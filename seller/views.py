@@ -40,11 +40,7 @@ def register(request):
         
         user = serializer.save()
         print(user._id)
-        # payload={
-        #     '_id':user._id,
-        #     'exp':datetime.datetime.utcnow()+datetime.timedelta(minutes=60),
-        #     'iat':datetime.datetime.utcnow()
-        # }
+      
         token = jwt.encode({
                 'username': user.username,
                 'iat': datetime.datetime.utcnow(),
@@ -61,8 +57,6 @@ def register(request):
         user_details.pop('devices', None)
         user_details.pop('email', None)
         user_data['user']=user_details
-        
-        
         return Response(user_data, status=status.HTTP_201_CREATED)
     
     except ValidationError as e:
