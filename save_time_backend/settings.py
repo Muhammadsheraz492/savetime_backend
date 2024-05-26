@@ -97,6 +97,13 @@ DATABASES = {
         }
     }
 }
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        # 'seller.authentication.JSONWebTokenAuthentication'
+        
+    ],
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators

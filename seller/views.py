@@ -5,7 +5,10 @@ from user_agents import parse
 from .serializers import SellerSerializer
 from django.core.exceptions import ValidationError
 from django.db import DatabaseError
+from rest_framework.authtoken.models import Token
 import traceback
+from rest_framework.authentication import TokenAuthentication
+import jwt,datetime
 def serialize_errors(errors):
     serialized_errors = []
     for field, messages in errors.items():
@@ -36,14 +39,35 @@ def register(request):
         serializer.is_valid(raise_exception=True)
         
         user = serializer.save()
-        user_data = SellerSerializer(user).data
-        user_data.pop('password', None)
-        user_data.pop('devices', None)
+        print(user._id)
+        # payload={
+        #     '_id':user._id,
+        #     'exp':datetime.datetime.utcnow()+datetime.timedelta(minutes=60),
+        #     'iat':datetime.datetime.utcnow()
+        # }
+        token = jwt.encode({
+                'username': user.username,
+                'iat': datetime.datetime.utcnow(),
+                'nbf': datetime.datetime.utcnow() + datetime.timedelta(minutes=-5),
+                'exp': datetime.datetime.utcnow() + datetime.timedelta(days=7)
+        }, 'muhammad')
+        # token=jwt.encode(payload,'secret',algorithm='HS256').decode('utf-8')
+        # print(token)
+        user_data={}
+        user_data['success']=True
+        # user_data['token']=token
+        user_details = SellerSerializer(user).data
+        user_details.pop('password', None)
+        user_details.pop('devices', None)
+        user_details.pop('email', None)
+        user_data['user']=user_details
+        
         
         return Response(user_data, status=status.HTTP_201_CREATED)
     
     except ValidationError as e:
-        return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+        
+        return Response({'success':False,'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
     except Exception as e:
         error_data = {
             'success': False,
