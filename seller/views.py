@@ -16,6 +16,7 @@ def serialize_errors(errors):
             serialized_errors.append({field: str(message)})
     return serialized_errors
 def serialize_exception(exception):
+    print(exception)
     return {
         'type': type(exception).__name__,
         'message': serialize_errors(exception.detail),

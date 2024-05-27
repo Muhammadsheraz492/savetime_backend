@@ -3,6 +3,14 @@ from .models import Device, User
 from django.db import transaction
 from django.contrib.auth.hashers import make_password
 from django.db import IntegrityError
+import boto3
+from django.conf import settings
+from datetime import datetime
+from botocore.exceptions import ClientError
+
+# def upload_to(instance, filename):
+    # print('images/{filename}'.format(filename=filename))
+    # return 'images/{filename}'.format(filename=filename)
 class DeviceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Device
@@ -14,15 +22,38 @@ class SellerSerializer(serializers.ModelSerializer):
     firstname=serializers.CharField(required=True)
     lastname=serializers.CharField(required=True)
     devices = DeviceSerializer(many=True, required=False)
+    profile_image = serializers.ImageField(max_length=None, required=False, allow_null=True)
 
     class Meta:
         model = User
-        fields = ['firstname', 'lastname', 'username', 'email', 'password', 'devices']
+        fields = ['firstname', 'lastname', 'username', 'email', 'password', 'devices','profile_image']
     
     def create(self, validated_data):
         devices_data = validated_data.pop('devices', [])
         password = validated_data.pop('password')
         validated_data['password']=make_password(password=password)
+        profile_image = validated_data.get('profile_image')
+        if profile_image:
+            print(f"Profile Image Filename: {profile_image.name}")
+            
+            profile_image = validated_data.pop('profile_image')
+            try:
+                s3 = boto3.client(
+                    's3',
+                    aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
+                    aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY,
+                    region_name=settings.AWS_S3_REGION_NAME
+                )
+                timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+                image_key = f"profile_images/{timestamp}_{profile_image.name}"
+                s3.upload_fileobj(profile_image, settings.AWS_STORAGE_BUCKET_NAME, image_key)
+                s3_url = f"https://{settings.AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{image_key}"
+                validated_data['profile_image'] = s3_url
+
+            except ClientError as e:
+                print(f"Error uploading profile image to S3: {e}")
+                raise serializers.ValidationError("Failed to upload profile image")
+        
         # user = User(**validated_data)
         try:
             with transaction.atomic():  # Ensure atomicity
