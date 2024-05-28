@@ -42,8 +42,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'seller',
+    # 'seller.middleware.JWTAuthenticationMiddleware',
     # My Settings
-    'storages'
+    'storages',
+    # 'middleware.JWTAuthenticationMiddleware',
 ]
 
 MIDDLEWARE = [
@@ -104,6 +106,7 @@ DATABASES = {
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
         # 'seller.authentication.JSONWebTokenAuthentication'
         
     ],

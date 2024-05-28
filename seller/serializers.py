@@ -8,6 +8,9 @@ from django.conf import settings
 from datetime import datetime
 from botocore.exceptions import ClientError
 from user_agents import parse
+from rest_framework.exceptions import ValidationError
+from .custom_exceptions import CustomValidationError  # Import the custom exception
+
 # def upload_to(instance, filename):
     # print('images/{filename}'.format(filename=filename))
     # return 'images/{filename}'.format(filename=filename)
@@ -105,4 +108,73 @@ class SellerSerializer(serializers.ModelSerializer):
         if instance.profile_image:
             data['profile_image']=instance.profile_image
         return data
-        
+class LoginSerializer(serializers.ModelSerializer):
+    email = serializers.CharField(required=True)
+    password = serializers.CharField(required=True)
+
+    class Meta:
+        model = User  # Specify your custom user model here
+        fields = ["email", "password"]
+
+    def validate_email(self, value):
+        print("This is mine")
+        if not value:
+            error_data = {
+                'success': False,
+                'error_message': {
+                    "type": "ValidationError",
+                    "message": "Email field cannot be blank."
+                },
+            }
+            raise CustomValidationError(detail=error_data)
+        try:
+            user = User.objects.get(email=value)
+            return user
+        except User.DoesNotExist:
+            error_data = {
+                'success': False,
+                'error_message': {
+                      "type": "ValidationError",
+                      "message":"This email does not exist."
+                
+                },
+            }
+            raise CustomValidationError(detail=error_data)
+    def run_validation(self, data):
+        if 'email' in data and not data['email'].strip():
+            error_data = {
+                'success': False,
+                'error_message': {
+                    "type": "ValidationError",
+                    "message": "Email field cannot be blank."
+                },
+            }
+            raise CustomValidationError(detail=error_data)
+        if 'password' in data and not data['password'].strip():
+            error_data = {
+                'success': False,
+                'error_message': {
+                    "type": "ValidationError",
+                    "message": "Password field cannot be blank."
+                },
+            }
+            raise CustomValidationError(detail=error_data)
+        return super().run_validation(data)
+    # def validate(self, attrs):
+    #     email = attrs.get('email')
+    #     try:
+    #         user = User.objects.get(email=email)
+    #         return user
+    #     except User.DoesNotExist:
+    #         error_data = {
+    #             'success': False,
+    #             'error_message': {
+    #                   "type": "ValidationError",
+    #                   "message":"This email does not exist."
+                
+    #             },
+    #         }
+    #         print(error_data)
+    #         raise CustomValidationError(detail=error_data)
+    #     return attrs
+    

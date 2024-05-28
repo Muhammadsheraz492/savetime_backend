@@ -2,7 +2,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from user_agents import parse
-from .serializers import SellerSerializer
+from .serializers import SellerSerializer,LoginSerializer
 from django.core.exceptions import ValidationError
 from django.db import DatabaseError
 from rest_framework.authtoken.models import Token
@@ -10,7 +10,10 @@ import traceback
 from rest_framework.authentication import TokenAuthentication
 import jwt,datetime
 from .models import *
-
+from .serializers import LoginSerializer
+from seller import serializers
+from django.contrib.auth.hashers import check_password
+from django.http import JsonResponse
 def serialize_errors(errors):
     serialized_errors = []
     for field, messages in errors.items():
@@ -29,12 +32,12 @@ def register(request):
         serializer = SellerSerializer(data=data,context={'request': request})
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
-        token = jwt.encode({
-                'username': user.username,
-                'iat': datetime.datetime.utcnow(),
-                'nbf': datetime.datetime.utcnow() + datetime.timedelta(minutes=-5),
-                'exp': datetime.datetime.utcnow() + datetime.timedelta(days=7)
-        }, 'muhammad')
+        # token = jwt.encode({
+        #         'username': user.username,
+        #         'iat': datetime.datetime.utcnow(),
+        #         'nbf': datetime.datetime.utcnow() + datetime.timedelta(minutes=-5),
+        #         'exp': datetime.datetime.utcnow() + datetime.timedelta(days=7)
+        # }, 'muhammad')
         # token=jwt.encode(payload,'secret',algorithm='HS256').decode('utf-8')
         # print(token)
         user_data={}
@@ -56,3 +59,64 @@ def register(request):
             'error_message':serialize_exception(e),
         }
         return Response(error_data, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+@api_view(['POST'])
+def login(request):    
+    serializer = LoginSerializer(data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        email = serializer.validated_data.get('email') 
+        print(email)
+        password = serializer.validated_data.get('password')
+
+        try:
+            user =User.objects.get(email=request.data['email'])
+            print(user.email)
+            
+            if check_password(password, user.password):
+                token = jwt.encode({
+                        'username': user.username,
+                        'iat': datetime.datetime.utcnow(),
+                        'nbf': datetime.datetime.utcnow() + datetime.timedelta(minutes=-5),
+                        'exp': datetime.datetime.utcnow() + datetime.timedelta(days=7)
+                }, 'muhammad')
+                response=Response({'success':True,"message": "Login successful",'email':user.email,'username':user.username,'token':token}, status=status.HTTP_200_OK)
+                response.set_cookie(
+                    key='token',
+                    value=token,
+                    httponly=True,  
+                    samesite='Lax',
+                    secure=True 
+                )
+                return response
+            else:
+                error_data = {
+                    'success': False,
+                    'error_message': {
+                        "type": "Invalid credentials",
+                        "message": "email and password went wrong"
+                    },
+                }
+                return Response(error_data, status=status.HTTP_401_UNAUTHORIZED)
+        except User.DoesNotExist:
+            error_data = {
+                    'success': False,
+                    'error_message': {
+                        "type": "Invalid credentials",
+                        "message": "email are not find"
+                    },
+                }
+            return Response(error_data, status=status.HTTP_401_UNAUTHORIZED)
+    else:
+        error_data = {
+            'success': False,
+            'error_message': serializer.errors,
+        }
+        return Response({**error_data}, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+@api_view(['GET'])
+def logout_view(request):
+    response = JsonResponse({'success': True, 'message': 'Logged out successfully.'})
+    response.delete_cookie('token') 
+    response.delete_cookie('token') 
+    return response
