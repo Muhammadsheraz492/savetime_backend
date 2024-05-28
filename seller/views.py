@@ -18,7 +18,6 @@ def serialize_errors(errors):
             serialized_errors.append({field: str(message)})
     return serialized_errors
 def serialize_exception(exception):
-    print(exception)
     return {
         'type': type(exception).__name__,
         'message': serialize_errors(exception.detail),
@@ -26,28 +25,10 @@ def serialize_exception(exception):
 @api_view(['POST'])
 def register(request):
     try:
-        user_agent_str = request.META.get('HTTP_USER_AGENT', '')
-        user_agent = parse(user_agent_str)
-        
-        device_info = {
-            'random_access_point': user_agent_str,
-            'device_name': user_agent.device.family,
-            'ip': request.META.get('REMOTE_ADDR', '')
-        }
-        
         data = request.data.copy()
-        devices=[device_info]
-        # data['devices'] = device_info
-        print("Data after modification:", data)  # Debugging statement
-
-        serializer = SellerSerializer(data=data)
+        serializer = SellerSerializer(data=data,context={'request': request})
         serializer.is_valid(raise_exception=True)
-        
         user = serializer.save()
-        for device_data in devices:
-             Device.objects.create(user=user, **device_data)
-        print(user._id)
-      
         token = jwt.encode({
                 'username': user.username,
                 'iat': datetime.datetime.utcnow(),

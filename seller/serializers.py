@@ -7,7 +7,7 @@ import boto3
 from django.conf import settings
 from datetime import datetime
 from botocore.exceptions import ClientError
-
+from user_agents import parse
 # def upload_to(instance, filename):
     # print('images/{filename}'.format(filename=filename))
     # return 'images/{filename}'.format(filename=filename)
@@ -18,11 +18,9 @@ class DeviceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Device
         fields = ['random_access_point', 'device_name', 'ip']
-    def create(self, validated_data):
-        print(validated_data)
-        pass
 
 class SellerSerializer(serializers.ModelSerializer):
+    devices=[]
     email=serializers.EmailField(required=True)
     username=serializers.CharField(required=True)
     firstname=serializers.CharField(required=True)
@@ -38,13 +36,11 @@ class SellerSerializer(serializers.ModelSerializer):
         fields = ['firstname', 'lastname', 'username', 'email', 'password', 'profile_image']
     
     def create(self, validated_data):
-        print(validated_data)
         # devices_data = validated_data.pop('devices', [])
         password = validated_data.pop('password')
         validated_data['password']=make_password(password=password)
         profile_image = validated_data.get('profile_image')
         if profile_image:
-            print(f"Profile Image Filename: {profile_image.name}")
             
             profile_image = validated_data.pop('profile_image')
             try:
@@ -66,6 +62,8 @@ class SellerSerializer(serializers.ModelSerializer):
         try:
             with transaction.atomic():  # Ensure atomicity
                 user = User.objects.create(**validated_data)
+                for device_data in self.devices:
+                    Device.objects.create(user=user, **device_data)
                 
                 return user
         except IntegrityError as e:
@@ -89,6 +87,19 @@ class SellerSerializer(serializers.ModelSerializer):
         if value is None:
             raise serializers.ValidationError("lastname are required")
         return value
+    def validate(self, attrs):
+        request = self.context.get('request')
+        user_agent_str = request.META.get('HTTP_USER_AGENT', '')
+        user_agent = parse(user_agent_str)
+        
+        device_info = {
+            'random_access_point': user_agent_str,
+            'device_name': user_agent.device.family,
+            'ip': request.META.get('REMOTE_ADDR', '')
+        }
+        self.devices.append(device_info)
+        
+        return super().validate(attrs)
     def to_representation(self, instance):
         data=super().to_representation(instance=instance)
         if instance.profile_image:

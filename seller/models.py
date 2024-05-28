@@ -5,6 +5,7 @@ from bson import ObjectId
 from django.utils import timezone
 
 class Device(models.Model):
+    _id = djongo_models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     user = models.ForeignKey('User', on_delete=models.CASCADE, null=True, related_name='user_devices')
     device_name = models.CharField(max_length=100)
     random_access_point = models.CharField(max_length=100)
