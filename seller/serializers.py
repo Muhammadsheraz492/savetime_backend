@@ -12,24 +12,34 @@ from botocore.exceptions import ClientError
     # print('images/{filename}'.format(filename=filename))
     # return 'images/{filename}'.format(filename=filename)
 class DeviceSerializer(serializers.ModelSerializer):
+    random_access_point=serializers.CharField(required=True)
+    device_name=serializers.CharField(required=True)
+    ip=serializers.CharField(required=True)
     class Meta:
         model = Device
         fields = ['random_access_point', 'device_name', 'ip']
+    def create(self, validated_data):
+        print(validated_data)
+        pass
 
 class SellerSerializer(serializers.ModelSerializer):
     email=serializers.EmailField(required=True)
     username=serializers.CharField(required=True)
     firstname=serializers.CharField(required=True)
     lastname=serializers.CharField(required=True)
-    devices = DeviceSerializer(many=True, required=False)
+     
+    # devices = DeviceSerializer(many=True, read_only=True)  # Assuming you want to display related devices
+
+    
     profile_image = serializers.ImageField(max_length=None, required=False, allow_null=True)
 
     class Meta:
         model = User
-        fields = ['firstname', 'lastname', 'username', 'email', 'password', 'devices','profile_image']
+        fields = ['firstname', 'lastname', 'username', 'email', 'password', 'profile_image']
     
     def create(self, validated_data):
-        devices_data = validated_data.pop('devices', [])
+        print(validated_data)
+        # devices_data = validated_data.pop('devices', [])
         password = validated_data.pop('password')
         validated_data['password']=make_password(password=password)
         profile_image = validated_data.get('profile_image')
@@ -53,13 +63,10 @@ class SellerSerializer(serializers.ModelSerializer):
             except ClientError as e:
                 print(f"Error uploading profile image to S3: {e}")
                 raise serializers.ValidationError("Failed to upload profile image")
-        
-        # user = User(**validated_data)
         try:
             with transaction.atomic():  # Ensure atomicity
                 user = User.objects.create(**validated_data)
-                for device_data in devices_data:
-                    Device.objects.create(user=user, **device_data)
+                
                 return user
         except IntegrityError as e:
             if 'UNIQUE constraint' in str(e):

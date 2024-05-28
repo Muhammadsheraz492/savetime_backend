@@ -9,6 +9,8 @@ from rest_framework.authtoken.models import Token
 import traceback
 from rest_framework.authentication import TokenAuthentication
 import jwt,datetime
+from .models import *
+
 def serialize_errors(errors):
     serialized_errors = []
     for field, messages in errors.items():
@@ -34,12 +36,16 @@ def register(request):
         }
         
         data = request.data.copy()
-        data['devices'] = [device_info]
-        
+        devices=[device_info]
+        # data['devices'] = device_info
+        print("Data after modification:", data)  # Debugging statement
+
         serializer = SellerSerializer(data=data)
         serializer.is_valid(raise_exception=True)
         
         user = serializer.save()
+        for device_data in devices:
+             Device.objects.create(user=user, **device_data)
         print(user._id)
       
         token = jwt.encode({

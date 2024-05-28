@@ -17,7 +17,7 @@ class User(models.Model):
     firstname = models.CharField(max_length=100, default='')
     lastname = models.CharField(max_length=100, default='')
     username = models.CharField(max_length=200, unique=True,)
-    profile_image=models.CharField(max_length=225,default="",null=True,blank=True)
+    profile_image=models.CharField(max_length=225,null=True,blank=True)
     email = models.EmailField(unique=True, default='')
     password = models.CharField(max_length=200, default='')
     devices = models.ManyToManyField(Device, related_name='user_devices')
@@ -26,9 +26,12 @@ class User(models.Model):
     completed_order = models.PositiveIntegerField(default=0)
     rating = models.FloatField(default=0.0)
     gig_limit = models.PositiveIntegerField(default=0)
-    
+    is_verified = models.BooleanField(default=False)  
     created_at = models.DateTimeField('created_At', auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True)
+    phoneNumber = models.CharField(max_length=15, null=True, blank=True)  # New field for phone number
+    is_number_verified = models.BooleanField(default=False)
+   
     def save(self, *args, **kwargs):
         # logging.debug("Password hashed: %s", self.password)
         
