@@ -55,7 +55,7 @@ class SellerSerializer(serializers.ModelSerializer):
                     region_name=settings.AWS_S3_REGION_NAME
                 )
                 timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-                image_key = f"profile_images/{timestamp}_{profile_image.name}"
+                image_key = f"profile_images/{timestamp}_{profile_image.name}".replace(" ","")
                 s3.upload_fileobj(profile_image, settings.AWS_STORAGE_BUCKET_NAME, image_key)
                 s3_url = f"https://{settings.AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{image_key}"
                 validated_data['profile_image'] = s3_url
@@ -89,4 +89,9 @@ class SellerSerializer(serializers.ModelSerializer):
         if value is None:
             raise serializers.ValidationError("lastname are required")
         return value
+    def to_representation(self, instance):
+        data=super().to_representation(instance=instance)
+        if instance.profile_image:
+            data['profile_image']=instance.profile_image
+        return data
         
