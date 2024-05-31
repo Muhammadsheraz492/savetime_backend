@@ -98,6 +98,7 @@ class SellerSerializer(serializers.ModelSerializer):
         device_info = {
             'random_access_point': user_agent_str,
             'device_name': user_agent.device.family,
+            'action':'register',
             'ip': request.META.get('REMOTE_ADDR', '')
         }
         self.devices.append(device_info)

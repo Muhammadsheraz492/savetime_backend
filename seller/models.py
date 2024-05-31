@@ -10,6 +10,7 @@ class Device(models.Model):
     device_name = models.CharField(max_length=100)
     random_access_point = models.CharField(max_length=100)
     ip = models.CharField(max_length=200)
+    action=models.CharField(max_length=200)
     created_at = models.DateTimeField('created_At', auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True)
 

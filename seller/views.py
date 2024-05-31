@@ -61,6 +61,17 @@ def register(request):
         return Response(error_data, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 @api_view(['POST'])
 def login(request):    
+    # request = self.context.get('request')
+    user_agent_str = request.META.get('HTTP_USER_AGENT', '')
+    user_agent = parse(user_agent_str)
+        
+    device_info = {
+        'random_access_point': user_agent_str,
+        'device_name': user_agent.device.family,
+        'action':'login',
+        'ip': request.META.get('REMOTE_ADDR', '')
+    }
+    devices=[device_info]
     serializer = LoginSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         email = serializer.validated_data.get('email') 
@@ -69,6 +80,10 @@ def login(request):
 
         try:
             user =User.objects.get(email=request.data['email'])
+            for device_data in [device_info]:
+                Device.objects.create(user=user, **device_data)
+            
+            
             print(user.email)
             
             if check_password(password, user.password):
