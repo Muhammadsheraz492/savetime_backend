@@ -15,7 +15,7 @@ def post_login(request):
         user=Admin_User.objects.get(email=email)
         if check_password(password,user.password):
             token = jwt.encode({
-                        'username': user.email,
+                        'email': user.email,
                         'iat': datetime.datetime.utcnow(),
                         'nbf': datetime.datetime.utcnow() + datetime.timedelta(minutes=-5),
                         'exp': datetime.datetime.utcnow() + datetime.timedelta(days=7)
@@ -87,3 +87,6 @@ class AdminUserAPIView(APIView):
             return Response({'success': False, 'message': error_message}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+@api_view(['post'])
+def post_category(request):
+    return Response("Category Route",status=status.HTTP_200_OK)

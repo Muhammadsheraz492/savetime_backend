@@ -1,5 +1,6 @@
-# admin/middleware/middleware.py
 from django.http import JsonResponse
+import jwt
+from django.conf import settings
 
 class BearerTokenMiddleware:
     def __init__(self, get_response):
@@ -7,16 +8,35 @@ class BearerTokenMiddleware:
 
     def __call__(self, request):
         bearer_token = request.headers.get('Authorization')
-        excluded_urls = ['/v1/api/admin/login/',]
-        print(request.path)
+        cookies_token = request.headers.get('Cookie')
+        
+        excluded_urls = ['/v1/api/admin/login/']
+        
         if request.path in excluded_urls:
-            response = self.get_response(request)
-            return response
+            return self.get_response(request)
 
-        if not self._validate_token(bearer_token):
-            return JsonResponse({'error': 'Unauthorized'}, status=401)
-        response = self.get_response(request)
-        return response
+        try:
+            if bearer_token and cookies_token and bearer_token.replace("Bearer ", "") == cookies_token.replace("token=", ""):
+                decoded_user = self._validate_token(bearer_token.replace("Bearer ", ""))
+                if decoded_user:
+                    request.decoded_user = decoded_user
+                    return self.get_response(request)
+                else:
+                    return JsonResponse({'status': False, 'message': 'Unauthorized. Invalid token.'}, status=403)
+            else:
+                return JsonResponse({'status': False, 'message': 'Unauthorized'}, status=403)
+        except jwt.ExpiredSignatureError:
+            return JsonResponse({'status': False, 'message': 'Unauthorized. Token has expired.'}, status=401)
+        except jwt.InvalidTokenError:
+            return JsonResponse({'status': False, 'message': 'Unauthorized. Invalid token.'}, status=401)
+        except Exception as e:
+            return JsonResponse({'status': False, 'message': 'Unauthorized '}, status=500)
 
     def _validate_token(self, bearer_token):
-        pass  # Replace this with your actual token validation logic
+        try:
+            decoded_token = jwt.decode(bearer_token, settings.ADMIN_PANNEL_ACCESS, algorithms=["HS256"])
+            return decoded_token.get('username')
+        except jwt.ExpiredSignatureError:
+            return None
+        except jwt.InvalidTokenError:
+            return None
