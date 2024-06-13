@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'admin',
     'seller',
+    
     # 'seller.middleware.JWTAuthenticationMiddleware',
     # My Settings
     'storages',
@@ -82,27 +84,27 @@ WSGI_APPLICATION = 'save_time_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'ENFORCE_SCHEMA': False,
-        'NAME': 'savetime',  # Specify your MongoDB database name
-        'CLIENT': {
-            'host': 'mongodb+srv://bahoo:Hacker@savetime.kfwac8h.mongodb.net/?retryWrites=true&w=majority',
-            'port':27017,
-            'username': 'bahoo',
-            'password': 'Hacker',
-            'authSource': 'admin',
-            'authMechanism': 'SCRAM-SHA-1',
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'ENFORCE_SCHEMA': False,
+#         'NAME': 'savetime',  # Specify your MongoDB database name
+#         'CLIENT': {
+#             'host': 'mongodb+srv://bahoo:Hacker@savetime.kfwac8h.mongodb.net/?retryWrites=true&w=majority',
+#             'port':27017,
+#             'username': 'bahoo',
+#             'password': 'Hacker',
+#             'authSource': 'admin',
+#             'authMechanism': 'SCRAM-SHA-1',
+#         }
+#     }
+# }
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',

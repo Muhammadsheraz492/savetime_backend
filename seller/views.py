@@ -29,6 +29,8 @@ def serialize_exception(exception):
 def register(request):
     try:
         data = request.data.copy()
+        print(data)
+        input("Hello Testing")
         serializer = SellerSerializer(data=data,context={'request': request})
         serializer.is_valid(raise_exception=True)
         user = serializer.save()

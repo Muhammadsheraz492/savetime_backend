@@ -5,7 +5,7 @@ from bson import ObjectId
 from django.utils import timezone
 
 class Device(models.Model):
-    _id = djongo_models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
+    # _id = djongo_models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     user = models.ForeignKey('User', on_delete=models.CASCADE, null=True, related_name='user_devices')
     device_name = models.CharField(max_length=100)
     random_access_point = models.CharField(max_length=100)
@@ -15,7 +15,7 @@ class Device(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 class User(models.Model):
-    _id = djongo_models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
+    # _id = djongo_models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
     firstname = models.CharField(max_length=100, default='')
     lastname = models.CharField(max_length=100, default='')
     username = models.CharField(max_length=200, unique=True,)
@@ -35,14 +35,10 @@ class User(models.Model):
     is_number_verified = models.BooleanField(default=False)
    
     def save(self, *args, **kwargs):
-        # logging.debug("Password hashed: %s", self.password)
-        
-        # if not self.pk:
-        #     self.password = make_password(self.password)
-        #     logging.debug("Password hashed: %s", self.password)
-        #     print(self)
         super().save(*args, **kwargs)
         
     def __str__(self):
         return self.username
+    
+# class Gigs(models.Model):
     
