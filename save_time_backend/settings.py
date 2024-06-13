@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'admin.middleware.middleware.BearerTokenMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -165,6 +166,8 @@ AWS_SECRET_ACCESS_KEY =os.getenv('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
 AWS_S3_REGION_NAME = os.getenv('AWS_S3_REGION_NAME')  # e.g., 'us-west-2'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
+ADMIN_PANNEL_ACCESS=os.getenv('ADMIN_PANNEL_ACCESS')
+
 
 # Static files (CSS, JavaScript, images)
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

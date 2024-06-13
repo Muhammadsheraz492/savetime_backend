@@ -6,6 +6,7 @@ from user_agents import parse
 from rest_framework.decorators import api_view
 from django.contrib.auth.hashers import check_password
 import jwt,datetime
+from django.conf import settings
 @api_view(['POST'])
 def post_login(request):
     try:
@@ -14,11 +15,22 @@ def post_login(request):
         user=Admin_User.objects.get(email=email)
         if check_password(password,user.password):
             token = jwt.encode({
-                        'username': user.username,
+                        'username': user.email,
                         'iat': datetime.datetime.utcnow(),
                         'nbf': datetime.datetime.utcnow() + datetime.timedelta(minutes=-5),
                         'exp': datetime.datetime.utcnow() + datetime.timedelta(days=7)
-            }, 'muhammad')
+            }, settings.ADMIN_PANNEL_ACCESS)
+            user_agent_str = request.META.get('HTTP_USER_AGENT', '')
+            user_agent = parse(user_agent_str)
+                
+            device_info = {
+                'random_access_point': user_agent_str,
+                'device_name': user_agent.device.family,
+                'action':'admin_login',
+                'ip': request.META.get('REMOTE_ADDR', '')
+            }
+            Admin_Device.objects.create(user=user, **device_info)
+            
             response=Response({'success':True,"message": "Login successful",'email':user.email,'username':user.username,'token':token}, status=status.HTTP_200_OK)
             response.set_cookie(
                     key='token',
@@ -74,14 +86,4 @@ class AdminUserAPIView(APIView):
             error_message = str(e)
             return Response({'success': False, 'message': error_message}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-   
-
-    # def delete(self, request, pk):
-    #     try:
-    #         user = Admin_User.objects.get(pk=pk)
-    #     except Admin_User.DoesNotExist:
-    #         return Response({"error": "User not found."}, status=status.HTTP_404_NOT_FOUND)
-        
-    #     user.delete()
-    #     return Response(status=status.HTTP_204_NO_CONTENT)
 
