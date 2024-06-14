@@ -9,10 +9,8 @@ class JWTAuthenticationMiddleware:
 
     def __call__(self, request):
         token = request.COOKIES.get('token')
-
         if not token:
             return JsonResponse({'success': False, 'message': 'Authentication credentials were not provided.'}, status=401)
-
         try:
             decoded_token = jwt.decode(token, 'muhammad', algorithms=["HS256"])
             request.user = decoded_token['username']

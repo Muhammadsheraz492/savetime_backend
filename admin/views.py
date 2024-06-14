@@ -2,11 +2,13 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers.user_serializer import *
+from .serializers.category_serialzer import *
 from user_agents import parse
 from rest_framework.decorators import api_view
 from django.contrib.auth.hashers import check_password
 import jwt,datetime
 from django.conf import settings
+from admin.controller.devices import *
 @api_view(['POST'])
 def post_login(request):
     try:
@@ -89,4 +91,26 @@ class AdminUserAPIView(APIView):
 
 @api_view(['post'])
 def post_category(request):
-    return Response("Category Route",status=status.HTTP_200_OK)
+    try:
+        # print(get_device_info(request=request))
+        
+            
+        user=Admin_User.objects.get(email=request.decoded_user['email'])
+        print(user)
+        print(request.data)
+        request.data['email']=user.email
+        print(request.data)
+        if 'name' not in request.data:
+            return Response({'success': False, 'message': 'Name is required'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        category_serializer=CategorySerializer(data=request.data)
+        if category_serializer.is_valid():
+            category_serializer.save()
+            return Response({'status':False,'message':"Category created successfully",**category_serializer.data}, status=status.HTTP_201_CREATED)
+        else:
+            errors = category_serializer.errors
+            error_message = " ".join([f"{key}: {value[0]}" for key, value in errors.items()])
+            return Response({'success': False, 'message': error_message}, status=status.HTTP_400_BAD_REQUEST) 
+        
+    except Admin_User.DoesNotExist:
+        return Response({'success':False,"message": "User not found."}, status=status.HTTP_404_NOT_FOUND)
