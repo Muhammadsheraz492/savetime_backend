@@ -30,7 +30,7 @@ def register(request):
     try:
         data = request.data.copy()
         print(data)
-        input("Hello Testing")
+        # input("Hello Testing")
         serializer = SellerSerializer(data=data,context={'request': request})
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
@@ -64,6 +64,7 @@ def register(request):
 @api_view(['POST'])
 def login(request):    
     # request = self.context.get('request')
+    # print("Test")
     user_agent_str = request.META.get('HTTP_USER_AGENT', '')
     user_agent = parse(user_agent_str)
         
@@ -77,16 +78,17 @@ def login(request):
     serializer = LoginSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         email = serializer.validated_data.get('email') 
-        print(email)
+        print(request.data['email'])
         password = serializer.validated_data.get('password')
 
         try:
+            
             user =User.objects.get(email=request.data['email'])
             for device_data in [device_info]:
                 Device.objects.create(user=user, **device_data)
             
             
-            print(user.email)
+            # print(user.email)
             
             if check_password(password, user.password):
                 token = jwt.encode({

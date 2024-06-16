@@ -11,20 +11,33 @@ class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ['id','name','email','sub_categories']
-    def _create_devices(self, user_instance, subcategorys):
+    def _create_subcategories(self, user_instance, subcategorys):
         for subcategory in subcategorys:
             try:
                 Subcategory.objects.create(category=user_instance,**subcategory)                
             except IntegrityError as e:
                 raise serializers.ValidationError(e)
     def create(self, validated_data):
+        # try:
+        #     subcategorys=validated_data.pop('sub_categories',[])
+        #     instance= super().create(validated_data)
+        #     self._create_devices(instance,subcategorys)
+        #     return instance
+        # except IntegrityError as e:
+        #     raise serializers.ValidationError(e)
+         
+        subcategories_data = validated_data.pop('sub_categories', [])
         try:
-            subcategorys=validated_data.pop('sub_categories',[])
-            instance= super().create(validated_data)
-            self._create_devices(instance,subcategorys)
+            # Check if category with the same name already exists
+            instance = Category.objects.get(name=validated_data['name'])
+            # raise serializers.ValidationError('success':False,'message':"Category with this name already exists.")
+            raise serializers.ValidationError({'success': False, 'message': 'Category with this name already exists.'})
+        except Category.DoesNotExist:
+            instance = Category.objects.create(**validated_data)
+            self._create_subcategories(instance, subcategories_data)
             return instance
         except IntegrityError as e:
-            raise serializers.ValidationError(e)
+            raise serializers.ValidationError(str(e))
     def to_representation(self, instance):
         representation = super().to_representation(instance)
         # # representation.pop('devices')
