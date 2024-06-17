@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'admin',
     'seller',
+    'common',
     
     # 'seller.middleware.JWTAuthenticationMiddleware',
     # My Settings

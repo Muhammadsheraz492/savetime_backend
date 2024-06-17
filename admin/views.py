@@ -2,7 +2,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers.user_serializer import *
-from .serializers.category_serialzer import *
+from common.serializer.category_serialzer import *
 from user_agents import parse
 from rest_framework.decorators import api_view
 from django.contrib.auth.hashers import check_password

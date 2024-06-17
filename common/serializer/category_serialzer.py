@@ -1,7 +1,7 @@
 from django.db import IntegrityError
 
 from rest_framework import serializers
-from admin.models.category import Category,Subcategory
+from common.models.category import *
 class SubCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Subcategory
