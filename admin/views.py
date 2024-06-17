@@ -89,31 +89,55 @@ class AdminUserAPIView(APIView):
             return Response({'success': False, 'message': error_message}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-@api_view(['post'])
+@api_view(['post','get'])
 def post_category(request):
-    try:
-        # print(get_device_info(request=request))
-        
+    if request.method == 'POST':
+        try:
+            print()
             
-        user=Admin_User.objects.get(email=request.decoded_user['email'])
-        print(request.data['name'])
-        # category_eixt=Category.objects.get(name=request.data['name'])
-        # print(user)
-        # print(request.data)
-        # print(category_eixt)
+                
+            user=Admin_User.objects.get(email=request.decoded_user['email'])
+            get_device_info(request=request,user=user,name='post category')
+            print(request.data['name'])
+            # category_eixt=Category.objects.get(name=request.data['name'])
+            # print(user)
+            # print(request.data)
+            # print(category_eixt)
+            
+            request.data['email']=user.email
+            if 'name' not in request.data:
+                return Response({'success': False, 'message': 'Name is required'}, status=status.HTTP_400_BAD_REQUEST)
+            
+            category_serializer=CategorySerializer(data=request.data)
+            if category_serializer.is_valid():
+                category_serializer.save()
+                return Response({'status':True,'message':"Category created successfully",**category_serializer.data}, status=status.HTTP_201_CREATED)
+            else:
+                errors = category_serializer.errors
+                error_message = " ".join([f"{key}: {value[0]}" for key, value in errors.items()])
+                return Response({'success': False, 'message': error_message}, status=status.HTTP_400_BAD_REQUEST) 
+            
+        except Admin_User.DoesNotExist:
+            return Response({'success':False,"message": "User not found."}, status=status.HTTP_404_NOT_FOUND)
+    else:
+        # query=Category.objects.all()
+        # serializer=CategorySerializer(query,many=True)
+        # return Response({'success':True,"message": "All Category Data",'data':serializer.data}, status=status.HTTP_200_OK)
+        try:
+            user=Admin_User.objects.get(email=request.decoded_user['email'])
+            get_device_info(request=request,user=user,name='get category')
+            categories = Category.objects.all()
+            serializer = CategorySerializer(categories, many=True)
+            return Response({
+                'success': True,
+                'message': 'All Category Data',
+                'data': serializer.data
+            }, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({
+                'success': False,
+                'message': 'Failed to retrieve categories',
+                'error': str(e)  # Convert exception to string for response
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
-        request.data['email']=user.email
-        if 'name' not in request.data:
-            return Response({'success': False, 'message': 'Name is required'}, status=status.HTTP_400_BAD_REQUEST)
-        
-        category_serializer=CategorySerializer(data=request.data)
-        if category_serializer.is_valid():
-            category_serializer.save()
-            return Response({'status':True,'message':"Category created successfully",**category_serializer.data}, status=status.HTTP_201_CREATED)
-        else:
-            errors = category_serializer.errors
-            error_message = " ".join([f"{key}: {value[0]}" for key, value in errors.items()])
-            return Response({'success': False, 'message': error_message}, status=status.HTTP_400_BAD_REQUEST) 
-        
-    except Admin_User.DoesNotExist:
-        return Response({'success':False,"message": "User not found."}, status=status.HTTP_404_NOT_FOUND)
+   
