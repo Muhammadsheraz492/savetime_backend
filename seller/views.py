@@ -14,6 +14,8 @@ from .serializers import LoginSerializer
 from seller import serializers
 from django.contrib.auth.hashers import check_password
 from django.http import JsonResponse
+from common.models.category import Category
+from common.serializer.category_serialzer import CategorySerializer
 def serialize_errors(errors):
     serialized_errors = []
     for field, messages in errors.items():
@@ -141,5 +143,28 @@ def logout_view(request):
 
 @api_view(['GET'])
 def categories(request):
-    print(request.decoded_user)
-    return Response("Data")
+    
+    try:
+        user_agent_str = request.META.get('HTTP_USER_AGENT', '')
+        user_agent = parse(user_agent_str)
+                    
+        device_info = {
+            'random_access_point': user_agent_str,
+            'device_name': user_agent.device.family,
+            'action':'categories',
+            'ip': request.META.get('REMOTE_ADDR', '')
+        }
+    
+        user=User.objects.get(username=request.decoded_user['username'])
+        categories = Category.objects.all()
+        category_serializer = CategorySerializer(categories, many=True)
+        # print(request.decoded_user)
+        Device.objects.create(user=user,**device_info)
+        
+        
+        # logger.info(f"User: {request.user}, Decoded user: {request.decoded_user}")
+        
+        return Response({'success': True, 'data': category_serializer.data})
+    
+    except Exception as e:
+        return Response({'success': False, 'error': 'Error fetching categories'}, status=500)
