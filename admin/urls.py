@@ -4,6 +4,7 @@ from .views import *
 urlpatterns = [
     path("login/", post_login, name='login'),  
     path("user/", AdminUserAPIView.as_view(), name='admin-user-list'),  
-    path("category/", post_category, name='category'),  
+    path("category/", post_category, name='category'),
+      
 
 ]

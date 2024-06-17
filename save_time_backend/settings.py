@@ -50,8 +50,20 @@ INSTALLED_APPS = [
     # 'middleware.JWTAuthenticationMiddleware',
 ]
 
+# MIDDLEWARE = [
+#     # 'admin.middleware.middleware.BearerTokenMiddleware',
+#     'django.middleware.security.SecurityMiddleware',
+#     'django.contrib.sessions.middleware.SessionMiddleware',
+#     'django.middleware.common.CommonMiddleware',
+#     'django.middleware.csrf.CsrfViewMiddleware',
+#     'django.contrib.auth.middleware.AuthenticationMiddleware',
+#     'django.contrib.messages.middleware.MessageMiddleware',
+#     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+# ]
+# if 'admin' in INSTALLED_APPS:
+#     MIDDLEWARE.insert(0, 'admin.middleware.middleware.BearerTokenMiddleware')
+
 MIDDLEWARE = [
-    'admin.middleware.middleware.BearerTokenMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -59,8 +71,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'common.middleware.middleware.BearerTokenMiddleware',
 ]
 
+# Conditionally include BearerTokenMiddleware for admin app only
 ROOT_URLCONF = 'save_time_backend.urls'
 
 TEMPLATES = [

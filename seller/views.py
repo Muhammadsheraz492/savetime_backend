@@ -131,11 +131,15 @@ def login(request):
         }
         return Response({**error_data}, status=status.HTTP_400_BAD_REQUEST)
 
-
-
 @api_view(['GET'])
 def logout_view(request):
     response = JsonResponse({'success': True, 'message': 'Logged out successfully.'})
     response.delete_cookie('token') 
     response.delete_cookie('token') 
     return response
+
+
+@api_view(['GET'])
+def categories(request):
+    print(request.decoded_user)
+    return Response("Data")

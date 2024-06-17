@@ -8,6 +8,7 @@ from rest_framework.decorators import api_view
 from django.contrib.auth.hashers import check_password
 import jwt,datetime
 from django.conf import settings
+from django.utils.decorators import decorator_from_middleware
 from admin.controller.devices import *
 @api_view(['POST'])
 def post_login(request):
@@ -87,7 +88,6 @@ class AdminUserAPIView(APIView):
         except Exception as e:
             error_message = str(e)
             return Response({'success': False, 'message': error_message}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
 
 @api_view(['post','get'])
 def post_category(request):
