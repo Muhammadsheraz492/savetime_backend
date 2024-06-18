@@ -14,24 +14,31 @@ class GigMetaDataSerializer(serializers.ModelSerializer):
 
 class ServiceTypeSerializer(serializers.ModelSerializer):
     gig_metadata = GigMetaDataSerializer(many=True, required=False)
+    has_nested_gig_metadata = serializers.BooleanField(required=False, read_only=True)
     class Meta:
         model = ServiceType
-        fields = ['id', 'name','description','gig_metadata']
+        fields = ['id', 'name','description','gig_metadata','has_nested_gig_metadata']
 
 class SubCategorySerializer(serializers.ModelSerializer):
     # service_type_data = serializers.ListField(required=False)
     service_type_data = ServiceTypeSerializer(many=True, required=False)
     has_nested_gig_metadata = serializers.BooleanField(required=False, read_only=True)
-    service_type=serializers.BooleanField(required=False, read_only=True)
+    service_type = serializers.BooleanField(required=False, read_only=True)
+    gig_metadata= GigMetaDataSerializer(many=True, required=False)
 
     class Meta:
         model = Subcategory
-        fields = ['id', 'name','description','service_type_data','has_nested_gig_metadata','service_type']
+        fields = ['id', 'name','description','service_type_data','has_nested_gig_metadata','service_type','gig_metadata']
     def to_representation(self, instance):
         data = super().to_representation(instance)
         data.pop('service_type_data')
         # print(data)
-        # if data['service_type']:
+        if data['service_type']:
+            servertype=ServiceType.objects.filter(subcategory=instance)
+            servertype_serializer=ServiceTypeSerializer(servertype,many=True).data
+            data['service_type_data']=servertype_serializer
+            
+            
             # data.pop("")
         return data
     
@@ -55,6 +62,16 @@ class CategorySerializer(serializers.ModelSerializer):
             except IntegrityError as e:
                 raise serializers.ValidationError(e)
             
+    def _create_subcategory_metadata(self,subcategory_instance,metadata):
+        for data in metadata:
+            try:
+                options=data.pop('options',[])
+                instance=GigMetaData.objects.create(subcategory=subcategory_instance,**data)
+                self._create_options(metadata_instance=instance,options=options)
+            except IntegrityError as e:
+                raise serializers.ValidationError(e)
+       
+            
             
     def _create_servicetype(self,subcategory_instance,servicetypes):
         for servicetype in servicetypes:
@@ -67,22 +84,24 @@ class CategorySerializer(serializers.ModelSerializer):
                     self._create_gigmetadata(service_type_instance=instance,metadata=gig_metadata)
             except IntegrityError as e:
                 raise serializers.ValidationError(e)
+    
             
             
             
     def _create_subcategories(self, user_instance, subcategorys):
         for subcategory in subcategorys:
-            
             try:
                 service_type_data = subcategory.pop('service_type_data', [])
-                service_type = subcategory.pop('service_type', [])
-                has_nested_gig_metadata = bool(service_type_data)
-                has_service_type = bool(service_type)
+                gig_metadata = subcategory.pop('gig_metadata', [])
+                has_nested_gig_metadata = bool(gig_metadata)
+                serive_type = bool(service_type_data)
                 subcategory['has_nested_gig_metadata'] = has_nested_gig_metadata
-                subcategory['service_type'] = has_service_type
+                subcategory['service_type'] = serive_type
                 subcategory_instance=Subcategory.objects.create(category=user_instance, **subcategory)  
                 if service_type_data:
                     self._create_servicetype(subcategory_instance=subcategory_instance,servicetypes=service_type_data)
+                if has_nested_gig_metadata:
+                    self._create_subcategory_metadata(subcategory_instance=subcategory_instance,metadata=gig_metadata)
               
             except IntegrityError as e:
                     raise serializers.ValidationError(e)
