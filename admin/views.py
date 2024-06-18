@@ -93,12 +93,18 @@ class AdminUserAPIView(APIView):
 def post_category(request):
     if request.method == 'POST':
         try:
-            print()
+            # print(request.data)
+            
+            # input("Hello")
             
                 
             user=Admin_User.objects.get(email=request.decoded_user['email'])
             get_device_info(request=request,user=user,name='post category')
-            print(request.data['name'])
+            category_serializer=CategorySerializer(data=request.data)
+            request.data['email']=request.decoded_user['email']
+        
+        
+            # print(request.data['name'])
             # category_eixt=Category.objects.get(name=request.data['name'])
             # print(user)
             # print(request.data)
@@ -108,10 +114,9 @@ def post_category(request):
             if 'name' not in request.data:
                 return Response({'success': False, 'message': 'Name is required'}, status=status.HTTP_400_BAD_REQUEST)
             
-            category_serializer=CategorySerializer(data=request.data)
             if category_serializer.is_valid():
                 category_serializer.save()
-                return Response({'status':True,'message':"Category created successfully",**category_serializer.data}, status=status.HTTP_201_CREATED)
+                return Response({'status':True,'message':"Category created successfully"}, status=status.HTTP_201_CREATED)
             else:
                 errors = category_serializer.errors
                 error_message = " ".join([f"{key}: {value[0]}" for key, value in errors.items()])
