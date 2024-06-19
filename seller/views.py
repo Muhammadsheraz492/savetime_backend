@@ -143,7 +143,6 @@ def logout_view(request):
 
 @api_view(['GET'])
 def categories(request):
-    
     try:
         user_agent_str = request.META.get('HTTP_USER_AGENT', '')
         user_agent = parse(user_agent_str)
@@ -168,3 +167,8 @@ def categories(request):
     
     except Exception as e:
         return Response({'success': False, 'error': 'Error fetching categories'}, status=500)
+
+@api_view(['POST'])
+def create_gig(request):
+    print(request.data)
+    return Response("Hacker")

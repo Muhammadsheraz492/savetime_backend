@@ -1,0 +1,3701 @@
+[
+    {
+        "name": "Graphics & Design",
+        "description": "A single place, millions of creative talents",
+        "sub_categories": [
+            {
+                "name": "Logo Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Brand Style Guides",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Game Art",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "Character Design",
+                        "description": "character-design"
+                    },
+                    {
+                        "name": "Props & Objects",
+                        "description": "props-objects-design"
+                    },
+                    {
+                        "name": "Backgrounds & Environments",
+                        "description": "backgrounds-environments-design"
+                    },
+                    {
+                        "name": "UI & UX",
+                        "description": "ui-ux"
+                    }
+                ]
+            },
+            {
+                "name": "Graphics for Streamers",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Business Cards & Stationery",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Website Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "Website UI/UX Design",
+                        "description": "website-ui-ux-design"
+                    },
+                    {
+                        "name": "Website Builders Design",
+                        "description": "website-builders-design"
+                    }
+                ]
+            },
+            {
+                "name": "App Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "UX Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Landing Page Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Resume Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Illustration",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Children\u2019s Book Illustration",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "AI Artists",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "Image Generation",
+                        "description": "image-generation"
+                    },
+                    {
+                        "name": "Custom Image Prompts",
+                        "description": "custom-image-prompt"
+                    }
+                ]
+            },
+            {
+                "name": "AI Avatar Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "NFT Art",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Pattern Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Fonts & Typography",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "Font Design",
+                        "description": "font-desgin"
+                    },
+                    {
+                        "name": "Typography",
+                        "description": "typography"
+                    },
+                    {
+                        "name": "Hand Lettering",
+                        "description": "lettering"
+                    },
+                    {
+                        "name": "Calligraphy",
+                        "description": "calligraphy"
+                    }
+                ]
+            },
+            {
+                "name": "Poster Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Brochure Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Flyer Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Book Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "Book Cover Design",
+                        "description": "cover"
+                    },
+                    {
+                        "name": "Book Layout Design & Typesetting",
+                        "description": "layout"
+                    }
+                ]
+            },
+            {
+                "name": "Album Cover Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Podcast Cover Art",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Packaging & Label Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "Packaging Design",
+                        "description": "packaging"
+                    },
+                    {
+                        "name": "Label Design",
+                        "description": "label"
+                    },
+                    {
+                        "name": "Dieline Design",
+                        "description": "dieline"
+                    }
+                ]
+            },
+            {
+                "name": "Storyboards",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Social Media Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "Headers & Covers",
+                        "description": "headers-covers"
+                    },
+                    {
+                        "name": "Social Posts & Banners",
+                        "description": "social-posts-banners"
+                    },
+                    {
+                        "name": "Thumbnails Design",
+                        "description": "thumbnails-design"
+                    },
+                    {
+                        "name": "AR Filters & Lenses",
+                        "description": "ar-filters-lenses"
+                    }
+                ]
+            },
+            {
+                "name": "Catalog Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Menu Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Invitation Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Portraits & Caricatures",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Cartoons & Comics",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Tattoo Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Signage Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Web Banners",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Image Editing",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "Product Image Editing",
+                        "description": "product-image-editing"
+                    },
+                    {
+                        "name": "Photo Manipulation",
+                        "description": "photo-manipulation"
+                    },
+                    {
+                        "name": "Portraits Retouching",
+                        "description": "portraits-retouching"
+                    },
+                    {
+                        "name": "Photo Restoration",
+                        "description": "photo-restoration"
+                    },
+                    {
+                        "name": "Mockups",
+                        "description": "mockups"
+                    }
+                ]
+            },
+            {
+                "name": "Architecture & Interior Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "2D Drawings & Floor Plans",
+                        "description": "2d-drawings"
+                    },
+                    {
+                        "name": "3D Modeling & Rendering",
+                        "description": "rendering-modeling"
+                    },
+                    {
+                        "name": "Architectural Planning",
+                        "description": "planning"
+                    },
+                    {
+                        "name": "Virtual Staging",
+                        "description": "virtual-staging"
+                    },
+                    {
+                        "name": "Architectural Graphics",
+                        "description": "architectural-graphics-design"
+                    },
+                    {
+                        "name": "Interior Design",
+                        "description": "interior-design"
+                    },
+                    {
+                        "name": "Mood Boards",
+                        "description": "mood-boards-design"
+                    }
+                ]
+            },
+            {
+                "name": "Landscape Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "2D Drawings & Site Plans",
+                        "description": "2d-drawing"
+                    },
+                    {
+                        "name": "3D Modeling & Rendering",
+                        "description": "3d-modeling-rendering"
+                    },
+                    {
+                        "name": "Planning & Design",
+                        "description": "planning"
+                    }
+                ]
+            },
+            {
+                "name": "Building Engineering",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "HVAC",
+                        "description": "hvac-engineering"
+                    },
+                    {
+                        "name": "Electrical Engineering",
+                        "description": "electrical-engineering"
+                    },
+                    {
+                        "name": "Plumbing & Drainage",
+                        "description": "plumbing-and-drainage"
+                    },
+                    {
+                        "name": "Civil & Structural",
+                        "description": "civil-and-structural-engineering"
+                    }
+                ]
+            },
+            {
+                "name": "Building Information Modeling",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "BIM 3D Modeling",
+                        "description": "3d-modeling"
+                    },
+                    {
+                        "name": "BIM Coordination & Clash Detection",
+                        "description": "coordination"
+                    },
+                    {
+                        "name": "BIM Family Creation",
+                        "description": "family-creation"
+                    },
+                    {
+                        "name": "BIM Online Training & Implementation",
+                        "description": "training"
+                    },
+                    {
+                        "name": "BIM 4D Construction Simulation",
+                        "description": "4d-simulation"
+                    }
+                ]
+            },
+            {
+                "name": "Character Modeling",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Industrial & Product Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "Concept Development",
+                        "description": "concept-development"
+                    },
+                    {
+                        "name": "Technical Drawing",
+                        "description": "2d-drawing"
+                    },
+                    {
+                        "name": "3D Modeling & Rendering",
+                        "description": "3d-modeling-rendering"
+                    },
+                    {
+                        "name": "Rapid Prototyping",
+                        "description": "prototyping-3d-printing"
+                    },
+                    {
+                        "name": "Design for Manufacturing",
+                        "description": "product-manufacturing"
+                    },
+                    {
+                        "name": "Full Design Process",
+                        "description": "full-product-design-process"
+                    }
+                ]
+            },
+            {
+                "name": "Trade Booth Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "T-Shirts & Merchandise",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Fashion Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "Technical Drawing & Tech Pack",
+                        "description": "technical-drawing"
+                    },
+                    {
+                        "name": "Pattern Making",
+                        "description": "pattern-making"
+                    },
+                    {
+                        "name": "Fashion Illustration",
+                        "description": "fashion-illustration"
+                    },
+                    {
+                        "name": "3D Garment Design",
+                        "description": "3d-garments"
+                    },
+                    {
+                        "name": "Full Design Process",
+                        "description": "full-design-process"
+                    }
+                ]
+            },
+            {
+                "name": "Jewelry Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "3D Modeling & Rendering",
+                        "description": "3d-modeling-rendering"
+                    },
+                    {
+                        "name": "Concept Design & Sketching",
+                        "description": "concept-design-sketching"
+                    }
+                ]
+            },
+            {
+                "name": "Presentation Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Email Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Icon Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Infographic Design",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Car Wraps",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Vector Tracing",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "NSFW Art",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Other",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": []
+            },
+            {
+                "name": "Design Advice",
+                "description": "A single place, millions of creative talents",
+                "service_type_data": [
+                    {
+                        "name": "Design Mentorship",
+                        "description": "design-mentorship"
+                    },
+                    {
+                        "name": "Design Review & Consultation",
+                        "description": "design-review-consultation"
+                    },
+                    {
+                        "name": "Design Lessons",
+                        "description": "design-lessons"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Digital Marketing",
+        "description": "Update and upgrade your business online",
+        "sub_categories": [
+            {
+                "name": "Social Media Marketing",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Profile Setup & Integration",
+                        "description": "profile-setup-integration"
+                    },
+                    {
+                        "name": "Social Content",
+                        "description": "social-content"
+                    },
+                    {
+                        "name": "Social Media Management",
+                        "description": "social-media-management"
+                    },
+                    {
+                        "name": "Analytics & Tracking",
+                        "description": "analytics-tracking"
+                    },
+                    {
+                        "name": "Social Media Strategy",
+                        "description": "social-media-strategy"
+                    },
+                    {
+                        "name": "Organic Social Promotions",
+                        "description": "organic-social-media"
+                    },
+                    {
+                        "name": "Paid Social Media",
+                        "description": "paid-social-media"
+                    }
+                ]
+            },
+            {
+                "name": "Guest Posting",
+                "description": "Update and upgrade your business online",
+                "service_type_data": []
+            },
+            {
+                "name": "Search Engine Optimization (SEO)",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Keyword Research",
+                        "description": "keyword-research"
+                    },
+                    {
+                        "name": "On-Page SEO",
+                        "description": "on-page-seo"
+                    },
+                    {
+                        "name": "Technical SEO",
+                        "description": "technical-seo"
+                    },
+                    {
+                        "name": "Off-Page SEO",
+                        "description": "off-page-seo"
+                    },
+                    {
+                        "name": "Competitor Analysis",
+                        "description": "competitor-analysis"
+                    },
+                    {
+                        "name": "Voice Search SEO",
+                        "description": "voice-search-optimization"
+                    },
+                    {
+                        "name": "Full SEO Package",
+                        "description": "seo-packages"
+                    }
+                ]
+            },
+            {
+                "name": "Public Relations",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Strategy & Planning",
+                        "description": "strategic-planning"
+                    },
+                    {
+                        "name": "Press Release Pitching",
+                        "description": "press-release-distribution"
+                    },
+                    {
+                        "name": "Events, Conferences & Awards",
+                        "description": "event-strategy"
+                    },
+                    {
+                        "name": "Consultation",
+                        "description": "consulting-services"
+                    }
+                ]
+            },
+            {
+                "name": "Book & eBook Marketing",
+                "description": "Update and upgrade your business online",
+                "service_type_data": []
+            },
+            {
+                "name": "Podcast Marketing",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Podcast Promotion",
+                        "description": "podcast-promotion"
+                    },
+                    {
+                        "name": "Advertising within Podcasts",
+                        "description": "podcast-advertising"
+                    }
+                ]
+            },
+            {
+                "name": "Video Marketing",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Consultation & Audience Research",
+                        "description": "consultation-audience-research"
+                    },
+                    {
+                        "name": "Video SEO",
+                        "description": "video-seo"
+                    },
+                    {
+                        "name": "Organic Video Promotion & Distribution",
+                        "description": "video-promotion-distribution"
+                    },
+                    {
+                        "name": "YouTube Channel Management",
+                        "description": "youtube-channel-management"
+                    },
+                    {
+                        "name": "Online Video Advertising",
+                        "description": "online-video-advertising"
+                    },
+                    {
+                        "name": "YouTube Monetization",
+                        "description": "youtube-monetization"
+                    },
+                    {
+                        "name": "Live Video Streaming",
+                        "description": "live-video-streaming"
+                    }
+                ]
+            },
+            {
+                "name": "Other",
+                "description": "Update and upgrade your business online",
+                "service_type_data": []
+            },
+            {
+                "name": "Email Marketing",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Email Platform Support",
+                        "description": "email-platform-support"
+                    },
+                    {
+                        "name": "Audience Development",
+                        "description": "audience-development"
+                    },
+                    {
+                        "name": "Campaign Management",
+                        "description": "campaign-management"
+                    },
+                    {
+                        "name": "Email Automations",
+                        "description": "email-automation"
+                    },
+                    {
+                        "name": "Cold Emails",
+                        "description": "cold-emailing"
+                    }
+                ]
+            },
+            {
+                "name": "Text Message Marketing",
+                "description": "Update and upgrade your business online",
+                "service_type_data": []
+            },
+            {
+                "name": "Crowdfunding",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Campaign Creation",
+                        "description": "campaign-creation"
+                    },
+                    {
+                        "name": "Campaign Marketing",
+                        "description": "campaign-marketing"
+                    }
+                ]
+            },
+            {
+                "name": "Search Engine Marketing (SEM)",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Setup & Strategy Consultation",
+                        "description": "setup-strategy-consultation"
+                    },
+                    {
+                        "name": "Search Engine Marketing Management",
+                        "description": "search-engine-marketing"
+                    },
+                    {
+                        "name": "Ad Review & Optimization",
+                        "description": "ad-review-optimization"
+                    },
+                    {
+                        "name": "Shopping Ads",
+                        "description": "shopping-ads"
+                    }
+                ]
+            },
+            {
+                "name": "Display Advertising",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Campaign Setup & Management",
+                        "description": "management-services"
+                    },
+                    {
+                        "name": "Ad Review & Optimization",
+                        "description": "optimization-services"
+                    },
+                    {
+                        "name": "Retargeting",
+                        "description": "retargeting"
+                    },
+                    {
+                        "name": "Audio Advertising",
+                        "description": "audio-advertising"
+                    },
+                    {
+                        "name": "Native Advertising",
+                        "description": "native-advertising"
+                    }
+                ]
+            },
+            {
+                "name": "Web Traffic",
+                "description": "Update and upgrade your business online",
+                "service_type_data": []
+            },
+            {
+                "name": "Marketing Concepts & Ideation",
+                "description": "Update and upgrade your business online",
+                "service_type_data": []
+            },
+            {
+                "name": "Web Analytics",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Setup",
+                        "description": "setup"
+                    },
+                    {
+                        "name": "Tracking & Reporting",
+                        "description": "tracking-reporting"
+                    },
+                    {
+                        "name": "Optimization",
+                        "description": "optimization"
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "description": "bug-fixes"
+                    }
+                ]
+            },
+            {
+                "name": "Marketing Advice",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Marketing Mentorship",
+                        "description": "mentors"
+                    },
+                    {
+                        "name": "Marketing Lessons",
+                        "description": "online-lessons"
+                    }
+                ]
+            },
+            {
+                "name": "Influencer Marketing",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Strategy & Research",
+                        "description": "strategy-research"
+                    },
+                    {
+                        "name": "Shoutouts & Promotion",
+                        "description": "shoutouts-promotion"
+                    },
+                    {
+                        "name": "Long-Term Collaborations",
+                        "description": "long-term-collaborations"
+                    },
+                    {
+                        "name": "Influencer Management",
+                        "description": "influencer-management"
+                    }
+                ]
+            },
+            {
+                "name": "Marketing Strategy",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Consulting",
+                        "description": "consulting"
+                    },
+                    {
+                        "name": "Marketing Plans",
+                        "description": "marketing-plans"
+                    },
+                    {
+                        "name": "Buyer Persona",
+                        "description": "buyer-persona-development"
+                    }
+                ]
+            },
+            {
+                "name": "Community Management",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Planning, Strategy & Setup",
+                        "description": "plan-and-strategy"
+                    },
+                    {
+                        "name": "Sourcing & Recruitment",
+                        "description": "sourcing-and-recruitment"
+                    },
+                    {
+                        "name": "Growth, Partnerships & Monetization",
+                        "description": "monetizing"
+                    },
+                    {
+                        "name": "Management & Engagement",
+                        "description": "community-manager"
+                    },
+                    {
+                        "name": "Event Marketing",
+                        "description": "event-marketing"
+                    },
+                    {
+                        "name": "Social Listening",
+                        "description": "social-listening"
+                    }
+                ]
+            },
+            {
+                "name": "Local SEO",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Google My Business (Google Business Profile)",
+                        "description": "google-my-business"
+                    },
+                    {
+                        "name": "Local Citations and Directories",
+                        "description": "local-citation"
+                    }
+                ]
+            },
+            {
+                "name": "E-Commerce Marketing",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "E-Commerce SEO",
+                        "description": "ecommerce-seo-services"
+                    },
+                    {
+                        "name": "Website Promotion",
+                        "description": "website-promotion"
+                    },
+                    {
+                        "name": "Promoted Listings",
+                        "description": "promoted-listings"
+                    }
+                ]
+            },
+            {
+                "name": "Affiliate Marketing",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Affiliate Program Strategy & Setup",
+                        "description": "affiliate-program-management"
+                    },
+                    {
+                        "name": "Affiliates Recruitment",
+                        "description": "affiliate-recruitment"
+                    },
+                    {
+                        "name": "Affiliate Marketing Monetization & Funnels",
+                        "description": "affiliate-funnel"
+                    },
+                    {
+                        "name": "Affiliate Link Promotion",
+                        "description": "links-promotion"
+                    },
+                    {
+                        "name": "Affiliate Marketing Consultation",
+                        "description": "affiliate-marketing-consultation"
+                    },
+                    {
+                        "name": "Affiliate Program Management",
+                        "description": "affiliate-programs"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App Marketing",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "App Store Optimization",
+                        "description": "app-store-optimization"
+                    },
+                    {
+                        "name": "App Promotion",
+                        "description": "app-promotion"
+                    }
+                ]
+            },
+            {
+                "name": "Music Promotion",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Organic Promotion",
+                        "description": "organic-music-promotion"
+                    },
+                    {
+                        "name": "Paid Advertising",
+                        "description": "paid-advertising"
+                    },
+                    {
+                        "name": "Music Streaming Services",
+                        "description": "music-streaming-services"
+                    },
+                    {
+                        "name": "Playlists and Placements",
+                        "description": "music-playlists-placements"
+                    }
+                ]
+            },
+            {
+                "name": "Conversion Rate Optimization (CRO)",
+                "description": "Update and upgrade your business online",
+                "service_type_data": []
+            },
+            {
+                "name": "Social Commerce",
+                "description": "Update and upgrade your business online",
+                "service_type_data": [
+                    {
+                        "name": "Social Commerce Setup & Integration",
+                        "description": "setup-and-integration"
+                    },
+                    {
+                        "name": "Social Commerce Maintenance",
+                        "description": "maintenance"
+                    },
+                    {
+                        "name": "Social Commerce Analytics & Reporting",
+                        "description": "analytics-and-reporting"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Writing & Translation",
+        "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+        "sub_categories": [
+            {
+                "name": "Articles & Blog Posts",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": [
+                    {
+                        "name": "SEO Writing",
+                        "description": "seo-writing"
+                    },
+                    {
+                        "name": "Promotional Articles",
+                        "description": "promotional-articles"
+                    },
+                    {
+                        "name": "Lifestyle Blogs",
+                        "description": "lifestyle-blogs"
+                    },
+                    {
+                        "name": "Professional Industry Articles",
+                        "description": "professional-industry-articles"
+                    },
+                    {
+                        "name": "Informative & Educational Articles",
+                        "description": "informative-educational-articles"
+                    },
+                    {
+                        "name": "Bulk Articles",
+                        "description": "bulk-articles"
+                    }
+                ]
+            },
+            {
+                "name": "Proofreading & Editing",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": [
+                    {
+                        "name": "Proofreading",
+                        "description": "proofreading-services"
+                    },
+                    {
+                        "name": "Copy Editing",
+                        "description": "copy-editing-services"
+                    },
+                    {
+                        "name": "AI Content Editing",
+                        "description": "ai-content-editing"
+                    },
+                    {
+                        "name": "Review & Rewrite",
+                        "description": "review-and-rewrite"
+                    },
+                    {
+                        "name": "Citation & Formatting",
+                        "description": "citation-and-formatting"
+                    }
+                ]
+            },
+            {
+                "name": "Translation",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Website Content",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Product Descriptions",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Book & eBook Writing",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": [
+                    {
+                        "name": "Ghostwriting",
+                        "description": "ghostwriting"
+                    },
+                    {
+                        "name": "Book Blurbs",
+                        "description": "book-blurb"
+                    },
+                    {
+                        "name": "Book Proposals",
+                        "description": "book-proposal"
+                    },
+                    {
+                        "name": "Short Stories",
+                        "description": "short-stories"
+                    },
+                    {
+                        "name": "Kindle Niche Research",
+                        "description": "kindle-niche-research"
+                    }
+                ]
+            },
+            {
+                "name": "Book Editing",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Resume Writing",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Brand Voice & Tone",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "UX Writing",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Email Copy",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Technical Writing",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "White Papers",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Localization",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Content Strategy",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Custom Writing Prompts",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": [
+                    {
+                        "name": "Creative Writing Prompts",
+                        "description": "creative-writing-prompts"
+                    },
+                    {
+                        "name": "Copywriting Prompts",
+                        "description": "copywriting-prompts"
+                    },
+                    {
+                        "name": "Technical Writing Prompts",
+                        "description": "technical-writing-prompts"
+                    },
+                    {
+                        "name": "Blogging & Content Prompts",
+                        "description": "blogging-and-content-prompts"
+                    }
+                ]
+            },
+            {
+                "name": "Sales Copy",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Social Media Copywriting",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": [
+                    {
+                        "name": "Social Media Posts & Captions",
+                        "description": "posts-and-captions"
+                    },
+                    {
+                        "name": "Social Media Video Scripts",
+                        "description": "social-media-video-scripts"
+                    },
+                    {
+                        "name": "Social Media Long Posts & Articles",
+                        "description": "long-posts-and-articles"
+                    },
+                    {
+                        "name": "Social Media Bios",
+                        "description": "social-media-bios"
+                    }
+                ]
+            },
+            {
+                "name": "Podcast Writing",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": [
+                    {
+                        "name": "Podcast Content",
+                        "description": "content-creation"
+                    },
+                    {
+                        "name": "Podcast Show Notes",
+                        "description": "show-notes"
+                    }
+                ]
+            },
+            {
+                "name": "Ad Copy",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Cover Letters",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Press Releases",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Case Studies",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "LinkedIn Profiles",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Job Descriptions",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Creative Writing",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": [
+                    {
+                        "name": "Poetry",
+                        "description": "poetry-writing"
+                    },
+                    {
+                        "name": "Song Lyrics",
+                        "description": "lyric-writing"
+                    },
+                    {
+                        "name": "Letters",
+                        "description": "letter-writing"
+                    },
+                    {
+                        "name": "Game Writing",
+                        "description": "video-game-writing"
+                    }
+                ]
+            },
+            {
+                "name": "Beta Reading",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Scriptwriting",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": [
+                    {
+                        "name": "Video Scripts",
+                        "description": "video-script"
+                    },
+                    {
+                        "name": "Film & TV Screenplays",
+                        "description": "tv-and-movie-scripts"
+                    },
+                    {
+                        "name": "Script Coverage",
+                        "description": "script-coverage"
+                    },
+                    {
+                        "name": "Audio Ads",
+                        "description": "audio-script"
+                    },
+                    {
+                        "name": "Cold Calls",
+                        "description": "cold-call-script"
+                    },
+                    {
+                        "name": "Webinars",
+                        "description": "webinar-script"
+                    },
+                    {
+                        "name": "Consultation",
+                        "description": "consulting-services"
+                    },
+                    {
+                        "name": "Other Scriptwriting",
+                        "description": "other-scripts"
+                    },
+                    {
+                        "name": "Chatbot Conversation Scripts",
+                        "description": "chatbot-conversation-scripts"
+                    }
+                ]
+            },
+            {
+                "name": "Business Names & Slogans",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "eLearning Content Development",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Speechwriting",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": [
+                    {
+                        "name": "Event Speeches",
+                        "description": "event-speeches"
+                    },
+                    {
+                        "name": "Business Speeches",
+                        "description": "business-speeches"
+                    },
+                    {
+                        "name": "Political Speeches",
+                        "description": "political-speeches"
+                    },
+                    {
+                        "name": "Academic Speeches",
+                        "description": "academic-speeches"
+                    },
+                    {
+                        "name": "Motivational  Speeches",
+                        "description": "motivational-speeches"
+                    }
+                ]
+            },
+            {
+                "name": "Grant Writing",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": [
+                    {
+                        "name": "Grant Research",
+                        "description": "grant-research"
+                    },
+                    {
+                        "name": "Grant Proposals",
+                        "description": "grant-proposal"
+                    }
+                ]
+            },
+            {
+                "name": "Transcription",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Research & Summaries",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Other",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            },
+            {
+                "name": "Writing Advice",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": [
+                    {
+                        "name": "Writing Mentorship",
+                        "description": "writing-mentor"
+                    },
+                    {
+                        "name": "Writing Lessons",
+                        "description": "writing-lessons"
+                    }
+                ]
+            },
+            {
+                "name": "Interpretation",
+                "description": "Have a way with words. Get copy, translation & editorial work from freelancers",
+                "service_type_data": []
+            }
+        ]
+    },
+    {
+        "name": "Video & Animation",
+        "description": "Your story's unique. Tell it differently with custom video & animation services",
+        "sub_categories": [
+            {
+                "name": "Animated Explainers",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": [
+                    {
+                        "name": "2D Animated Explainers",
+                        "description": "2d"
+                    },
+                    {
+                        "name": "3D Animated Explainers",
+                        "description": "3d"
+                    },
+                    {
+                        "name": "Isometric Explainers",
+                        "description": "isometric"
+                    },
+                    {
+                        "name": "Whiteboard Animation",
+                        "description": "whiteboard"
+                    }
+                ]
+            },
+            {
+                "name": "Video Editing",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Video Ads & Commercials",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Animated GIFs",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Logo Animation",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Intro & Outro Videos",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Character Animation",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "3D Product Animation",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Social Media Videos",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Music Videos",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": [
+                    {
+                        "name": "Lyric Videos",
+                        "description": "lyric-videos"
+                    },
+                    {
+                        "name": "Music Visualization",
+                        "description": "music-visualization"
+                    },
+                    {
+                        "name": "Dance Videos",
+                        "description": "dance-videos"
+                    },
+                    {
+                        "name": "Narrative-Based Videos",
+                        "description": "narrative-videos"
+                    },
+                    {
+                        "name": "Performance Videos",
+                        "description": "performance-videos"
+                    },
+                    {
+                        "name": "Conceptual Videos",
+                        "description": "conceptual-videos"
+                    },
+                    {
+                        "name": "Anime Music Videos",
+                        "description": "anime-music-videos"
+                    },
+                    {
+                        "name": "Spotify Canvas",
+                        "description": "spotify-canvas"
+                    }
+                ]
+            },
+            {
+                "name": "NFT Animation",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Animation for Kids",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Video Art",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": [
+                    {
+                        "name": "Experimental Video Art",
+                        "description": "experimental-video-art"
+                    },
+                    {
+                        "name": "AI Video Art",
+                        "description": "ai-video-art"
+                    },
+                    {
+                        "name": "Image Animation",
+                        "description": "image-animation"
+                    },
+                    {
+                        "name": "Video Installations",
+                        "description": "video-installations"
+                    }
+                ]
+            },
+            {
+                "name": "Text Animation",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Animation for Streamers",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Live Action Explainers",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Filmed Video Production",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Videographers",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "E-Commerce Product Videos",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Spokespersons Videos",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Subtitles & Captions",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": [
+                    {
+                        "name": "Subtitles",
+                        "description": "professional-subtitle"
+                    },
+                    {
+                        "name": "Social Media Captions",
+                        "description": "creative-captions"
+                    }
+                ]
+            },
+            {
+                "name": "Visual Effects",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": [
+                    {
+                        "name": "Rotoscoping & Chroma Keying",
+                        "description": "rotoscoping-keying"
+                    },
+                    {
+                        "name": "Color Grading",
+                        "description": "color-grading-color-correction"
+                    },
+                    {
+                        "name": "Match Moving",
+                        "description": "match-moving"
+                    },
+                    {
+                        "name": "Compositing",
+                        "description": "video-compositing"
+                    },
+                    {
+                        "name": "Cleanups",
+                        "description": "cleanups"
+                    },
+                    {
+                        "name": "Beauty Retouching",
+                        "description": "beauty-retouching"
+                    }
+                ]
+            },
+            {
+                "name": "Lottie & Web Animation",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "eLearning Video Production",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Article to Video",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "UGC Videos",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": [
+                    {
+                        "name": "UGC Ads",
+                        "description": "ugc-ads"
+                    },
+                    {
+                        "name": "Organic UGC",
+                        "description": "organic-ugc"
+                    },
+                    {
+                        "name": "Livestreaming",
+                        "description": "livestreaming"
+                    }
+                ]
+            },
+            {
+                "name": "Screencasting Videos",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Rigging",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": [
+                    {
+                        "name": "2D Rigging",
+                        "description": "2d-rigging"
+                    },
+                    {
+                        "name": "3D Rigging",
+                        "description": "3d-rigging"
+                    },
+                    {
+                        "name": "Streaming Avatars",
+                        "description": "streaming-avatars"
+                    }
+                ]
+            },
+            {
+                "name": "Corporate Videos",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Crowdfunding Videos",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Slideshow Videos",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Video Templates Editing",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "App & Website Previews",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Book Trailers",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Meditation Videos",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Real Estate Promos",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Game Trailers",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            },
+            {
+                "name": "Video Advice",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": [
+                    {
+                        "name": "Video Mentorship",
+                        "description": "video-mentorship"
+                    },
+                    {
+                        "name": "Video Review & Consultation",
+                        "description": "video-review-consultation"
+                    },
+                    {
+                        "name": "Video Lessons",
+                        "description": "video-lessons"
+                    }
+                ]
+            },
+            {
+                "name": "Other",
+                "description": "Your story's unique. Tell it differently with custom video & animation services",
+                "service_type_data": []
+            }
+        ]
+    },
+    {
+        "name": "Music & Audio",
+        "description": "You've got a message. Let the world hear it with music, audio & voice services",
+        "sub_categories": [
+            {
+                "name": "Voice Over",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": []
+            },
+            {
+                "name": "Mixing & Mastering",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": [
+                    {
+                        "name": "Mixing",
+                        "description": "music-mixing"
+                    },
+                    {
+                        "name": "Mastering",
+                        "description": "music-mastering"
+                    },
+                    {
+                        "name": "Dolby Atmos & Immersive Audio",
+                        "description": "dolby-atmos-immersive-audio"
+                    }
+                ]
+            },
+            {
+                "name": "Music Producers",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": [
+                    {
+                        "name": "Ghost Production",
+                        "description": "ghost-production"
+                    },
+                    {
+                        "name": "Backing Tracks",
+                        "description": "backing-tracks"
+                    },
+                    {
+                        "name": "Beat Making",
+                        "description": "beat-making"
+                    },
+                    {
+                        "name": "Remixing",
+                        "description": "remixing"
+                    }
+                ]
+            },
+            {
+                "name": "Composers",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": [
+                    {
+                        "name": "Film & Soundtrack Composers",
+                        "description": "film"
+                    },
+                    {
+                        "name": "Game Composers",
+                        "description": "video-game"
+                    },
+                    {
+                        "name": "Music Arrangement",
+                        "description": "arranging"
+                    },
+                    {
+                        "name": "Musical Theater Composers",
+                        "description": "musical-theater"
+                    }
+                ]
+            },
+            {
+                "name": "Singers & Vocalists",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": [
+                    {
+                        "name": "Male Singers",
+                        "description": "male-singers"
+                    },
+                    {
+                        "name": "Female Singers",
+                        "description": "female-singers"
+                    },
+                    {
+                        "name": "Gender Neutral Singers",
+                        "description": "gender-neutral-singers"
+                    },
+                    {
+                        "name": "Choir & Gospel Singers",
+                        "description": "choir-gospel-singers"
+                    }
+                ]
+            },
+            {
+                "name": "Session Musicians",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": [
+                    {
+                        "name": "Guitar",
+                        "description": "guitar"
+                    },
+                    {
+                        "name": "Drums & Percussion",
+                        "description": "drums-percussion"
+                    },
+                    {
+                        "name": "Bass",
+                        "description": "bass"
+                    },
+                    {
+                        "name": "Piano & Keys",
+                        "description": "piano-keys"
+                    },
+                    {
+                        "name": "Strings",
+                        "description": "strings"
+                    },
+                    {
+                        "name": "Brass & Woodwind",
+                        "description": "brass-woodwind"
+                    }
+                ]
+            },
+            {
+                "name": "Songwriters",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": []
+            },
+            {
+                "name": "Podcast Production",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": []
+            },
+            {
+                "name": "Sound Design",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": [
+                    {
+                        "name": "Sound Effects",
+                        "description": "sound-effects"
+                    },
+                    {
+                        "name": "Foley",
+                        "description": "foley"
+                    }
+                ]
+            },
+            {
+                "name": "Audiobook Production",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": []
+            },
+            {
+                "name": "Online Music Lessons",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": [
+                    {
+                        "name": "Instruments",
+                        "description": "instruments"
+                    },
+                    {
+                        "name": "Production",
+                        "description": "production"
+                    },
+                    {
+                        "name": "Vocals",
+                        "description": "vocals"
+                    },
+                    {
+                        "name": "Theory",
+                        "description": "theory"
+                    }
+                ]
+            },
+            {
+                "name": "Audio Editing",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": []
+            },
+            {
+                "name": "Audio Ads Production",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": []
+            },
+            {
+                "name": "Music Transcription",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": []
+            },
+            {
+                "name": "Vocal Tuning",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": []
+            },
+            {
+                "name": "Custom Songs",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": []
+            },
+            {
+                "name": "DJ Drops & Tags",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": [
+                    {
+                        "name": "DJ Drops",
+                        "description": "dj-drops"
+                    },
+                    {
+                        "name": "Producer Tags",
+                        "description": "producer-tags"
+                    }
+                ]
+            },
+            {
+                "name": "DJ Mixing",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": [
+                    {
+                        "name": "DJ Sets",
+                        "description": "sets"
+                    },
+                    {
+                        "name": "Mashups",
+                        "description": "mashups"
+                    },
+                    {
+                        "name": "Scratching",
+                        "description": "scratching"
+                    }
+                ]
+            },
+            {
+                "name": "Custom Patches & Samples",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": [
+                    {
+                        "name": "Synth & Instrument Presets",
+                        "description": "synth-presets"
+                    },
+                    {
+                        "name": "DAW & Software Presets",
+                        "description": "daw-presets"
+                    },
+                    {
+                        "name": "Loops & Samples",
+                        "description": "loops-samples"
+                    }
+                ]
+            },
+            {
+                "name": "Meditation Music",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": []
+            },
+            {
+                "name": "Jingles & Intros",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": [
+                    {
+                        "name": "Jingles",
+                        "description": "jingles"
+                    },
+                    {
+                        "name": "Intros & Outros",
+                        "description": "intros-and-outros"
+                    }
+                ]
+            },
+            {
+                "name": "Audio Logo & Sonic Branding",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": []
+            },
+            {
+                "name": "Music & Audio Advice",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": [
+                    {
+                        "name": "Music & Audio Mentorship",
+                        "description": "mentorship"
+                    },
+                    {
+                        "name": "Music Review & Feedback",
+                        "description": "review-feedback"
+                    }
+                ]
+            },
+            {
+                "name": "Voice Synthesis & AI",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": [
+                    {
+                        "name": "Text-to-speech",
+                        "description": "text-to-speech"
+                    },
+                    {
+                        "name": "Custom AI Voices",
+                        "description": "voice-cloning"
+                    },
+                    {
+                        "name": "Speech Recognition",
+                        "description": "speech-recognition"
+                    }
+                ]
+            },
+            {
+                "name": "Audio Plugin Development",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": []
+            },
+            {
+                "name": "Other",
+                "description": "You've got a message. Let the world hear it with music, audio & voice services",
+                "service_type_data": []
+            }
+        ]
+    },
+    {
+        "name": "Programming & Tech",
+        "description": "Get all the technical bells and whistles without paying for a programming degree",
+        "sub_categories": [
+            {
+                "name": "Website Development",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "WordPress",
+                        "description": "wordpress-development"
+                    },
+                    {
+                        "name": "Shopify",
+                        "description": "shopify-development"
+                    },
+                    {
+                        "name": "Wix",
+                        "description": "wix-development"
+                    },
+                    {
+                        "name": "Squarespace",
+                        "description": "squarespace-development"
+                    },
+                    {
+                        "name": "Webflow",
+                        "description": "webflow-development"
+                    },
+                    {
+                        "name": "GoDaddy",
+                        "description": "godaddy-development"
+                    },
+                    {
+                        "name": "WooCommerce",
+                        "description": "woocommerce-development"
+                    },
+                    {
+                        "name": "ClickFunnels",
+                        "description": "clickfunnels-development"
+                    },
+                    {
+                        "name": "Custom Websites",
+                        "description": "custom-websites-development"
+                    },
+                    {
+                        "name": "Other Builders",
+                        "description": "other-builders-development"
+                    },
+                    {
+                        "name": "Magento",
+                        "description": "magento-development"
+                    },
+                    {
+                        "name": "SiteBuilder",
+                        "description": "sitebuilder-development"
+                    },
+                    {
+                        "name": "Thinkific",
+                        "description": "thinkific-development"
+                    },
+                    {
+                        "name": "Drupal",
+                        "description": "drupal-development"
+                    },
+                    {
+                        "name": "Joomla",
+                        "description": "joomla-development"
+                    },
+                    {
+                        "name": "Blogger",
+                        "description": "blogger-development"
+                    },
+                    {
+                        "name": "Opencart",
+                        "description": "opencart-development"
+                    },
+                    {
+                        "name": "BigCommerce",
+                        "description": "bigcommerce-development"
+                    },
+                    {
+                        "name": "Prestashop",
+                        "description": "prestashop-development"
+                    },
+                    {
+                        "name": "Shopware",
+                        "description": "shopware-development"
+                    },
+                    {
+                        "name": "Big Cartel",
+                        "description": "bigcartel-development"
+                    },
+                    {
+                        "name": "OsCommerce",
+                        "description": "oscommerce-development"
+                    },
+                    {
+                        "name": "Weebly",
+                        "description": "weebly-development"
+                    },
+                    {
+                        "name": "Simvoly",
+                        "description": "simvoly-development"
+                    },
+                    {
+                        "name": "Ionos",
+                        "description": "lonos-development"
+                    },
+                    {
+                        "name": "Tilda",
+                        "description": "tilda-development"
+                    },
+                    {
+                        "name": "Jimdo",
+                        "description": "jimdo-development"
+                    },
+                    {
+                        "name": "Strikingly",
+                        "description": "strikingly-development"
+                    },
+                    {
+                        "name": "Site123",
+                        "description": "site123-development"
+                    }
+                ]
+            },
+            {
+                "name": "Website Maintenance",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Bug Fixes",
+                        "description": "bug-fixes"
+                    },
+                    {
+                        "name": "Backup & Migration",
+                        "description": "backup-migration"
+                    },
+                    {
+                        "name": "Hosting",
+                        "description": "hosting"
+                    },
+                    {
+                        "name": "Themes/Plugins Installation",
+                        "description": "themes-plugins-installation"
+                    },
+                    {
+                        "name": "Help/Consultation",
+                        "description": "consultation"
+                    },
+                    {
+                        "name": "Installation",
+                        "description": "installation"
+                    },
+                    {
+                        "name": "Speed Optimization",
+                        "description": "performance"
+                    },
+                    {
+                        "name": "Security",
+                        "description": "security"
+                    },
+                    {
+                        "name": "Customization",
+                        "description": "customization"
+                    },
+                    {
+                        "name": "Analytics",
+                        "description": "analytics"
+                    }
+                ]
+            },
+            {
+                "name": "Software Development",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Web Application",
+                        "description": "web-application"
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "description": "bug-fixes"
+                    },
+                    {
+                        "name": "Email Template",
+                        "description": "email-template"
+                    },
+                    {
+                        "name": "Convert PSD",
+                        "description": "convert-psd"
+                    },
+                    {
+                        "name": "Scripting",
+                        "description": "scripting"
+                    },
+                    {
+                        "name": "Help/Consultation",
+                        "description": "help-consultation"
+                    },
+                    {
+                        "name": "Browser Extensions",
+                        "description": "browser-extension"
+                    },
+                    {
+                        "name": "Desktop Applications",
+                        "description": "desktop-applications"
+                    },
+                    {
+                        "name": "API & Integrations",
+                        "description": "api-integrations"
+                    },
+                    {
+                        "name": "Plugins Development",
+                        "description": "plugins-development"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App Development",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Cross-Platform Development",
+                        "description": "custom-app"
+                    },
+                    {
+                        "name": "Website to App",
+                        "description": "convert-site-to-app"
+                    },
+                    {
+                        "name": "Android App Development",
+                        "description": "android-development"
+                    },
+                    {
+                        "name": "IOS App Development",
+                        "description": "ios-development"
+                    }
+                ]
+            },
+            {
+                "name": "Game Development",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Full Game Creation",
+                        "description": "full-game-creation"
+                    },
+                    {
+                        "name": "Prototyping",
+                        "description": "prototyping"
+                    },
+                    {
+                        "name": "Customization",
+                        "description": "customization"
+                    },
+                    {
+                        "name": "Bug Fixes",
+                        "description": "bug-fixes"
+                    },
+                    {
+                        "name": "Backup & Migration",
+                        "description": "backup-migration"
+                    },
+                    {
+                        "name": "Consultation",
+                        "description": "consultation"
+                    },
+                    {
+                        "name": "Game Mods",
+                        "description": "game-mods"
+                    }
+                ]
+            },
+            {
+                "name": "AI Development",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "AI Applications",
+                        "description": "ai-applications"
+                    },
+                    {
+                        "name": "AI Agents",
+                        "description": "ai-agents-development"
+                    },
+                    {
+                        "name": "AI Integrations",
+                        "description": "ai-integrations"
+                    },
+                    {
+                        "name": "AI Model Fine-Tuning",
+                        "description": "ai-fine-tuning"
+                    },
+                    {
+                        "name": "AI Chatbot",
+                        "description": "ai-chatbot"
+                    },
+                    {
+                        "name": "Custom GPT Apps",
+                        "description": "custom-gpts"
+                    }
+                ]
+            },
+            {
+                "name": "Chatbot Development",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": []
+            },
+            {
+                "name": "Cloud Computing",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Cloud Management",
+                        "description": "cloud-management"
+                    },
+                    {
+                        "name": "Cloud Network & Security",
+                        "description": "cloud-network-security"
+                    },
+                    {
+                        "name": "Cloud Consultation",
+                        "description": "cloud-consultation"
+                    },
+                    {
+                        "name": "Serverless Computing",
+                        "description": "serverless"
+                    }
+                ]
+            },
+            {
+                "name": "DevOps Engineering",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Infra as Code",
+                        "description": "infra-as-code"
+                    },
+                    {
+                        "name": "CI/CD",
+                        "description": "ci-cd"
+                    },
+                    {
+                        "name": "DevOps Containerization",
+                        "description": "containerization"
+                    },
+                    {
+                        "name": "DevOps Consulting",
+                        "description": "devops-consulting"
+                    }
+                ]
+            },
+            {
+                "name": "Support & IT",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Technical Support",
+                        "description": "technical-support"
+                    },
+                    {
+                        "name": "Server Administration",
+                        "description": "server-administrations"
+                    },
+                    {
+                        "name": "Email Management",
+                        "description": "email-management"
+                    },
+                    {
+                        "name": "VoIP and Telephony",
+                        "description": "voip-telephony"
+                    },
+                    {
+                        "name": "Software Installation",
+                        "description": "software-installation"
+                    },
+                    {
+                        "name": "CCTV Setup",
+                        "description": "cctv"
+                    }
+                ]
+            },
+            {
+                "name": "Cryptocurrencies & Tokens",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Coin Design & Tokenization",
+                        "description": "coin-design-tokenization"
+                    },
+                    {
+                        "name": "E-Wallet Development",
+                        "description": "e-wallet-development"
+                    },
+                    {
+                        "name": "Exchange Platforms",
+                        "description": "cryptocurrency-trading-platforms"
+                    },
+                    {
+                        "name": "Smart Contracts",
+                        "description": "smart-contracts"
+                    }
+                ]
+            },
+            {
+                "name": "Blockchain Development & Solutions",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Decentralized Applications (dApps)",
+                        "description": "decentralized-application"
+                    },
+                    {
+                        "name": "Technical Support",
+                        "description": "blockchain-support-services"
+                    },
+                    {
+                        "name": "Chain Analysis",
+                        "description": "chain-analysis"
+                    },
+                    {
+                        "name": "Blockchain Security & Audits",
+                        "description": "security-audits"
+                    },
+                    {
+                        "name": "Blockchain Protocol Development",
+                        "description": "protocol"
+                    }
+                ]
+            },
+            {
+                "name": "NFT Development",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "NFT Websites",
+                        "description": "nft-websites"
+                    },
+                    {
+                        "name": "NFT Marketplace",
+                        "description": "nft-marketplace"
+                    },
+                    {
+                        "name": "NFT Generators",
+                        "description": "nft-generator"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App Maintenance",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Mobile App Customization",
+                        "description": "customization"
+                    },
+                    {
+                        "name": "Mobile App Bug Fixes",
+                        "description": "bug-fixes"
+                    },
+                    {
+                        "name": "Mobile App Consultation",
+                        "description": "consultation"
+                    },
+                    {
+                        "name": "Mobile Store Management",
+                        "description": "store-management"
+                    }
+                ]
+            },
+            {
+                "name": "Electronics Engineering",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Printed Circuit Boards (PCB)",
+                        "description": "pcb"
+                    },
+                    {
+                        "name": "Embedded Systems & IoT",
+                        "description": "embedded-systems-iot"
+                    }
+                ]
+            },
+            {
+                "name": "Cybersecurity",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Cybersecurity Management",
+                        "description": "cybersecurity-management"
+                    },
+                    {
+                        "name": "Assessment & Penetration Test",
+                        "description": "assessment-penetration-test"
+                    },
+                    {
+                        "name": "Compliance Services",
+                        "description": "compliance-services"
+                    },
+                    {
+                        "name": "Consultation",
+                        "description": "consultation"
+                    }
+                ]
+            },
+            {
+                "name": "Development for Streamers",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Setup & Installation",
+                        "description": "setup-installation"
+                    },
+                    {
+                        "name": "Addons & Customization",
+                        "description": "addons-customization"
+                    }
+                ]
+            },
+            {
+                "name": "Online Coding Lessons",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": []
+            },
+            {
+                "name": "Wearable App Development",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Smartwatch Development",
+                        "description": "smartwatch-development"
+                    },
+                    {
+                        "name": "VR Headset Development",
+                        "description": "vr-development"
+                    }
+                ]
+            },
+            {
+                "name": "Convert Files",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Convert to a Fillable Form",
+                        "description": "convert-to-fillable-form"
+                    },
+                    {
+                        "name": "Convert to an eBook",
+                        "description": "convert-to-e-book"
+                    },
+                    {
+                        "name": "Convert to an Editable File",
+                        "description": "convert-to-editable-file"
+                    },
+                    {
+                        "name": "Convert to Another File",
+                        "description": "convert-to-another-file"
+                    }
+                ]
+            },
+            {
+                "name": "User Testing",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": []
+            },
+            {
+                "name": "QA & Review",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": [
+                    {
+                        "name": "Software Testing",
+                        "description": "software-testing"
+                    },
+                    {
+                        "name": "Code Review",
+                        "description": "code-review"
+                    },
+                    {
+                        "name": "Design Review",
+                        "description": "design-review"
+                    }
+                ]
+            },
+            {
+                "name": "Other",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": []
+            },
+            {
+                "name": "Trading Bots Development",
+                "description": "Get all the technical bells and whistles without paying for a programming degree",
+                "service_type_data": []
+            }
+        ]
+    },
+    {
+        "name": "Data",
+        "description": "From analytics to databases, find all the data services you need.",
+        "sub_categories": [
+            {
+                "name": "Data Governance & Protection",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": []
+            },
+            {
+                "name": "Data Scraping",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": []
+            },
+            {
+                "name": "Data Annotation",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": []
+            },
+            {
+                "name": "Data Formatting",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": []
+            },
+            {
+                "name": "Databases",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": [
+                    {
+                        "name": "Design & Optimization",
+                        "description": "design-optimization"
+                    },
+                    {
+                        "name": "SQL & NoSQL Queries",
+                        "description": "queries"
+                    },
+                    {
+                        "name": "Database Administration (DBA)",
+                        "description": "dba"
+                    },
+                    {
+                        "name": "Consultation",
+                        "description": "consulting"
+                    },
+                    {
+                        "name": "Database Development",
+                        "description": "database-development"
+                    },
+                    {
+                        "name": "Database Migration & Performance",
+                        "description": "migration-performance"
+                    }
+                ]
+            },
+            {
+                "name": "Data Cleaning",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": []
+            },
+            {
+                "name": "Data Enrichment",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": []
+            },
+            {
+                "name": "Data Processing",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": [
+                    {
+                        "name": "Formulas & Macros",
+                        "description": "formulas-macros"
+                    },
+                    {
+                        "name": "Automations",
+                        "description": "automations"
+                    },
+                    {
+                        "name": "Consultation",
+                        "description": "consulting"
+                    }
+                ]
+            },
+            {
+                "name": "Data Engineering",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": []
+            },
+            {
+                "name": "Data Analytics",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": [
+                    {
+                        "name": "Marketing Analytics",
+                        "description": "marketing-sales"
+                    },
+                    {
+                        "name": "Product Analytics",
+                        "description": "product-ux"
+                    },
+                    {
+                        "name": "Statistical Modeling & Analytics",
+                        "description": "surveys-research"
+                    },
+                    {
+                        "name": "Financial Analytics",
+                        "description": "business-financial"
+                    },
+                    {
+                        "name": "Supply Chain Analytics",
+                        "description": "planning-supply-chain"
+                    },
+                    {
+                        "name": "Data Analytics Consultation",
+                        "description": "consulting"
+                    },
+                    {
+                        "name": "BI Analytics",
+                        "description": "bi-analytics"
+                    }
+                ]
+            },
+            {
+                "name": "Data Visualization",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": [
+                    {
+                        "name": "Graphs & Charts",
+                        "description": "graphs-charts"
+                    },
+                    {
+                        "name": "Data Dashboards",
+                        "description": "dashboards"
+                    },
+                    {
+                        "name": "Geographic Information Systems (GIS)",
+                        "description": "gis"
+                    },
+                    {
+                        "name": "Reports",
+                        "description": "reports"
+                    },
+                    {
+                        "name": "Consultation",
+                        "description": "consulting"
+                    }
+                ]
+            },
+            {
+                "name": "Data Science & ML",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": [
+                    {
+                        "name": "Computer Vision",
+                        "description": "computer-vision"
+                    },
+                    {
+                        "name": "Natural Language Processing",
+                        "description": "text-analysis-nlp"
+                    },
+                    {
+                        "name": "Time Series Analysis",
+                        "description": "time-series-analysis"
+                    },
+                    {
+                        "name": "Data Science Consultation",
+                        "description": "consulting"
+                    },
+                    {
+                        "name": "Generative Models",
+                        "description": "ai-models"
+                    },
+                    {
+                        "name": "Machine Learning",
+                        "description": "machine-learning"
+                    },
+                    {
+                        "name": "Deep Learning",
+                        "description": "deep-learning"
+                    }
+                ]
+            },
+            {
+                "name": "Data Entry",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": [
+                    {
+                        "name": "Web Research",
+                        "description": "web-research"
+                    },
+                    {
+                        "name": "Copy Paste",
+                        "description": "copy-paste"
+                    },
+                    {
+                        "name": "Data Typing",
+                        "description": "data-typing"
+                    }
+                ]
+            },
+            {
+                "name": "Other",
+                "description": "From analytics to databases, find all the data services you need.",
+                "service_type_data": []
+            }
+        ]
+    },
+    {
+        "name": "Business",
+        "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+        "sub_categories": [
+            {
+                "name": "Financial Consulting",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "Online Trading Lessons",
+                        "description": "trading-lessons"
+                    },
+                    {
+                        "name": "Financial Forecasting & Modeling",
+                        "description": "financial-forecasting-and-modeling"
+                    },
+                    {
+                        "name": "Personal Finance & Wealth Management",
+                        "description": "personal-finance-wealth-management"
+                    },
+                    {
+                        "name": "Tax Consulting",
+                        "description": "tax-consulting"
+                    },
+                    {
+                        "name": "Accounting & Bookkeeping",
+                        "description": "accounting-bookkeeping"
+                    },
+                    {
+                        "name": "Analysis, Valuation & Optimization",
+                        "description": "analysis"
+                    }
+                ]
+            },
+            {
+                "name": "Legal Consulting",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "Legal Research",
+                        "description": "legal-research"
+                    },
+                    {
+                        "name": "Legal Documents & Contracts",
+                        "description": "legal-documents"
+                    },
+                    {
+                        "name": "General Legal Advice",
+                        "description": "legal-advice"
+                    },
+                    {
+                        "name": "Arbitration & Mediation",
+                        "description": "arbitration-mediation"
+                    },
+                    {
+                        "name": "Applications & Registrations",
+                        "description": "applications-registrations"
+                    },
+                    {
+                        "name": "Legal Disputes",
+                        "description": "legal-disputes"
+                    },
+                    {
+                        "name": "Business Registration",
+                        "description": "business-registration"
+                    },
+                    {
+                        "name": "Legal Review",
+                        "description": "legal-review"
+                    }
+                ]
+            },
+            {
+                "name": "E-Commerce Management",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "Product Research",
+                        "description": "product-research"
+                    },
+                    {
+                        "name": "E-Commerce Store Management",
+                        "description": "store-management"
+                    },
+                    {
+                        "name": "Product Upload",
+                        "description": "product-upload"
+                    },
+                    {
+                        "name": "Consultation",
+                        "description": "ecommerce-consultation"
+                    },
+                    {
+                        "name": "E-Commerce Store Setup",
+                        "description": "ecommerce-store-setup"
+                    }
+                ]
+            },
+            {
+                "name": "Sales",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "Strategy & Planning",
+                        "description": "strategy-and-planning"
+                    },
+                    {
+                        "name": "Lead Generation",
+                        "description": "lead-generation-services"
+                    },
+                    {
+                        "name": "Lead Qualification",
+                        "description": "lead-qualification-services"
+                    },
+                    {
+                        "name": "Deal Development",
+                        "description": "deal-negotiation"
+                    }
+                ]
+            },
+            {
+                "name": "Virtual Assistant",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "File Conversion",
+                        "description": "file-conversion"
+                    },
+                    {
+                        "name": "Call Center & Calling",
+                        "description": "call-center-and-calling"
+                    },
+                    {
+                        "name": "Research Assistant",
+                        "description": "research-assistant"
+                    },
+                    {
+                        "name": "Messaging & Emailing",
+                        "description": "messaging-and-emailing"
+                    },
+                    {
+                        "name": "Template Docs & Formatting",
+                        "description": "template-docs-and-formatting"
+                    },
+                    {
+                        "name": "General Assistance",
+                        "description": "general-assistance"
+                    }
+                ]
+            },
+            {
+                "name": "Business Plans",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "Business Plans for Startups",
+                        "description": "business-plans-for-startups"
+                    },
+                    {
+                        "name": "Business Plans for Loan Approval",
+                        "description": "business-plans-for-loan-approval"
+                    },
+                    {
+                        "name": "Business Plans for Non-Profits",
+                        "description": "business-plans-for-non-profits"
+                    },
+                    {
+                        "name": "Business Plans for Immigration",
+                        "description": "business-plans-for-immigration"
+                    },
+                    {
+                        "name": "Business Plans for Partnerships",
+                        "description": "business-plans-for-partnerships"
+                    }
+                ]
+            },
+            {
+                "name": "Market Research",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "General Online Research",
+                        "description": "online-research-service"
+                    },
+                    {
+                        "name": "Domain Name Research",
+                        "description": "domain-name-research"
+                    },
+                    {
+                        "name": "Interviews & Focus Groups",
+                        "description": "interviews-and-focus-groups"
+                    },
+                    {
+                        "name": "Surveys",
+                        "description": "online-survey"
+                    },
+                    {
+                        "name": "Consultation",
+                        "description": "market-research-consulting"
+                    },
+                    {
+                        "name": "Full Package Qual & Quant",
+                        "description": "quality-and-quantitative-market-research"
+                    }
+                ]
+            },
+            {
+                "name": "Business Consulting",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "Digital Transformation Consulting",
+                        "description": "digital-transformation-consulting"
+                    },
+                    {
+                        "name": "Business Strategy & Innovation",
+                        "description": "business-strategy-and-innovation"
+                    },
+                    {
+                        "name": "Funds & Capital Raising",
+                        "description": "funds-and-capital-raising"
+                    },
+                    {
+                        "name": "Business Efficiency & Automation",
+                        "description": "business-efficiency-and-automation"
+                    },
+                    {
+                        "name": "Risk Management",
+                        "description": "risk-management"
+                    }
+                ]
+            },
+            {
+                "name": "Presentations",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "Pitch Decks",
+                        "description": "pitch-decks"
+                    },
+                    {
+                        "name": "Course Presentations",
+                        "description": "course-presentations"
+                    },
+                    {
+                        "name": "Business Presentations",
+                        "description": "business-presentations"
+                    }
+                ]
+            },
+            {
+                "name": "Project Management",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": []
+            },
+            {
+                "name": "Software Management",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "CRM Management",
+                        "description": "crm-management"
+                    },
+                    {
+                        "name": "Project Management Software",
+                        "description": "project-management-software"
+                    },
+                    {
+                        "name": "ERP Management",
+                        "description": "erp-management"
+                    }
+                ]
+            },
+            {
+                "name": "HR Consulting",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "Organizational Development",
+                        "description": "organizational-development"
+                    },
+                    {
+                        "name": "Talent Acquisition & Recruitment",
+                        "description": "recruiting"
+                    },
+                    {
+                        "name": "Performance Management",
+                        "description": "performance-management"
+                    },
+                    {
+                        "name": "Employee Learning & Development",
+                        "description": "employee-learning-development"
+                    },
+                    {
+                        "name": "Compensation & Benefits",
+                        "description": "compensation-benefits"
+                    },
+                    {
+                        "name": "HR Information Systems",
+                        "description": "hr-information-systems"
+                    }
+                ]
+            },
+            {
+                "name": "Customer Care",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "Customer Success",
+                        "description": "customer-success"
+                    },
+                    {
+                        "name": "Planning & Setup",
+                        "description": "customer-plan"
+                    },
+                    {
+                        "name": "Consulting",
+                        "description": "customer-consulting"
+                    },
+                    {
+                        "name": "Customer Support",
+                        "description": "customer-support"
+                    }
+                ]
+            },
+            {
+                "name": "Online Investigations",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "Corporate Investigations",
+                        "description": "corporate-investigations"
+                    },
+                    {
+                        "name": "Background Checks",
+                        "description": "background-checks"
+                    },
+                    {
+                        "name": "Skip Tracing",
+                        "description": "skip-tracing"
+                    },
+                    {
+                        "name": "CCTV Monitoring",
+                        "description": "cctv-monitoring"
+                    }
+                ]
+            },
+            {
+                "name": "Sustainability Consulting",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": []
+            },
+            {
+                "name": "Supply Chain Management",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "Procurement & Vendor Management",
+                        "description": "procurement-vendor"
+                    },
+                    {
+                        "name": "Logistics",
+                        "description": "logistics"
+                    }
+                ]
+            },
+            {
+                "name": "Product Management",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "User Research & Insights",
+                        "description": "user-research"
+                    },
+                    {
+                        "name": "Product Strategy & Roadmapping",
+                        "description": "strategy-and-roadmapping"
+                    },
+                    {
+                        "name": "Product Prioritization & Execution",
+                        "description": "prioritization-and-execution"
+                    },
+                    {
+                        "name": "Product Consultation",
+                        "description": "product-consultation"
+                    }
+                ]
+            },
+            {
+                "name": "Event Management",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": []
+            },
+            {
+                "name": "AI Consulting",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": [
+                    {
+                        "name": "AI Strategy",
+                        "description": "ai-strategy"
+                    },
+                    {
+                        "name": "AI Lessons",
+                        "description": "ai-lessons"
+                    }
+                ]
+            },
+            {
+                "name": "Fact Checking",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": []
+            },
+            {
+                "name": "Game Concept Design",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": []
+            },
+            {
+                "name": "Other",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": []
+            },
+            {
+                "name": "Freelancers Trainerr Program",
+                "description": "Your business = your passion. Outsource smaller tasks so you can focus on growth",
+                "service_type_data": []
+            }
+        ]
+    },
+    {
+        "name": "Lifestyle",
+        "description": "Improve your quality of life with style",
+        "sub_categories": [
+            {
+                "name": "Online Tutoring",
+                "description": "Improve your quality of life with style",
+                "service_type_data": [
+                    {
+                        "name": "Math Tutoring",
+                        "description": "math"
+                    },
+                    {
+                        "name": "Science Tutoring",
+                        "description": "science"
+                    },
+                    {
+                        "name": "Social Sciences Tutoring",
+                        "description": "social-sciences"
+                    },
+                    {
+                        "name": "Business Tutoring",
+                        "description": "business"
+                    },
+                    {
+                        "name": "Other Subjects",
+                        "description": "other-subjects"
+                    },
+                    {
+                        "name": "Engineering Tutoring",
+                        "description": "engineering"
+                    }
+                ]
+            },
+            {
+                "name": "Language Lessons",
+                "description": "Improve your quality of life with style",
+                "service_type_data": []
+            },
+            {
+                "name": "Life Coaching",
+                "description": "Improve your quality of life with style",
+                "service_type_data": [
+                    {
+                        "name": "Personal Growth",
+                        "description": "personal-growth"
+                    },
+                    {
+                        "name": "Accountability & Time Management",
+                        "description": "accountability"
+                    },
+                    {
+                        "name": "Relationship Advice",
+                        "description": "relationship-advice"
+                    }
+                ]
+            },
+            {
+                "name": "Competitive Gaming",
+                "description": "Improve your quality of life with style",
+                "service_type_data": [
+                    {
+                        "name": "Game Coaching",
+                        "description": "game-coaching"
+                    },
+                    {
+                        "name": "eSports Management & Strategy",
+                        "description": "esports-management-strategy"
+                    }
+                ]
+            },
+            {
+                "name": "Game Recordings & Guides",
+                "description": "Improve your quality of life with style",
+                "service_type_data": []
+            },
+            {
+                "name": "Gameplay Experience & Feedback",
+                "description": "Improve your quality of life with style",
+                "service_type_data": []
+            },
+            {
+                "name": "Recreational Gaming",
+                "description": "Improve your quality of life with style",
+                "service_type_data": [
+                    {
+                        "name": "Game Matchmaking",
+                        "description": "game-matchmaking"
+                    },
+                    {
+                        "name": "Other Gaming Services",
+                        "description": "other-services"
+                    }
+                ]
+            },
+            {
+                "name": "Ingame Creation",
+                "description": "Improve your quality of life with style",
+                "service_type_data": [
+                    {
+                        "name": "Ingame Architecture",
+                        "description": "ingame-architecture"
+                    },
+                    {
+                        "name": "World Building",
+                        "description": "world-building"
+                    }
+                ]
+            },
+            {
+                "name": "Career Counseling",
+                "description": "Improve your quality of life with style",
+                "service_type_data": [
+                    {
+                        "name": "Career Consulting",
+                        "description": "career-consulting"
+                    },
+                    {
+                        "name": "Leadership Development",
+                        "description": "leadership-development"
+                    },
+                    {
+                        "name": "Interview Prep",
+                        "description": "interview-prep"
+                    },
+                    {
+                        "name": "Search & Apply",
+                        "description": "search-apply"
+                    }
+                ]
+            },
+            {
+                "name": "Arts & Crafts",
+                "description": "Improve your quality of life with style",
+                "service_type_data": []
+            },
+            {
+                "name": "Embroidery Digitizing",
+                "description": "Improve your quality of life with style",
+                "service_type_data": []
+            },
+            {
+                "name": "Astrology & Psychics",
+                "description": "Improve your quality of life with style",
+                "service_type_data": [
+                    {
+                        "name": "Readings",
+                        "description": "readings"
+                    },
+                    {
+                        "name": "Love & Relationships",
+                        "description": "love-relationships"
+                    },
+                    {
+                        "name": "Dream Analysis",
+                        "description": "dream-analysis"
+                    },
+                    {
+                        "name": "Reiki",
+                        "description": "reiki"
+                    },
+                    {
+                        "name": "Spell Casting",
+                        "description": "spell-casting"
+                    },
+                    {
+                        "name": "Feng shui",
+                        "description": "feng-shui"
+                    }
+                ]
+            },
+            {
+                "name": "Modeling & Acting",
+                "description": "Improve your quality of life with style",
+                "service_type_data": []
+            },
+            {
+                "name": "Fitness",
+                "description": "Improve your quality of life with style",
+                "service_type_data": [
+                    {
+                        "name": "Fitness Lessons",
+                        "description": "fitness-lessons"
+                    },
+                    {
+                        "name": "Workout Plans",
+                        "description": "workout-plans"
+                    },
+                    {
+                        "name": "Dance Lessons",
+                        "description": "dance-lessons"
+                    }
+                ]
+            },
+            {
+                "name": "Nutrition",
+                "description": "Improve your quality of life with style",
+                "service_type_data": [
+                    {
+                        "name": "Recipe Creation",
+                        "description": "recipe-creation"
+                    },
+                    {
+                        "name": "Meal Plans",
+                        "description": "meal-plans"
+                    },
+                    {
+                        "name": "Nutrition Coaching",
+                        "description": "nutrition-coaching"
+                    }
+                ]
+            },
+            {
+                "name": "Wellness",
+                "description": "Improve your quality of life with style",
+                "service_type_data": [
+                    {
+                        "name": "Guided Meditation",
+                        "description": "guided-meditation"
+                    },
+                    {
+                        "name": "Mindfulness Coaching",
+                        "description": "mindfulness-coaching"
+                    }
+                ]
+            },
+            {
+                "name": "Traveling",
+                "description": "Improve your quality of life with style",
+                "service_type_data": [
+                    {
+                        "name": "Trip Plans",
+                        "description": "trip-plans"
+                    },
+                    {
+                        "name": "Local Advisors",
+                        "description": "local-advisors"
+                    },
+                    {
+                        "name": "Shipping Services",
+                        "description": "shipping-services"
+                    }
+                ]
+            },
+            {
+                "name": "Puzzle & Game Creation",
+                "description": "Improve your quality of life with style",
+                "service_type_data": []
+            },
+            {
+                "name": "Styling & Beauty",
+                "description": "Improve your quality of life with style",
+                "service_type_data": [
+                    {
+                        "name": "Fashion Stylists",
+                        "description": "fashion-stylists"
+                    },
+                    {
+                        "name": "Hair & Makeup",
+                        "description": "hair-makeup"
+                    },
+                    {
+                        "name": "Skincare Advice",
+                        "description": "skincare"
+                    }
+                ]
+            },
+            {
+                "name": "Trend Forecasting",
+                "description": "Improve your quality of life with style",
+                "service_type_data": []
+            },
+            {
+                "name": "Cosmetics Formulation",
+                "description": "Improve your quality of life with style",
+                "service_type_data": []
+            },
+            {
+                "name": "Family & Genealogy",
+                "description": "Improve your quality of life with style",
+                "service_type_data": []
+            },
+            {
+                "name": "Greeting Cards & Videos",
+                "description": "Improve your quality of life with style",
+                "service_type_data": []
+            },
+            {
+                "name": "Collectibles",
+                "description": "Improve your quality of life with style",
+                "service_type_data": []
+            },
+            {
+                "name": "Other",
+                "description": "Improve your quality of life with style",
+                "service_type_data": []
+            }
+        ]
+    },
+    {
+        "name": "Photography",
+        "description": "Get the shot you need. Every time.",
+        "sub_categories": [
+            {
+                "name": "Product Photographers",
+                "description": "Get the shot you need. Every time.",
+                "service_type_data": []
+            },
+            {
+                "name": "Portrait Photographers",
+                "description": "Get the shot you need. Every time.",
+                "service_type_data": []
+            },
+            {
+                "name": "Lifestyle & Fashion Photographers",
+                "description": "Get the shot you need. Every time.",
+                "service_type_data": []
+            },
+            {
+                "name": "Real Estate Photographers",
+                "description": "Get the shot you need. Every time.",
+                "service_type_data": []
+            },
+            {
+                "name": "Event Photographers",
+                "description": "Get the shot you need. Every time.",
+                "service_type_data": []
+            },
+            {
+                "name": "Food Photographers",
+                "description": "Get the shot you need. Every time.",
+                "service_type_data": []
+            },
+            {
+                "name": "Scenic Photographers",
+                "description": "Get the shot you need. Every time.",
+                "service_type_data": []
+            },
+            {
+                "name": "Photo Preset Creation",
+                "description": "Get the shot you need. Every time.",
+                "service_type_data": []
+            },
+            {
+                "name": "Photography Advice",
+                "description": "Get the shot you need. Every time.",
+                "service_type_data": [
+                    {
+                        "name": "Photography Lessons",
+                        "description": "photography-lessons"
+                    },
+                    {
+                        "name": "Photography Mentorship",
+                        "description": "photography-mentorship"
+                    }
+                ]
+            },
+            {
+                "name": "Other",
+                "description": "Get the shot you need. Every time.",
+                "service_type_data": []
+            }
+        ]
+    },
+    {
+        "name": "End-to-End Projects",
+        "description": "One order with everything you need from start to finish",
+        "sub_categories": [
+            {
+                "name": "Build a Website",
+                "description": "One order with everything you need from start to finish",
+                "service_type_data": []
+            },
+            {
+                "name": "Develop a Brand Identity",
+                "description": "One order with everything you need from start to finish",
+                "service_type_data": []
+            },
+            {
+                "name": "Digital Marketing Management",
+                "description": "One order with everything you need from start to finish",
+                "service_type_data": []
+            },
+            {
+                "name": "Produce a Video",
+                "description": "One order with everything you need from start to finish",
+                "service_type_data": []
+            }
+        ]
+    }
+]
