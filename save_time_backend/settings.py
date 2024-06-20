@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'seller',
     'common',
     
+    
     # 'seller.middleware.JWTAuthenticationMiddleware',
     # My Settings
     'storages',
@@ -73,6 +74,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'common.middleware.middleware.BearerTokenMiddleware',
+    # "common.middleware.CustomExceptionHandlerMiddleware.CustomExceptionHandlerMiddleware"
 ]
 
 # Conditionally include BearerTokenMiddleware for admin app only
@@ -122,12 +124,13 @@ DATABASES = {
 #     }
 # }
 REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'common.middleware.exception_handler.custom_exception_handler',
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         # 'seller.authentication.JSONWebTokenAuthentication'
-        
     ],
+    # 'EXCEPTION_HANDLER':'common.middleware.exception_handler._handler_authentication_error'
 }
 
 # Password validation

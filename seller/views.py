@@ -2,6 +2,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from user_agents import parse
+
+from common.serializer.gig_serializer import GigSerializer
 from .serializers import SellerSerializer,LoginSerializer
 from django.core.exceptions import ValidationError
 from django.db import DatabaseError
@@ -170,5 +172,22 @@ def categories(request):
 
 @api_view(['POST'])
 def create_gig(request):
-    print(request.data)
-    return Response("Hacker")
+    try:
+        serializer = GigSerializer(data=request.data)  # Extract 'gig' from request data
+        
+        if serializer.is_valid():
+            data=serializer.save()
+            # Perform any additional actions like saving to the database
+            # For now, let's just return the serialized data as a response
+            return Response({"message":"Working Good","data":data})
+        else:
+            # If serializer validation fails, return the errors
+            errors = serializer.errors
+            error_message = " ".join([f"{key}: {value[0]}" for key, value in errors.items()])
+            return Response({'success': False, 'message': error_message}, status=status.HTTP_400_BAD_REQUEST) 
+            
+           
+    except Exception as e:
+      raise e
+        
+        
