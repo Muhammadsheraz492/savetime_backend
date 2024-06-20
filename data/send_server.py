@@ -1,6 +1,6 @@
 import requests
 import json
-
+token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RpbmczQGdtYWlsLmNvbSIsImlhdCI6MTcxODkyMTAzMSwibmJmIjoxNzE4OTIwNzMxLCJleHAiOjE3MTk1MjU4MzF9.O-U2BM53k3PSmRFqWwoWHq8xy6f_NZujXKxOchexAn0"
 def post_data_to_api(url, headers, payload):
     try:
         if not isinstance(payload, str):
@@ -40,8 +40,8 @@ for item in data:
     url = "http://127.0.0.1:8000/v1/api/admin/category/"
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RpbmczQGdtYWlsLmNvbSIsImlhdCI6MTcxODgyNjAzOSwibmJmIjoxNzE4ODI1NzM5LCJleHAiOjE3MTk0MzA4Mzl9.7NeDRdIjJEDDXmLoFL917QqqLwp2UhEBN0dXZbZLdUI',
-        'Cookie': 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RpbmczQGdtYWlsLmNvbSIsImlhdCI6MTcxODgyNjAzOSwibmJmIjoxNzE4ODI1NzM5LCJleHAiOjE3MTk0MzA4Mzl9.7NeDRdIjJEDDXmLoFL917QqqLwp2UhEBN0dXZbZLdUI'
+        'Authorization': 'Bearer {}'.format(token),
+        'Cookie': 'token={}'.format(token)
     }
     
     post_data_to_api(url, headers, item)

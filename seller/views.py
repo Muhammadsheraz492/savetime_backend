@@ -2,7 +2,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from user_agents import parse
-
+from common.middleware.exception_handler import custom_exception_handler
 from common.serializer.gig_serializer import GigSerializer
 from .serializers import SellerSerializer,LoginSerializer
 from django.core.exceptions import ValidationError
@@ -179,15 +179,29 @@ def create_gig(request):
             data=serializer.save()
             # Perform any additional actions like saving to the database
             # For now, let's just return the serialized data as a response
-            return Response({"message":"Working Good","data":data})
-        else:
-            # If serializer validation fails, return the errors
-            errors = serializer.errors
-            error_message = " ".join([f"{key}: {value[0]}" for key, value in errors.items()])
-            return Response({'success': False, 'message': error_message}, status=status.HTTP_400_BAD_REQUEST) 
+            return Response({'success':True,"message":"Working Good",'data':data})
+        
+        raise serializers.ValidationError(serializer.errors)
+    except serializers.ValidationError as e:
+        errors = e.detail
+        
+        if 'gig' in errors:
+            error_message = " ".join([f"{key}: {value[0]}" for key, value in errors['gig'].items()])
+            print(error_message)
+            raise serializers.ValidationError(error_message)
+
+        # Handle other validation errors if needed
+        raise e  
+        # else:
+        #     # If serializer validation fails, return the errors
+        #     print(serializer.errors)
+        #     raise custom_exception_handler( serializer.errors)
+        #     # error_message = " ".join([f"{key}: {value[0]}" for key, value in errors.items()])
+        #     # return Response({'success': False, 'message': error_message}, status=status.HTTP_400_BAD_REQUEST) 
             
            
     except Exception as e:
+      print(e)
       raise e
         
         

@@ -1,1 +1,784 @@
-{"id": 1, "name": "Graphics & Design", "email": "Testing3@gmail.com", "description": "A single place, millions of creative talents", "sub_categories": [{"id": 1, "name": "Logo Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 2, "name": "Brand Style Guides", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 3, "name": "Game Art", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 1, "name": "Character Design", "description": "character-design", "has_nested_gig_metadata": false}, {"id": 2, "name": "Props & Objects", "description": "props-objects-design", "has_nested_gig_metadata": false}, {"id": 3, "name": "Backgrounds & Environments", "description": "backgrounds-environments-design", "has_nested_gig_metadata": false}, {"id": 4, "name": "UI & UX", "description": "ui-ux", "has_nested_gig_metadata": false}]}, {"id": 4, "name": "Graphics for Streamers", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 5, "name": "Business Cards & Stationery", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 6, "name": "Website Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 5, "name": "Website UI/UX Design", "description": "website-ui-ux-design", "has_nested_gig_metadata": false}, {"id": 6, "name": "Website Builders Design", "description": "website-builders-design", "has_nested_gig_metadata": false}]}, {"id": 7, "name": "App Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 8, "name": "UX Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 9, "name": "Landing Page Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 10, "name": "Resume Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 11, "name": "Illustration", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 12, "name": "Children\u2019s Book Illustration", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 13, "name": "AI Artists", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 7, "name": "Image Generation", "description": "image-generation", "has_nested_gig_metadata": false}, {"id": 8, "name": "Custom Image Prompts", "description": "custom-image-prompt", "has_nested_gig_metadata": false}]}, {"id": 14, "name": "AI Avatar Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 15, "name": "NFT Art", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 16, "name": "Pattern Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 17, "name": "Fonts & Typography", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 9, "name": "Font Design", "description": "font-desgin", "has_nested_gig_metadata": false}, {"id": 10, "name": "Typography", "description": "typography", "has_nested_gig_metadata": false}, {"id": 11, "name": "Hand Lettering", "description": "lettering", "has_nested_gig_metadata": false}, {"id": 12, "name": "Calligraphy", "description": "calligraphy", "has_nested_gig_metadata": false}]}, {"id": 18, "name": "Poster Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 19, "name": "Brochure Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 20, "name": "Flyer Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 21, "name": "Book Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 13, "name": "Book Cover Design", "description": "cover", "has_nested_gig_metadata": false}, {"id": 14, "name": "Book Layout Design & Typesetting", "description": "layout", "has_nested_gig_metadata": false}]}, {"id": 22, "name": "Album Cover Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 23, "name": "Podcast Cover Art", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 24, "name": "Packaging & Label Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 15, "name": "Packaging Design", "description": "packaging", "has_nested_gig_metadata": false}, {"id": 16, "name": "Label Design", "description": "label", "has_nested_gig_metadata": false}, {"id": 17, "name": "Dieline Design", "description": "dieline", "has_nested_gig_metadata": false}]}, {"id": 25, "name": "Storyboards", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 26, "name": "Social Media Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 18, "name": "Headers & Covers", "description": "headers-covers", "has_nested_gig_metadata": false}, {"id": 19, "name": "Social Posts & Banners", "description": "social-posts-banners", "has_nested_gig_metadata": false}, {"id": 20, "name": "Thumbnails Design", "description": "thumbnails-design", "has_nested_gig_metadata": false}, {"id": 21, "name": "AR Filters & Lenses", "description": "ar-filters-lenses", "has_nested_gig_metadata": false}]}, {"id": 27, "name": "Catalog Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 28, "name": "Menu Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 29, "name": "Invitation Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 30, "name": "Portraits & Caricatures", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 31, "name": "Cartoons & Comics", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 32, "name": "Tattoo Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 33, "name": "Signage Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 34, "name": "Web Banners", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 35, "name": "Image Editing", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 22, "name": "Product Image Editing", "description": "product-image-editing", "has_nested_gig_metadata": false}, {"id": 23, "name": "Photo Manipulation", "description": "photo-manipulation", "has_nested_gig_metadata": false}, {"id": 24, "name": "Portraits Retouching", "description": "portraits-retouching", "has_nested_gig_metadata": false}, {"id": 25, "name": "Photo Restoration", "description": "photo-restoration", "has_nested_gig_metadata": false}, {"id": 26, "name": "Mockups", "description": "mockups", "has_nested_gig_metadata": false}]}, {"id": 36, "name": "Architecture & Interior Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 27, "name": "2D Drawings & Floor Plans", "description": "2d-drawings", "has_nested_gig_metadata": false}, {"id": 28, "name": "3D Modeling & Rendering", "description": "rendering-modeling", "has_nested_gig_metadata": false}, {"id": 29, "name": "Architectural Planning", "description": "planning", "has_nested_gig_metadata": false}, {"id": 30, "name": "Virtual Staging", "description": "virtual-staging", "has_nested_gig_metadata": false}, {"id": 31, "name": "Architectural Graphics", "description": "architectural-graphics-design", "has_nested_gig_metadata": false}, {"id": 32, "name": "Interior Design", "description": "interior-design", "has_nested_gig_metadata": false}, {"id": 33, "name": "Mood Boards", "description": "mood-boards-design", "has_nested_gig_metadata": false}]}, {"id": 37, "name": "Landscape Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 34, "name": "2D Drawings & Site Plans", "description": "2d-drawing", "has_nested_gig_metadata": false}, {"id": 35, "name": "3D Modeling & Rendering", "description": "3d-modeling-rendering", "has_nested_gig_metadata": false}, {"id": 36, "name": "Planning & Design", "description": "planning", "has_nested_gig_metadata": false}]}, {"id": 38, "name": "Building Engineering", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 37, "name": "HVAC", "description": "hvac-engineering", "has_nested_gig_metadata": false}, {"id": 38, "name": "Electrical Engineering", "description": "electrical-engineering", "has_nested_gig_metadata": false}, {"id": 39, "name": "Plumbing & Drainage", "description": "plumbing-and-drainage", "has_nested_gig_metadata": false}, {"id": 40, "name": "Civil & Structural", "description": "civil-and-structural-engineering", "has_nested_gig_metadata": false}]}, {"id": 39, "name": "Building Information Modeling", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 41, "name": "BIM 3D Modeling", "description": "3d-modeling", "has_nested_gig_metadata": false}, {"id": 42, "name": "BIM Coordination & Clash Detection", "description": "coordination", "has_nested_gig_metadata": false}, {"id": 43, "name": "BIM Family Creation", "description": "family-creation", "has_nested_gig_metadata": false}, {"id": 44, "name": "BIM Online Training & Implementation", "description": "training", "has_nested_gig_metadata": false}, {"id": 45, "name": "BIM 4D Construction Simulation", "description": "4d-simulation", "has_nested_gig_metadata": false}]}, {"id": 40, "name": "Character Modeling", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 41, "name": "Industrial & Product Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 46, "name": "Concept Development", "description": "concept-development", "has_nested_gig_metadata": false}, {"id": 47, "name": "Technical Drawing", "description": "2d-drawing", "has_nested_gig_metadata": false}, {"id": 48, "name": "3D Modeling & Rendering", "description": "3d-modeling-rendering", "has_nested_gig_metadata": false}, {"id": 49, "name": "Rapid Prototyping", "description": "prototyping-3d-printing", "has_nested_gig_metadata": false}, {"id": 50, "name": "Design for Manufacturing", "description": "product-manufacturing", "has_nested_gig_metadata": false}, {"id": 51, "name": "Full Design Process", "description": "full-product-design-process", "has_nested_gig_metadata": false}]}, {"id": 42, "name": "Trade Booth Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 43, "name": "T-Shirts & Merchandise", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 44, "name": "Fashion Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 52, "name": "Technical Drawing & Tech Pack", "description": "technical-drawing", "has_nested_gig_metadata": false}, {"id": 53, "name": "Pattern Making", "description": "pattern-making", "has_nested_gig_metadata": false}, {"id": 54, "name": "Fashion Illustration", "description": "fashion-illustration", "has_nested_gig_metadata": false}, {"id": 55, "name": "3D Garment Design", "description": "3d-garments", "has_nested_gig_metadata": false}, {"id": 56, "name": "Full Design Process", "description": "full-design-process", "has_nested_gig_metadata": false}]}, {"id": 45, "name": "Jewelry Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 57, "name": "3D Modeling & Rendering", "description": "3d-modeling-rendering", "has_nested_gig_metadata": false}, {"id": 58, "name": "Concept Design & Sketching", "description": "concept-design-sketching", "has_nested_gig_metadata": false}]}, {"id": 46, "name": "Presentation Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 47, "name": "Email Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 48, "name": "Icon Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 49, "name": "Infographic Design", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 50, "name": "Car Wraps", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 51, "name": "Vector Tracing", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 52, "name": "NSFW Art", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 53, "name": "Other", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": false}, {"id": 54, "name": "Design Advice", "description": "A single place, millions of creative talents", "has_nested_gig_metadata": false, "service_type": true, "service_type_data": [{"id": 59, "name": "Design Mentorship", "description": "design-mentorship", "has_nested_gig_metadata": false}, {"id": 60, "name": "Design Review & Consultation", "description": "design-review-consultation", "has_nested_gig_metadata": false}, {"id": 61, "name": "Design Lessons", "description": "design-lessons", "has_nested_gig_metadata": false}]}]}
+{
+  "id": 1,
+  "name": "Graphics & Design",
+  "email": "Testing3@gmail.com",
+  "description": "A single place, millions of creative talents",
+  "sub_categories": [
+    {
+      "id": 1,
+      "name": "Logo Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 2,
+      "name": "Brand Style Guides",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 3,
+      "name": "Game Art",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 1,
+          "name": "Character Design",
+          "description": "character-design",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 2,
+          "name": "Props & Objects",
+          "description": "props-objects-design",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 3,
+          "name": "Backgrounds & Environments",
+          "description": "backgrounds-environments-design",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 4,
+          "name": "UI & UX",
+          "description": "ui-ux",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Graphics for Streamers",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 5,
+      "name": "Business Cards & Stationery",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 6,
+      "name": "Website Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 5,
+          "name": "Website UI/UX Design",
+          "description": "website-ui-ux-design",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 6,
+          "name": "Website Builders Design",
+          "description": "website-builders-design",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "App Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 8,
+      "name": "UX Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 9,
+      "name": "Landing Page Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 10,
+      "name": "Resume Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 11,
+      "name": "Illustration",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 12,
+      "name": "Children\u2019s Book Illustration",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 13,
+      "name": "AI Artists",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 7,
+          "name": "Image Generation",
+          "description": "image-generation",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 8,
+          "name": "Custom Image Prompts",
+          "description": "custom-image-prompt",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "AI Avatar Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 15,
+      "name": "NFT Art",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 16,
+      "name": "Pattern Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 17,
+      "name": "Fonts & Typography",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 9,
+          "name": "Font Design",
+          "description": "font-desgin",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 10,
+          "name": "Typography",
+          "description": "typography",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 11,
+          "name": "Hand Lettering",
+          "description": "lettering",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 12,
+          "name": "Calligraphy",
+          "description": "calligraphy",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Poster Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 19,
+      "name": "Brochure Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 20,
+      "name": "Flyer Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 21,
+      "name": "Book Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 13,
+          "name": "Book Cover Design",
+          "description": "cover",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 14,
+          "name": "Book Layout Design & Typesetting",
+          "description": "layout",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Album Cover Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 23,
+      "name": "Podcast Cover Art",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 24,
+      "name": "Packaging & Label Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 15,
+          "name": "Packaging Design",
+          "description": "packaging",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 16,
+          "name": "Label Design",
+          "description": "label",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 17,
+          "name": "Dieline Design",
+          "description": "dieline",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Storyboards",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 26,
+      "name": "Social Media Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 18,
+          "name": "Headers & Covers",
+          "description": "headers-covers",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 19,
+          "name": "Social Posts & Banners",
+          "description": "social-posts-banners",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 20,
+          "name": "Thumbnails Design",
+          "description": "thumbnails-design",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 21,
+          "name": "AR Filters & Lenses",
+          "description": "ar-filters-lenses",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Catalog Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 28,
+      "name": "Menu Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 29,
+      "name": "Invitation Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 30,
+      "name": "Portraits & Caricatures",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 31,
+      "name": "Cartoons & Comics",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 32,
+      "name": "Tattoo Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 33,
+      "name": "Signage Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 34,
+      "name": "Web Banners",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 35,
+      "name": "Image Editing",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 22,
+          "name": "Product Image Editing",
+          "description": "product-image-editing",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 23,
+          "name": "Photo Manipulation",
+          "description": "photo-manipulation",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 24,
+          "name": "Portraits Retouching",
+          "description": "portraits-retouching",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 25,
+          "name": "Photo Restoration",
+          "description": "photo-restoration",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 26,
+          "name": "Mockups",
+          "description": "mockups",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Architecture & Interior Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 27,
+          "name": "2D Drawings & Floor Plans",
+          "description": "2d-drawings",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 28,
+          "name": "3D Modeling & Rendering",
+          "description": "rendering-modeling",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 29,
+          "name": "Architectural Planning",
+          "description": "planning",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 30,
+          "name": "Virtual Staging",
+          "description": "virtual-staging",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 31,
+          "name": "Architectural Graphics",
+          "description": "architectural-graphics-design",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 32,
+          "name": "Interior Design",
+          "description": "interior-design",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 33,
+          "name": "Mood Boards",
+          "description": "mood-boards-design",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Landscape Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 34,
+          "name": "2D Drawings & Site Plans",
+          "description": "2d-drawing",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 35,
+          "name": "3D Modeling & Rendering",
+          "description": "3d-modeling-rendering",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 36,
+          "name": "Planning & Design",
+          "description": "planning",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Building Engineering",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 37,
+          "name": "HVAC",
+          "description": "hvac-engineering",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 38,
+          "name": "Electrical Engineering",
+          "description": "electrical-engineering",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 39,
+          "name": "Plumbing & Drainage",
+          "description": "plumbing-and-drainage",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 40,
+          "name": "Civil & Structural",
+          "description": "civil-and-structural-engineering",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Building Information Modeling",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 41,
+          "name": "BIM 3D Modeling",
+          "description": "3d-modeling",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 42,
+          "name": "BIM Coordination & Clash Detection",
+          "description": "coordination",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 43,
+          "name": "BIM Family Creation",
+          "description": "family-creation",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 44,
+          "name": "BIM Online Training & Implementation",
+          "description": "training",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 45,
+          "name": "BIM 4D Construction Simulation",
+          "description": "4d-simulation",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Character Modeling",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 41,
+      "name": "Industrial & Product Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 46,
+          "name": "Concept Development",
+          "description": "concept-development",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 47,
+          "name": "Technical Drawing",
+          "description": "2d-drawing",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 48,
+          "name": "3D Modeling & Rendering",
+          "description": "3d-modeling-rendering",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 49,
+          "name": "Rapid Prototyping",
+          "description": "prototyping-3d-printing",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 50,
+          "name": "Design for Manufacturing",
+          "description": "product-manufacturing",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 51,
+          "name": "Full Design Process",
+          "description": "full-product-design-process",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Trade Booth Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 43,
+      "name": "T-Shirts & Merchandise",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 44,
+      "name": "Fashion Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 52,
+          "name": "Technical Drawing & Tech Pack",
+          "description": "technical-drawing",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 53,
+          "name": "Pattern Making",
+          "description": "pattern-making",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 54,
+          "name": "Fashion Illustration",
+          "description": "fashion-illustration",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 55,
+          "name": "3D Garment Design",
+          "description": "3d-garments",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 56,
+          "name": "Full Design Process",
+          "description": "full-design-process",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Jewelry Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 57,
+          "name": "3D Modeling & Rendering",
+          "description": "3d-modeling-rendering",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 58,
+          "name": "Concept Design & Sketching",
+          "description": "concept-design-sketching",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Presentation Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 47,
+      "name": "Email Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 48,
+      "name": "Icon Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 49,
+      "name": "Infographic Design",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 50,
+      "name": "Car Wraps",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 51,
+      "name": "Vector Tracing",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 52,
+      "name": "NSFW Art",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 53,
+      "name": "Other",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": false
+    },
+    {
+      "id": 54,
+      "name": "Design Advice",
+      "description": "A single place, millions of creative talents",
+      "has_nested_gig_metadata": false,
+      "service_type": true,
+      "service_type_data": [
+        {
+          "id": 59,
+          "name": "Design Mentorship",
+          "description": "design-mentorship",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 60,
+          "name": "Design Review & Consultation",
+          "description": "design-review-consultation",
+          "has_nested_gig_metadata": false
+        },
+        {
+          "id": 61,
+          "name": "Design Lessons",
+          "description": "design-lessons",
+          "has_nested_gig_metadata": false
+        }
+      ]
+    }
+  ]
+}
