@@ -55,6 +55,7 @@ class GigSerializer(serializers.ModelSerializer):
         model = GigData
         fields = ['title','gig']
     def create(self, validated_data):
+        # print()
         data=validated_data
         gig=validated_data.pop('gig',None)     
         try:    

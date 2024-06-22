@@ -7532,6 +7532,80 @@ data=[
   }
 ]
 import json
+import requests
+def make_request(url):
+    try:
+        print(url)
+        payload = {}
+        headers = {
+          'authority': 'www.fiverr.com',
+          'accept': 'application/json',
+          'accept-language': 'en-US,en;q=0.9',
+          'cookie': 'u_guid=1718234142000-b2d11762371d4e0cad7d249405d02dd0484baed2; cpra_opt_out_status_external=false; _pxvid=afb9cb27-2911-11ef-9c05-32cb8fc12a62; _gcl_au=1.1.569077531.1718234147; __pxvid=b35f7b5e-2911-11ef-b609-0242ac120004; _fbp=fb.1.1718234163896.754688408971923538; __pdst=3b4b0543b1e34922be221b075f4d10a5; _tt_enable_cookie=1; _ttp=BKv7WZQ9mw68jkLbpVAqWk9nOzj; hubspotutk=b4147c9078aa7bc1ee032c6e37e4d55c; page_views=4; hodor_creds=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmaXZlcnIvaG9kb3JfcGVnYXN1cyIsInVpZCI6MTc0MDYyMDY1LCJ1cHMiOm51bGwsInNpZCI6IjA5ZTQxODc3ZGYyNjk5OGQyMjgzYWQwYmQzNDcyNjViIiwiaWF0IjoxNzE4NTM5NzgwLCJleHAiOjE3NTAwOTczODB9.wgupNHVc4YEe3rrHyJNkAK1xnrgMK_xk6kd2m5xi2jg; _fiverr_session_key=228a2c650ddd9a54e7e3957e817e7042; session_locale=en-US; logged_in_currency_v2=USD; cpra_opt_out_permanent_user=false; _gid=GA1.2.2131727224.1718781056; last_content_pages_=gigs%7C%7C%7Cshow%7C%7C%7C345414457%3Bgigs%7C%7C%7Cshow%7C%7C%7C104128428; _ga_311202432=GS1.1.1718821710.6.0.1718821710.0.0.0; _ga_XBEB8JPBY8=GS1.2.1718821713.4.0.1718821713.60.0.0; _clck=1c4zq2j%7C2%7Cfms%7C0%7C1624; external_guid=adfdacae-b32f-42d0-bb31-f3b65342507a; refinfo=%7B%22utm_source%22%3A%22fiverr%22%2C%22utm_medium%22%3A%22website%22%2C%22action%22%3A%22pixel%22%2C%22cookie_created_at%22%3A%222024-06-20T16%3A27%3A16.035Z%22%2C%22is_for_real%22%3Atrue%7D; _ga_Y0CT339S9K=GS1.1.1718900835.1.1.1718900849.0.0.0; _ga=GA1.1.38c8d831d1cab070314594fbd8d9b91e335c97daf3974447c3c737ccab8d7bdb; tatari-user-cookie=38c8d831d1cab070314594fbd8d9b91e335c97daf3974447c3c737ccab8d7bdb; tatari-session-cookie=55e7d43a-007c-f802-ccfb-5afc648b4c0a; _pxhd=0zX/C9Ng98AhwMx8wN43RVmVBYwKrZRx36vh2TroSUHz77Swpxxj8CYg9kRWryyCYhPGea3ngLez87IGKaK9tA==:WMw7RMgu-/PIAnEYI84Uws2kxRXa-WiKTXS9t5vDF5jZA6WtgicU7fsPp-KeyN0dVBWNh6uOR4fOCVgGGVPPUknuhZW5H2KM9LZj4JoURPE=; _cfuvid=L16k0KNIh1Eivq.UPbg2hSIv8le8kZSiPm_CfSAUuug-1718922145562-0.0.1.1-604800000; pxcts=9391874b-2f53-11ef-9ec0-b9db1d75fff0; ftr_blst_1h=1718922148930; hp_view=seller; visited_fiverr=true; redirect_url=%2Fusers%2Ftocybernate_sol%2Fmanage_gigs%3Fcurrent_filter%3Ddraft; t-ip=1; __hstc=156287140.b4147c9078aa7bc1ee032c6e37e4d55c.1718234173685.1718909248042.1718922165014.27; __hssrc=1; forterToken=d81332ec083e4715ac2a40a1ac613848_1718922165548__UDF43-m4_17ck; _px3=e3dbcdc29e62da298eb44cf1b2aa0374d0798a07ad032e63cfe84eeffbf8a6dc:sEXrNgT1LtSjQ2jPB10sE4fjlr96TBluRk10WxrBVTompEVj/YiZBoYlXucSkLqrsM69F0cALEy/U5l31iGlhA==:1000:JLH04CZK3gtAay8MNEihR2KdBHCvq/RV6Xw5TXEWHmzlolTOe91PF9CFK6/AEWgkk83ogEQCMD0gbbIaWjgnO0paHWtMe4QYGP/Hndgf4LWgBbdwoHUdu20XlAWMQwCCIak91rPJMsUyI5/GakocpWnoFdywVYtjA8nhArZ+h9/yqayb4LMbikXi/oZe6M5G0o1FjdHjRW6gTtpvaCj0TmTTY5b/iBYusqkP43WvR3Y=; QSI_HistorySession=https%3A%2F%2Fwww.fiverr.com%2Fusers%2Ftocybernate_sol%2Fmanage_gigs%3Fcurrent_filter%3Ddraft~1718922161174%7Chttps%3A%2F%2Fwww.fiverr.com%2Fusers%2Ftocybernate_sol%2Fmanage_gigs%2Fcreate-test-recordbxvsdsdv-ehfbe-wgefw%2Fedit%3Fwizard%3D0%26tab%3Dgeneral~1718922172045; _rdt_uuid=1718234171078.29c1b2e7-2941-4ead-8295-5da755837c7b; _uetsid=4cd443e02bd911efa923e76623b091c0; _uetvid=ef7d9010e86d11ee871295b568debb1e; _tq_id.TV-18900945-1.8951=b87398dc74417871.1718234172.0.1718922172..; OptanonConsent=isGpcEnabled=0&datestamp=Fri+Jun+21+2024+03%3A22%3A52+GMT%2B0500+(Pakistan+Standard+Time)&version=202211.1.0&isIABGlobal=false&hosts=&consentId=8a04083d-fce6-4704-aa8f-0b3b2a470389&interactionCount=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0004%3A1&AwaitingReconsent=false; tatari-cookie-test=81033337; __hssc=156287140.2.1718922165014; access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjE3NDA2MjA2NSwic2lkIjoiMDllNDE4NzdkZjI2OTk4ZDIyODNhZDBiZDM0NzI2NWIiLCJwcnYiOm51bGwsImV4cCI6MTcxODkyMjI4MX0.y_S_fo3sv9OAvAXlpnHP9WdY2_9FWXsgz3TJsf_-d-s; _pxde=336e3c6e04a8b156439b70631acfe03fb28a9c89c68436f01c567815a21f0d8f:eyJ0aW1lc3RhbXAiOjE3MTg5MjIyMjYxNTAsImZfa2IiOjAsImlwY19pZCI6W119; _clsk=18ivbrz%7C1718922248365%7C2%7C0%7Cq.clarity.ms%2Fcollect; _ga_GK1NB7HX40=GS1.1.1718899769.5.1.1718922248.60.0.0; access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjE3NDA2MjA2NSwic2lkIjoiMDllNDE4NzdkZjI2OTk4ZDIyODNhZDBiZDM0NzI2NWIiLCJwcnYiOm51bGwsImV4cCI6MTcxOTAwMDgzMX0.Kh_v2898QGkkBXXehRpyQ2tL1xQDD9bxM805CA7q_gQ; visited_fiverr=true; _fiverr_session_key=228a2c650ddd9a54e7e3957e817e7042; _pxhd=0zX/C9Ng98AhwMx8wN43RVmVBYwKrZRx36vh2TroSUHz77Swpxxj8CYg9kRWryyCYhPGea3ngLez87IGKaK9tA==:WMw7RMgu-/PIAnEYI84Uws2kxRXa-WiKTXS9t5vDF5jZA6WtgicU7fsPp-KeyN0dVBWNh6uOR4fOCVgGGVPPUknuhZW5H2KM9LZj4JoURPE=',
+          'fvrr-page-ctx-id': '640954fb85fd47afae1f5ea3cacd649c',
+          'referer': 'https://www.fiverr.com/users/tocybernate_sol/manage_gigs/create-test-recordbxvsdsdv-ehfbe-wgefw/edit?wizard=0&tab=general',
+          'sec-ch-ua': '"Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"macOS"',
+          'sec-fetch-dest': 'empty',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-site': 'same-origin',
+          'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+          'x-csrf-token': '1720131765.9xjrbHbEDXIpSzCeFf572r2ufveKRQyb9m1JowssetM=',
+          'x-requested-with': 'XMLHttpRequest'
+        }
+
+        response = requests.request("GET", url, headers=headers, data=payload)
+        stored_data=[]
+        print(response.json())
+        # input()
+        if "packages" in response.json():
+            for item in response.json()["packages"]:
+                temp={}
+                content=[]
+                
+                
+                temp['package_id']=item['package_id']
+                temp['duration_limit']=item['new_duration_limit']
+                temp['duration_unit']=item['duration_unit']
+                for itm in item['content']:
+                    nested={}
+                    nested['title']=itm['title']
+                    nested['translated_label']=itm['translated_label']
+                    nested['edit_type']=itm['edit_type']
+                    if itm['edit_type']=='dropdown':
+                        if itm['data_options']==None:
+                            nested['data_options']=itm['included_modifications_options']
+                        else:
+                            nested['data_options']=itm['data_options']
+                    content.append(nested)
+                temp['content']=content
+                # input("Check your data")
+                stored_data.append(temp)   
+        return stored_data 
+    except requests.exceptions.RequestException as e:
+        print(f"An error occurred: {e}")
+        return None
+
+# Example usage
+url = "https://www.fiverr.com/manage_gigs/gig_pricing?sub_cat_id=365&service_type_id=2249&gig_id=378799758&include_constraints=true"
+headers = {
+    'authority': 'www.fiverr.com',
+    'accept': 'application/json',
+    'accept-language': 'en-US,en;q=0.9',
+    'cookie': 'your_cookie_data_here',
+    'referer': 'https://www.fiverr.com/users/tocybernate_sol/manage_gigs/create-test-recordbxvsdsdv-ehfbe-wgefw/edit?wizard=0&tab=general',
+    'sec-ch-ua': '"Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"macOS"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+    'x-csrf-token': '1720131765.9xjrbHbEDXIpSzCeFf572r2ufveKRQyb9m1JowssetM=',
+    'x-requested-with': 'XMLHttpRequest'
+}
+import time
 category_data=[]
 for item in data:
     subcategory=[]
@@ -7542,20 +7616,32 @@ for item in data:
     }
     for category in item['sub_categories']:
         service_type_data=[]
+        conents=[]
         temp = {}
         temp["name"]=category["sub_category_name"]
         temp["description"]=category["category_subtitle"]
         if category['nested_sub_categories']:
             for nested in category['nested_sub_categories']:
+                url = f"https://www.fiverr.com/manage_gigs/gig_pricing?sub_cat_id={category['sub_category_id']}&service_type_id={nested['id']}&gig_id=378799758&include_constraints=true"
+                content=make_request(url=url)
                 nested_temp={
                     "name":nested["name"],
-                    "description":nested["cached_slug"]
+                    "description":nested["cached_slug"],
+                    "content":content
                 }
                 service_type_data.append(nested_temp)
+        else:
+            url = f"https://www.fiverr.com/manage_gigs/gig_pricing?sub_cat_id={category['sub_category_id']}&gig_id=378799758&include_constraints=true"
+            content=make_request(url=url)
+            conents.append(content)
+            
         temp['service_type_data']=service_type_data
+        temp['content']=conents
+        
         subcategory.append(temp)
     payload['sub_categories']=subcategory
     category_data.append(payload)
+    time.sleep(2)
 
 
 with open("Category_data.json", 'w') as f:
