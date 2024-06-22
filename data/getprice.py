@@ -2309,29 +2309,6 @@ def make_request(url, headers, payload=None):
     try:
         response = requests.get(url, headers=headers, data=payload)
         response.raise_for_status()  # Raise an error for bad responses (4xx or 5xx)
-        stored_data=[]
-        for item in response.json()["packages"]:
-            temp={}
-            content=[]
-            
-            
-            temp['package_id']=item['package_id']
-            temp['duration_limit']=item['new_duration_limit']
-            temp['duration_unit']=item['duration_unit']
-            for itm in item['content']:
-                nested={}
-                nested['title']=itm['title']
-                nested['translated_label']=itm['translated_label']
-                nested['edit_type']=itm['edit_type']
-                if itm['edit_type']=='dropdown':
-                    if itm['data_options']==None:
-                        nested['data_options']=itm['included_modifications_options']
-                    else:
-                        nested['data_options']=itm['data_options']
-                content.append(nested)
-            temp['content']=content
-            # input("Check your data")
-            stored_data.append(temp)   
         return response.json()  # Assuming the response is JSON
     except requests.exceptions.RequestException as e:
         print(f"An error occurred: {e}")

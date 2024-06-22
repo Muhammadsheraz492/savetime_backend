@@ -1,1 +1,275 @@
-[{"package_id": 1, "duration_limit": [1, 2, 3, 4, 5, 6, 7, 10, 14, 21, 30, 45, 60, 75, 90], "duration_unit": "day", "content": [{"title": "Revisions", "translated_label": "Revisions", "edit_type": "dropdown", "data_options": [{"value": 0, "text": "0", "val": 0}, {"value": 1, "text": "1", "val": 1}, {"value": 2, "text": "2", "val": 2}, {"value": 3, "text": "3", "val": 3}, {"value": 4, "text": "4", "val": 4}, {"value": 5, "text": "5", "val": 5}, {"value": 6, "text": "6", "val": 6}, {"value": 7, "text": "7", "val": 7}, {"value": 8, "text": "8", "val": 8}, {"value": 9, "text": "9", "val": 9}, {"value": "UNLIMITED", "text": "UNLIMITED", "val": "UNLIMITED"}]}, {"title": "# of Initial Concepts Included", "translated_label": "Number of initial concepts included", "edit_type": "dropdown", "data_options": [{"value": 1, "text": "1", "val": 1}, {"value": 2, "text": "2", "val": 2}, {"value": 3, "text": "3", "val": 3}, {"value": 4, "text": "4", "val": 4}, {"value": 5, "text": "5", "val": 5}]}, {"title": "Number of characters", "translated_label": "Number of characters", "edit_type": "dropdown", "data_options": [{"value": 1, "text": "1", "val": 1}, {"value": 2, "text": "2", "val": 2}, {"value": 3, "text": "3", "val": 3}, {"value": 4, "text": "4", "val": 4}, {"value": 5, "text": "5", "val": 5}, {"value": 6, "text": "6", "val": 6}, {"value": 7, "text": "7", "val": 7}, {"value": 8, "text": "8", "val": 8}, {"value": 9, "text": "9", "val": 9}, {"value": 10, "text": "10", "val": 10}]}, {"title": "Number of accessories", "translated_label": "Number of accessories", "edit_type": "dropdown", "data_options": [{"value": 1, "text": "1", "val": 1}, {"value": 2, "text": "2", "val": 2}, {"value": 3, "text": "3", "val": 3}, {"value": 4, "text": "4", "val": 4}, {"value": 5, "text": "5", "val": 5}, {"value": 6, "text": "6", "val": 6}, {"value": 7, "text": "7", "val": 7}, {"value": 8, "text": "8", "val": 8}, {"value": 9, "text": "9", "val": 9}, {"value": 10, "text": "10", "val": 10}]}, {"title": "Sprite sheet", "translated_label": "Sprite sheet", "edit_type": "checkbox"}, {"title": "High-level of details", "translated_label": "Enhanced detailing", "edit_type": "checkbox"}, {"title": "Includes animation", "translated_label": "Includes animation", "edit_type": "checkbox"}, {"title": "3D modeling", "translated_label": "3D modeling", "edit_type": "checkbox"}]}, {"package_id": 2, "duration_limit": [1, 2, 3, 4, 5, 6, 7, 10, 14, 21, 30, 45, 60, 75, 90], "duration_unit": "day", "content": [{"title": "Revisions", "translated_label": "Revisions", "edit_type": "dropdown", "data_options": [{"value": 0, "text": "0", "val": 0}, {"value": 1, "text": "1", "val": 1}, {"value": 2, "text": "2", "val": 2}, {"value": 3, "text": "3", "val": 3}, {"value": 4, "text": "4", "val": 4}, {"value": 5, "text": "5", "val": 5}, {"value": 6, "text": "6", "val": 6}, {"value": 7, "text": "7", "val": 7}, {"value": 8, "text": "8", "val": 8}, {"value": 9, "text": "9", "val": 9}, {"value": "UNLIMITED", "text": "UNLIMITED", "val": "UNLIMITED"}]}, {"title": "# of Initial Concepts Included", "translated_label": "Number of initial concepts included", "edit_type": "dropdown", "data_options": [{"value": 1, "text": "1", "val": 1}, {"value": 2, "text": "2", "val": 2}, {"value": 3, "text": "3", "val": 3}, {"value": 4, "text": "4", "val": 4}, {"value": 5, "text": "5", "val": 5}]}, {"title": "Number of characters", "translated_label": "Number of characters", "edit_type": "dropdown", "data_options": [{"value": 1, "text": "1", "val": 1}, {"value": 2, "text": "2", "val": 2}, {"value": 3, "text": "3", "val": 3}, {"value": 4, "text": "4", "val": 4}, {"value": 5, "text": "5", "val": 5}, {"value": 6, "text": "6", "val": 6}, {"value": 7, "text": "7", "val": 7}, {"value": 8, "text": "8", "val": 8}, {"value": 9, "text": "9", "val": 9}, {"value": 10, "text": "10", "val": 10}]}, {"title": "Number of accessories", "translated_label": "Number of accessories", "edit_type": "dropdown", "data_options": [{"value": 1, "text": "1", "val": 1}, {"value": 2, "text": "2", "val": 2}, {"value": 3, "text": "3", "val": 3}, {"value": 4, "text": "4", "val": 4}, {"value": 5, "text": "5", "val": 5}, {"value": 6, "text": "6", "val": 6}, {"value": 7, "text": "7", "val": 7}, {"value": 8, "text": "8", "val": 8}, {"value": 9, "text": "9", "val": 9}, {"value": 10, "text": "10", "val": 10}]}, {"title": "Sprite sheet", "translated_label": "Sprite sheet", "edit_type": "checkbox"}, {"title": "High-level of details", "translated_label": "Enhanced detailing", "edit_type": "checkbox"}, {"title": "Includes animation", "translated_label": "Includes animation", "edit_type": "checkbox"}, {"title": "3D modeling", "translated_label": "3D modeling", "edit_type": "checkbox"}]}, {"package_id": 3, "duration_limit": [1, 2, 3, 4, 5, 6, 7, 10, 14, 21, 30, 45, 60, 75, 90], "duration_unit": "day", "content": [{"title": "Revisions", "translated_label": "Revisions", "edit_type": "dropdown", "data_options": [{"value": 0, "text": "0", "val": 0}, {"value": 1, "text": "1", "val": 1}, {"value": 2, "text": "2", "val": 2}, {"value": 3, "text": "3", "val": 3}, {"value": 4, "text": "4", "val": 4}, {"value": 5, "text": "5", "val": 5}, {"value": 6, "text": "6", "val": 6}, {"value": 7, "text": "7", "val": 7}, {"value": 8, "text": "8", "val": 8}, {"value": 9, "text": "9", "val": 9}, {"value": "UNLIMITED", "text": "UNLIMITED", "val": "UNLIMITED"}]}, {"title": "# of Initial Concepts Included", "translated_label": "Number of initial concepts included", "edit_type": "dropdown", "data_options": [{"value": 1, "text": "1", "val": 1}, {"value": 2, "text": "2", "val": 2}, {"value": 3, "text": "3", "val": 3}, {"value": 4, "text": "4", "val": 4}, {"value": 5, "text": "5", "val": 5}]}, {"title": "Number of characters", "translated_label": "Number of characters", "edit_type": "dropdown", "data_options": [{"value": 1, "text": "1", "val": 1}, {"value": 2, "text": "2", "val": 2}, {"value": 3, "text": "3", "val": 3}, {"value": 4, "text": "4", "val": 4}, {"value": 5, "text": "5", "val": 5}, {"value": 6, "text": "6", "val": 6}, {"value": 7, "text": "7", "val": 7}, {"value": 8, "text": "8", "val": 8}, {"value": 9, "text": "9", "val": 9}, {"value": 10, "text": "10", "val": 10}]}, {"title": "Number of accessories", "translated_label": "Number of accessories", "edit_type": "dropdown", "data_options": [{"value": 1, "text": "1", "val": 1}, {"value": 2, "text": "2", "val": 2}, {"value": 3, "text": "3", "val": 3}, {"value": 4, "text": "4", "val": 4}, {"value": 5, "text": "5", "val": 5}, {"value": 6, "text": "6", "val": 6}, {"value": 7, "text": "7", "val": 7}, {"value": 8, "text": "8", "val": 8}, {"value": 9, "text": "9", "val": 9}, {"value": 10, "text": "10", "val": 10}]}, {"title": "Sprite sheet", "translated_label": "Sprite sheet", "edit_type": "checkbox"}, {"title": "High-level of details", "translated_label": "Enhanced detailing", "edit_type": "checkbox"}, {"title": "Includes animation", "translated_label": "Includes animation", "edit_type": "checkbox"}, {"title": "3D modeling", "translated_label": "3D modeling", "edit_type": "checkbox"}]}]
+[
+  {
+    "package_id": 1,
+    "duration_limit": [1, 2, 3, 4, 5, 6, 7, 10, 14, 21, 30, 45, 60, 75, 90],
+    "duration_unit": "day",
+    "content": [
+      {
+        "title": "Revisions",
+        "translated_label": "Revisions",
+        "edit_type": "dropdown",
+        "data_options": [
+          { "value": 0, "text": "0", "val": 0 },
+          { "value": 1, "text": "1", "val": 1 },
+          { "value": 2, "text": "2", "val": 2 },
+          { "value": 3, "text": "3", "val": 3 },
+          { "value": 4, "text": "4", "val": 4 },
+          { "value": 5, "text": "5", "val": 5 },
+          { "value": 6, "text": "6", "val": 6 },
+          { "value": 7, "text": "7", "val": 7 },
+          { "value": 8, "text": "8", "val": 8 },
+          { "value": 9, "text": "9", "val": 9 },
+          { "value": "UNLIMITED", "text": "UNLIMITED", "val": "UNLIMITED" }
+        ]
+      },
+      {
+        "title": "# of Initial Concepts Included",
+        "translated_label": "Number of initial concepts  ",
+        "edit_type": "dropdown",
+        "data_options": [
+          { "value": 1, "text": "1", "val": 1 },
+          { "value": 2, "text": "2", "val": 2 },
+          { "value": 3, "text": "3", "val": 3 },
+          { "value": 4, "text": "4", "val": 4 },
+          { "value": 5, "text": "5", "val": 5 }
+        ]
+      },
+      {
+        "title": "Number of characters",
+        "translated_label": "Number of characters",
+        "edit_type": "dropdown",
+        "data_options": [
+          { "value": 1, "text": "1", "val": 1 },
+          { "value": 2, "text": "2", "val": 2 },
+          { "value": 3, "text": "3", "val": 3 },
+          { "value": 4, "text": "4", "val": 4 },
+          { "value": 5, "text": "5", "val": 5 },
+          { "value": 6, "text": "6", "val": 6 },
+          { "value": 7, "text": "7", "val": 7 },
+          { "value": 8, "text": "8", "val": 8 },
+          { "value": 9, "text": "9", "val": 9 },
+          { "value": 10, "text": "10", "val": 10 }
+        ]
+      },
+      {
+        "title": "Number of accessories",
+        "translated_label": "Number of accessories",
+        "edit_type": "dropdown",
+        "data_options": [
+          { "value": 1, "text": "1", "val": 1 },
+          { "value": 2, "text": "2", "val": 2 },
+          { "value": 3, "text": "3", "val": 3 },
+          { "value": 4, "text": "4", "val": 4 },
+          { "value": 5, "text": "5", "val": 5 },
+          { "value": 6, "text": "6", "val": 6 },
+          { "value": 7, "text": "7", "val": 7 },
+          { "value": 8, "text": "8", "val": 8 },
+          { "value": 9, "text": "9", "val": 9 },
+          { "value": 10, "text": "10", "val": 10 }
+        ]
+      },
+      {
+        "title": "Sprite sheet",
+        "translated_label": "Sprite sheet",
+        "edit_type": "checkbox"
+      },
+      {
+        "title": "High-level of details",
+        "translated_label": "Enhanced detailing",
+        "edit_type": "checkbox"
+      },
+      {
+        "title": "Includes animation",
+        "translated_label": "Includes animation",
+        "edit_type": "checkbox"
+      },
+      {
+        "title": "3D modeling",
+        "translated_label": "3D modeling",
+        "edit_type": "checkbox"
+      }
+    ]
+  },
+  {
+    "package_id": 2,
+    "duration_limit": [1, 2, 3, 4, 5, 6, 7, 10, 14, 21, 30, 45, 60, 75, 90],
+    "duration_unit": "day",
+    "content": [
+      {
+        "title": "Revisions",
+        "translated_label": "Revisions",
+        "edit_type": "dropdown",
+        "data_options": [
+          { "value": 0, "text": "0", "val": 0 },
+          { "value": 1, "text": "1", "val": 1 },
+          { "value": 2, "text": "2", "val": 2 },
+          { "value": 3, "text": "3", "val": 3 },
+          { "value": 4, "text": "4", "val": 4 },
+          { "value": 5, "text": "5", "val": 5 },
+          { "value": 6, "text": "6", "val": 6 },
+          { "value": 7, "text": "7", "val": 7 },
+          { "value": 8, "text": "8", "val": 8 },
+          { "value": 9, "text": "9", "val": 9 },
+          { "value": "UNLIMITED", "text": "UNLIMITED", "val": "UNLIMITED" }
+        ]
+      },
+      {
+        "title": "# of Initial Concepts Included",
+        "translated_label": "Number of initial concepts included",
+        "edit_type": "dropdown",
+        "data_options": [
+          { "value": 1, "text": "1", "val": 1 },
+          { "value": 2, "text": "2", "val": 2 },
+          { "value": 3, "text": "3", "val": 3 },
+          { "value": 4, "text": "4", "val": 4 },
+          { "value": 5, "text": "5", "val": 5 }
+        ]
+      },
+      {
+        "title": "Number of characters",
+        "translated_label": "Number of characters",
+        "edit_type": "dropdown",
+        "data_options": [
+          { "value": 1, "text": "1", "val": 1 },
+          { "value": 2, "text": "2", "val": 2 },
+          { "value": 3, "text": "3", "val": 3 },
+          { "value": 4, "text": "4", "val": 4 },
+          { "value": 5, "text": "5", "val": 5 },
+          { "value": 6, "text": "6", "val": 6 },
+          { "value": 7, "text": "7", "val": 7 },
+          { "value": 8, "text": "8", "val": 8 },
+          { "value": 9, "text": "9", "val": 9 },
+          { "value": 10, "text": "10", "val": 10 }
+        ]
+      },
+      {
+        "title": "Number of accessories",
+        "translated_label": "Number of accessories",
+        "edit_type": "dropdown",
+        "data_options": [
+          { "value": 1, "text": "1", "val": 1 },
+          { "value": 2, "text": "2", "val": 2 },
+          { "value": 3, "text": "3", "val": 3 },
+          { "value": 4, "text": "4", "val": 4 },
+          { "value": 5, "text": "5", "val": 5 },
+          { "value": 6, "text": "6", "val": 6 },
+          { "value": 7, "text": "7", "val": 7 },
+          { "value": 8, "text": "8", "val": 8 },
+          { "value": 9, "text": "9", "val": 9 },
+          { "value": 10, "text": "10", "val": 10 }
+        ]
+      },
+      {
+        "title": "Sprite sheet",
+        "translated_label": "Sprite sheet",
+        "edit_type": "checkbox"
+      },
+      {
+        "title": "High-level of details",
+        "translated_label": "Enhanced detailing",
+        "edit_type": "checkbox"
+      },
+      {
+        "title": "Includes animation",
+        "translated_label": "Includes animation",
+        "edit_type": "checkbox"
+      },
+      {
+        "title": "3D modeling",
+        "translated_label": "3D modeling",
+        "edit_type": "checkbox"
+      }
+    ]
+  },
+  {
+    "package_id": 3,
+    "duration_limit": [1, 2, 3, 4, 5, 6, 7, 10, 14, 21, 30, 45, 60, 75, 90],
+    "duration_unit": "day",
+    "content": [
+      {
+        "title": "Revisions",
+        "translated_label": "Revisions",
+        "edit_type": "dropdown",
+        "data_options": [
+          { "value": 0, "text": "0", "val": 0 },
+          { "value": 1, "text": "1", "val": 1 },
+          { "value": 2, "text": "2", "val": 2 },
+          { "value": 3, "text": "3", "val": 3 },
+          { "value": 4, "text": "4", "val": 4 },
+          { "value": 5, "text": "5", "val": 5 },
+          { "value": 6, "text": "6", "val": 6 },
+          { "value": 7, "text": "7", "val": 7 },
+          { "value": 8, "text": "8", "val": 8 },
+          { "value": 9, "text": "9", "val": 9 },
+          { "value": "UNLIMITED", "text": "UNLIMITED", "val": "UNLIMITED" }
+        ]
+      },
+      {
+        "title": "# of Initial Concepts Included",
+        "translated_label": "Number of initial concepts included",
+        "edit_type": "dropdown",
+        "data_options": [
+          { "value": 1, "text": "1", "val": 1 },
+          { "value": 2, "text": "2", "val": 2 },
+          { "value": 3, "text": "3", "val": 3 },
+          { "value": 4, "text": "4", "val": 4 },
+          { "value": 5, "text": "5", "val": 5 }
+        ]
+      },
+      {
+        "title": "Number of characters",
+        "translated_label": "Number of characters",
+        "edit_type": "dropdown",
+        "data_options": [
+          { "value": 1, "text": "1", "val": 1 },
+          { "value": 2, "text": "2", "val": 2 },
+          { "value": 3, "text": "3", "val": 3 },
+          { "value": 4, "text": "4", "val": 4 },
+          { "value": 5, "text": "5", "val": 5 },
+          { "value": 6, "text": "6", "val": 6 },
+          { "value": 7, "text": "7", "val": 7 },
+          { "value": 8, "text": "8", "val": 8 },
+          { "value": 9, "text": "9", "val": 9 },
+          { "value": 10, "text": "10", "val": 10 }
+        ]
+      },
+      {
+        "title": "Number of accessories",
+        "translated_label": "Number of accessories",
+        "edit_type": "dropdown",
+        "data_options": [
+          { "value": 1, "text": "1", "val": 1 },
+          { "value": 2, "text": "2", "val": 2 },
+          { "value": 3, "text": "3", "val": 3 },
+          { "value": 4, "text": "4", "val": 4 },
+          { "value": 5, "text": "5", "val": 5 },
+          { "value": 6, "text": "6", "val": 6 },
+          { "value": 7, "text": "7", "val": 7 },
+          { "value": 8, "text": "8", "val": 8 },
+          { "value": 9, "text": "9", "val": 9 },
+          { "value": 10, "text": "10", "val": 10 }
+        ]
+      },
+      {
+        "title": "Sprite sheet",
+        "translated_label": "Sprite sheet",
+        "edit_type": "checkbox"
+      },
+      {
+        "title": "High-level of details",
+        "translated_label": "Enhanced detailing",
+        "edit_type": "checkbox"
+      },
+      {
+        "title": "Includes animation",
+        "translated_label": "Includes animation",
+        "edit_type": "checkbox"
+      },
+      {
+        "title": "3D modeling",
+        "translated_label": "3D modeling",
+        "edit_type": "checkbox"
+      }
+    ]
+  }
+]

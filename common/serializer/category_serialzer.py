@@ -69,8 +69,33 @@ class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ['id','name','email','description','sub_categories']
+    def _create_data_options(self,content_instance,data_options):
+        for option in data_options:
+            try:
+                DataOptions.objects.create(content=content_instance,**option)
+            except IntegrityError as e:
+                raise serializers.ValidationError(e)
+    def _create_content(self,package_instance,contents):
+        for content in contents:
+            try:
+                data_options=content.pop('data_options',[])
+                is_data_options=bool(data_options)
+                content['data_options']=is_data_options
+                content_instance=Content.objects.create(package=package_instance,**content)
+                if is_data_options:
+                    self._create_data_options(content_instance=content_instance,data_options=data_options)
+            except IntegrityError as e:
+                raise serializers.ValidationError(e)
     def _create_duration(self,package_instance,durations):
-        print(durations)
+        for itm in durations:
+            try:
+            #   print(x)
+               data={}
+               data['number']=itm
+               DurationLimit.objects.create(package_id=package_instance,**data)
+            except IntegrityError as e:
+                raise serializers.ValidationError(e)
+        
         pass
     def _create_package(self,subcategory_instance,packages):
         # print(packages)
@@ -85,6 +110,8 @@ class CategorySerializer(serializers.ModelSerializer):
                 package_instance=Packages.objects.create(subcategory=subcategory_instance,**package)
                 if is_duration_limit:
                     self._create_duration(package_instance=package_instance,durations=duration_limit)
+                if is_content:
+                    self._create_content(package_instance=package_instance,contents=content)
                 
             except IntegrityError as e:
                 raise serializers.ValidationError(e)
