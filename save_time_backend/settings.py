@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 """
 
 from pathlib import Path
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-521s2=^ai)*!$tps$#t^*d_4gqnu(0&^l!483%v^0rh@_&yy5+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -31,7 +33,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -39,8 +41,29 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'seller'
+    'admin',
+    'seller',
+    'common',
+    
+    
+    # 'seller.middleware.JWTAuthenticationMiddleware',
+    # My Settings
+    'storages',
+    # 'middleware.JWTAuthenticationMiddleware',
 ]
+
+# MIDDLEWARE = [
+#     # 'admin.middleware.middleware.BearerTokenMiddleware',
+#     'django.middleware.security.SecurityMiddleware',
+#     'django.contrib.sessions.middleware.SessionMiddleware',
+#     'django.middleware.common.CommonMiddleware',
+#     'django.middleware.csrf.CsrfViewMiddleware',
+#     'django.contrib.auth.middleware.AuthenticationMiddleware',
+#     'django.contrib.messages.middleware.MessageMiddleware',
+#     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+# ]
+# if 'admin' in INSTALLED_APPS:
+#     MIDDLEWARE.insert(0, 'admin.middleware.middleware.BearerTokenMiddleware')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -50,8 +73,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'common.middleware.middleware.BearerTokenMiddleware',
+    # "common.middleware.CustomExceptionHandlerMiddleware.CustomExceptionHandlerMiddleware"
 ]
 
+# Conditionally include BearerTokenMiddleware for admin app only
 ROOT_URLCONF = 'save_time_backend.urls'
 
 TEMPLATES = [
@@ -76,33 +102,35 @@ WSGI_APPLICATION = 'save_time_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'ENFORCE_SCHEMA': False,
-        'NAME': 'savetime',  # Specify your MongoDB database name
-        'CLIENT': {
-            'host': 'mongodb+srv://bahoo:Hacker@savetime.kfwac8h.mongodb.net/?retryWrites=true&w=majority',
-            'port':27017,
-            'username': 'bahoo',
-            'password': 'Hacker',
-            'authSource': 'admin',
-            'authMechanism': 'SCRAM-SHA-1',
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'ENFORCE_SCHEMA': False,
+#         'NAME': 'savetime',  # Specify your MongoDB database name
+#         'CLIENT': {
+#             'host': 'mongodb+srv://bahoo:Hacker@savetime.kfwac8h.mongodb.net/?retryWrites=true&w=majority',
+#             'port':27017,
+#             'username': 'bahoo',
+#             'password': 'Hacker',
+#             'authSource': 'admin',
+#             'authMechanism': 'SCRAM-SHA-1',
+#         }
+#     }
+# }
 REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'common.middleware.exception_handler.custom_exception_handler',
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
         # 'seller.authentication.JSONWebTokenAuthentication'
-        
     ],
+    # 'EXCEPTION_HANDLER':'common.middleware.exception_handler._handler_authentication_error'
 }
 
 # Password validation
@@ -145,3 +173,26 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# My Data of Save Time
+
+# AWS S3 settings
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY =os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_REGION_NAME = os.getenv('AWS_S3_REGION_NAME')  # e.g., 'us-west-2'
+AWS_S3_SIGNATURE_VERSION = 's3v4'
+ADMIN_PANNEL_ACCESS=os.getenv('ADMIN_PANNEL_ACCESS')
+
+
+# Static files (CSS, JavaScript, images)
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# Media files
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'seller.storages_backends.MediaStorage'
+
+# Optional settings
+AWS_QUERYSTRING_AUTH = False  # Optional: remove query parameter authentication from generated URLs
+

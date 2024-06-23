@@ -3,32 +3,71 @@ from .models import Device, User
 from django.db import transaction
 from django.contrib.auth.hashers import make_password
 from django.db import IntegrityError
+import boto3
+from django.conf import settings
+from datetime import datetime
+from botocore.exceptions import ClientError
+from user_agents import parse
+from rest_framework.exceptions import ValidationError
+from .custom_exceptions import CustomValidationError  # Import the custom exception
+
+# def upload_to(instance, filename):
+    # print('images/{filename}'.format(filename=filename))
+    # return 'images/{filename}'.format(filename=filename)
 class DeviceSerializer(serializers.ModelSerializer):
+    random_access_point=serializers.CharField(required=True)
+    device_name=serializers.CharField(required=True)
+    ip=serializers.CharField(required=True)
     class Meta:
         model = Device
         fields = ['random_access_point', 'device_name', 'ip']
 
 class SellerSerializer(serializers.ModelSerializer):
+    devices=[]
     email=serializers.EmailField(required=True)
     username=serializers.CharField(required=True)
     firstname=serializers.CharField(required=True)
     lastname=serializers.CharField(required=True)
-    devices = DeviceSerializer(many=True, required=False)
+     
+    # devices = DeviceSerializer(many=True, read_only=True)  # Assuming you want to display related devices
+
+    
+    profile_image = serializers.ImageField(max_length=None, required=False, allow_null=True)
 
     class Meta:
         model = User
-        fields = ['firstname', 'lastname', 'username', 'email', 'password', 'devices']
+        fields = ['firstname', 'lastname', 'username', 'email', 'password', 'profile_image']
     
     def create(self, validated_data):
-        devices_data = validated_data.pop('devices', [])
+        # devices_data = validated_data.pop('devices', [])
         password = validated_data.pop('password')
         validated_data['password']=make_password(password=password)
-        # user = User(**validated_data)
+        profile_image = validated_data.get('profile_image')
+        if profile_image:
+            
+            profile_image = validated_data.pop('profile_image')
+            try:
+                s3 = boto3.client(
+                    's3',
+                    aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
+                    aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY,
+                    region_name=settings.AWS_S3_REGION_NAME
+                )
+                timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+                image_key = f"profile_images/{timestamp}_{profile_image.name}".replace(" ","")
+                s3.upload_fileobj(profile_image, settings.AWS_STORAGE_BUCKET_NAME, image_key)
+                s3_url = f"https://{settings.AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{image_key}"
+                validated_data['profile_image'] = s3_url
+
+            except ClientError as e:
+                print(f"Error uploading profile image to S3: {e}")
+                raise serializers.ValidationError("Failed to upload profile image")
         try:
             with transaction.atomic():  # Ensure atomicity
                 user = User.objects.create(**validated_data)
-                for device_data in devices_data:
+                for device_data in self.devices:
                     Device.objects.create(user=user, **device_data)
+                
                 return user
         except IntegrityError as e:
             if 'UNIQUE constraint' in str(e):
@@ -51,4 +90,92 @@ class SellerSerializer(serializers.ModelSerializer):
         if value is None:
             raise serializers.ValidationError("lastname are required")
         return value
+    def validate(self, attrs):
+        request = self.context.get('request')
+        user_agent_str = request.META.get('HTTP_USER_AGENT', '')
+        user_agent = parse(user_agent_str)
         
+        device_info = {
+            'random_access_point': user_agent_str,
+            'device_name': user_agent.device.family,
+            'action':'register',
+            'ip': request.META.get('REMOTE_ADDR', '')
+        }
+        self.devices.append(device_info)
+        
+        return super().validate(attrs)
+    def to_representation(self, instance):
+        data=super().to_representation(instance=instance)
+        if instance.profile_image:
+            data['profile_image']=instance.profile_image
+        return data
+class LoginSerializer(serializers.ModelSerializer):
+    email = serializers.CharField(required=True)
+    password = serializers.CharField(required=True)
+
+    class Meta:
+        model = User  # Specify your custom user model here
+        fields = ["email", "password"]
+
+    def validate_email(self, value):
+        print("This is mine")
+        if not value:
+            error_data = {
+                'success': False,
+                'error_message': {
+                    "type": "ValidationError",
+                    "message": "Email field cannot be blank."
+                },
+            }
+            raise CustomValidationError(detail=error_data)
+        try:
+            user = User.objects.get(email=value)
+            return user
+        except User.DoesNotExist:
+            error_data = {
+                'success': False,
+                'error_message': {
+                      "type": "ValidationError",
+                      "message":"This email does not exist."
+                
+                },
+            }
+            raise CustomValidationError(detail=error_data)
+    def run_validation(self, data):
+        if 'email' in data and not data['email'].strip():
+            error_data = {
+                'success': False,
+                'error_message': {
+                    "type": "ValidationError",
+                    "message": "Email field cannot be blank."
+                },
+            }
+            raise CustomValidationError(detail=error_data)
+        if 'password' in data and not data['password'].strip():
+            error_data = {
+                'success': False,
+                'error_message': {
+                    "type": "ValidationError",
+                    "message": "Password field cannot be blank."
+                },
+            }
+            raise CustomValidationError(detail=error_data)
+        return super().run_validation(data)
+    # def validate(self, attrs):
+    #     email = attrs.get('email')
+    #     try:
+    #         user = User.objects.get(email=email)
+    #         return user
+    #     except User.DoesNotExist:
+    #         error_data = {
+    #             'success': False,
+    #             'error_message': {
+    #                   "type": "ValidationError",
+    #                   "message":"This email does not exist."
+                
+    #             },
+    #         }
+    #         print(error_data)
+    #         raise CustomValidationError(detail=error_data)
+    #     return attrs
+    
