@@ -3,25 +3,63 @@ from django.db import IntegrityError
 from rest_framework import serializers
 from common.models.category import *
 from common.models.category import Packages
+class DurationLimit_Serializer(serializers.ModelSerializer):
+    class Meta:
+        model = DurationLimit
+        fields = ['number']
 class DataOptionsSerializer(serializers.ModelSerializer):
     class Meta:
         model = DataOptions
         fields = ['value', 'text', 'val']
 class ContentSerializer(serializers.ModelSerializer):
     data_options = DataOptionsSerializer(many=True, required=False)
+    
 
     class Meta:
         model = Content
         fields = ['title', 'translated_label', 'edit_type', 'data_options']
+class Content_Serializer(serializers.ModelSerializer):
+    
+
+    class Meta:
+        model = Content
+        fields = ['title', 'translated_label', 'edit_type', 'data_options']
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        if instance.data_options:
+            data_options_=DataOptions.objects.filter(content=instance.id)
+            remove=data.pop('data_options')
+            data_options_data=DataOptionsSerializer(data_options_,many=True).data
+            data['data_options']=data_options_data
+        return data
+            
 
 
 
 class Packages_serializer(serializers.ModelSerializer):
-    duration_limit=serializers.ListField(child=serializers.IntegerField())
-    content=ContentSerializer(many=True)
+    duration_limit=serializers.ListField(child=serializers.IntegerField(),required=False)
+    content=ContentSerializer(many=True,required=False)
+    is_duration_limit=serializers.BooleanField(required=False, read_only=True)
+    is_content=serializers.BooleanField(required=False, read_only=True)
     class Meta:
         model = Packages
-        fields = ['id', 'duration_limit','duration_unit','content']
+        fields = ['id', 'duration_limit','duration_unit','content','is_duration_limit','is_content']
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        if instance.is_duration_limit:
+            durationlimit=DurationLimit.objects.filter(package_id=instance.id)
+            durationlimit_data=DurationLimit_Serializer(durationlimit,many=True).data
+            data['duration_limit']=durationlimit_data
+        if instance.is_content:
+            content=Content.objects.filter(package=instance.id)
+            content_data=Content_Serializer(content,many=True).data
+            # print(content_data)
+            data['content']=content_data
+            
+            
+        return data
+        
+    
 
 class OptionSerializer(serializers.ModelSerializer):
     class Meta:
@@ -35,33 +73,39 @@ class GigMetaDataSerializer(serializers.ModelSerializer):
 
 class ServiceTypeSerializer(serializers.ModelSerializer):
     gig_metadata = GigMetaDataSerializer(many=True, required=False)
+    packages=Packages_serializer(many=True,required=False,write_only=False)
     has_nested_gig_metadata = serializers.BooleanField(required=False, read_only=True)
+    has_gig_price = serializers.BooleanField(required=False, read_only=True)
     class Meta:
         model = ServiceType
-        fields = ['id', 'name','description','gig_metadata','has_nested_gig_metadata']
+        fields = ['id', 'name','description','gig_metadata','has_nested_gig_metadata','has_gig_price','packages']
 
 class SubCategorySerializer(serializers.ModelSerializer):
     # service_type_data = serializers.ListField(required=False)
     service_type_data = ServiceTypeSerializer(many=True, required=False)
-    packages=Packages_serializer(many=True)
+    packages=Packages_serializer(many=True,required=False,write_only=False)
     has_nested_gig_metadata = serializers.BooleanField(required=False, read_only=True)
+    is_price= serializers.BooleanField(required=False, read_only=True)
+    
     service_type = serializers.BooleanField(required=False, read_only=True)
     gig_metadata= GigMetaDataSerializer(many=True, required=False)
 
     class Meta:
         model = Subcategory
-        fields = ['id', 'name','description','service_type_data','has_nested_gig_metadata','service_type','gig_metadata','packages']
+        fields = ['id', 'name','description','service_type_data','has_nested_gig_metadata','service_type','gig_metadata','packages','is_price']
     def to_representation(self, instance):
         data = super().to_representation(instance)
-        data.pop('service_type_data')
+        # data.pop('service_type_data')
+        # data.pop('packages')
         # print(data)
         if data['service_type']:
-            servertype=ServiceType.objects.filter(subcategory=instance)
+            servertype=ServiceType.objects.filter(subcategory=instance.id)
             servertype_serializer=ServiceTypeSerializer(servertype,many=True).data
             data['service_type_data']=servertype_serializer
+ 
+        packages=data.pop('packages',[])
             
-            
-            # data.pop("")
+  
         return data
     
 class CategorySerializer(serializers.ModelSerializer):
@@ -115,6 +159,24 @@ class CategorySerializer(serializers.ModelSerializer):
                 
             except IntegrityError as e:
                 raise serializers.ValidationError(e)
+    def _create_package_with_service_type(self,subcategory_instance,service_type_instance,packages):
+        # print(packages)
+        for package in packages:
+            try:
+                duration_limit=package.pop('duration_limit',[])
+                content=package.pop('content',[])
+                is_duration_limit=bool(duration_limit)
+                is_content=bool(content)
+                package['is_duration_limit']=is_duration_limit
+                package['is_content']=is_content
+                package_instance=Packages.objects.create(subcategory=subcategory_instance,servicetype=service_type_instance,**package)
+                if is_duration_limit:
+                    self._create_duration(package_instance=package_instance,durations=duration_limit)
+                if is_content:
+                    self._create_content(package_instance=package_instance,contents=content)
+                
+            except IntegrityError as e:
+                raise serializers.ValidationError(e)
                 
       
     def _create_options(self,metadata_instance,options):
@@ -137,7 +199,7 @@ class CategorySerializer(serializers.ModelSerializer):
             try:
                 options=data.pop('options',[])
                 instance=GigMetaData.objects.create(subcategory=subcategory_instance,**data)
-                self._create_options(metadata_instance=instance,options=options)
+                # self._create_options(metadata_instance=instance,options=options)
             except IntegrityError as e:
                 raise serializers.ValidationError(e)
        
@@ -149,7 +211,13 @@ class CategorySerializer(serializers.ModelSerializer):
                 gig_metadata=servicetype.pop('gig_metadata',[])
                 has_nested_gig_metadata=bool(gig_metadata)
                 servicetype['has_nested_gig_metadata']=has_nested_gig_metadata
+                packages=servicetype.pop('packages',[])
+                has_gig_price=bool(packages)
+                servicetype['has_gig_price']=has_gig_price
                 instance=ServiceType.objects.create(subcategory=subcategory_instance,**servicetype)
+                if has_gig_price:
+                    self._create_package_with_service_type(subcategory_instance=subcategory_instance,service_type_instance=instance,packages=packages)
+                    
                 if has_nested_gig_metadata:
                     self._create_gigmetadata(service_type_instance=instance,metadata=gig_metadata)
             except IntegrityError as e:
@@ -206,17 +274,17 @@ class CategorySerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(str(e))
         
 
-    # def to_representation(self, instance):
-    #     representation = super().to_representation(instance)
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
     #     # # representation.pop('devices')
-    #     subcategory = Subcategory.objects.filter(category=instance.id)
+        subcategory = Subcategory.objects.filter(category=instance.id)
     #     # devices_representation = AdminDeviceSerializer(user_devices, many=True).data
-    #     subcategory_representation=SubCategorySerializer(subcategory,many=True).data
+        subcategory_representation=SubCategorySerializer(subcategory,many=True).data
     #     representation['sub_categories'] = subcategory_representation
     #     # subcategory=Subcategory.objects.filter(category_id=instance.id)
     #     # subcategory_representation=SubCategorySerializer(subcategory,many=True).data
-    #     # representation['sub_categories']=subcategory_representation
+        representation['sub_categories']=subcategory_representation
         
         
-    #     return representation
+        return representation
     

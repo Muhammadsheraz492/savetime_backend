@@ -16,8 +16,9 @@ from .serializers import LoginSerializer
 from seller import serializers
 from django.contrib.auth.hashers import check_password
 from django.http import JsonResponse
-from common.models.category import Category
-from common.serializer.category_serialzer import CategorySerializer
+from common.models.category import Category,Subcategory,Packages,ServiceType
+from common.serializer.category_serialzer import CategorySerializer,SubCategorySerializer,Packages_serializer,ServiceTypeSerializer
+
 def serialize_errors(errors):
     serialized_errors = []
     for field, messages in errors.items():
@@ -169,12 +170,43 @@ def categories(request):
     
     except Exception as e:
         return Response({'success': False, 'error': 'Error fetching categories'}, status=500)
+@api_view(['GET'])
+def packages(request):
+    try:
+        sub_cat_id=request.GET.get("sub_cat_id")
+        service_id=request.GET.get('service_id')
+        if sub_cat_id is None:
+            return Response({'success':False,'message':'SubCategory is Required'})
+        subcategory = Subcategory.objects.filter(id=sub_cat_id)
+        subcategory_representation=SubCategorySerializer(subcategory,many=True).data[0]  
+        if subcategory_representation['is_price']:
+            packages_=Packages.objects.filter(subcategory=subcategory_representation['id'])
+            packages_data=Packages_serializer(packages_,many=True).data
+            subcategory_representation['packages']=packages_data
+        else:
+            subcategory_representation.pop('service_type_data')
+            if service_id is None:
+                return Response({'success':False,'message':'Service Type id is Required'})
+            servertype=ServiceType.objects.filter(subcategory=sub_cat_id,id=service_id)
+            if not servertype.exists():
+                return Response({'success':False,'message':'Servce Type Not Found'})
+            servertype_data=ServiceTypeSerializer(servertype,many=True).data[0]
+            if servertype_data['has_gig_price']:
+                packages_=Packages.objects.filter(subcategory=subcategory_representation['id'],servicetype=servertype_data['id'])
+                packages_data=Packages_serializer(packages_,many=True).data
+                servertype_data['packages']=packages_data
+            subcategory_representation['servertype_data']=servertype_data
+        return Response({'success':True,'message':"All Packages Arive",'data':subcategory_representation})       
+    except (Subcategory.DoesNotExist,ServiceType.DoesNotExist) as e:
+      print(e)
+      raise e
+        
+
 
 @api_view(['POST'])
 def create_gig(request):
     try:
         serializer = GigSerializer(data=request.data)  # Extract 'gig' from request data
-        
         if serializer.is_valid():
             data=serializer.save()
             # Perform any additional actions like saving to the database

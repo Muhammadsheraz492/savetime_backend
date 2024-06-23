@@ -42,14 +42,14 @@ class Packages(models.Model):
     duration_unit=models.CharField(max_length=100)
     is_duration_limit=models.BooleanField()
     is_content=models.BooleanField()
-    duration_limit=models.ManyToManyField(DurationLimit, related_name='durations')
+    # duration_limit=models.ManyToManyField(DurationLimit, related_name='durations')
     # gig_meta_data = models.ForeignKey('GigMetaData', on_delete=models.CASCADE, null=True, related_name='related_options')
     # title = models.CharField(max_length=100)
     created_at = models.DateTimeField('created_at', auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True)
     
     def __str__(self):
-        return self.name
+        return self.duration_unit
 
     class Meta:
         db_table = 'Packages'
@@ -74,7 +74,6 @@ class GigMetaData(models.Model):
     description = models.TextField()
     service_type = models.ForeignKey('ServiceType', on_delete=models.CASCADE, null=True, related_name='metadata')
     type = models.CharField(max_length=100)
-    options = models.ManyToManyField(Options, related_name='metadata')
     created_at = models.DateTimeField('created_at', auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -107,8 +106,7 @@ class Subcategory(models.Model):
     has_nested_gig_metadata = models.BooleanField()
     service_type = models.BooleanField()
     is_price=models.BooleanField()
-    service_type_data = models.ManyToManyField(ServiceType, related_name='subcategories')
-    created_at = models.DateTimeField('created_at', auto_now_add=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
