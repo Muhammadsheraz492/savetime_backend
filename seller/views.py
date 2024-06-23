@@ -17,8 +17,9 @@ from seller import serializers
 from django.contrib.auth.hashers import check_password
 from django.http import JsonResponse
 from common.models.category import Category,Subcategory,Packages,ServiceType
+from common.models.gig import GigData
 from common.serializer.category_serialzer import CategorySerializer,SubCategorySerializer,Packages_serializer,ServiceTypeSerializer
-
+from .gig.gig_details import Get_GigSerializer
 def serialize_errors(errors):
     serialized_errors = []
     for field, messages in errors.items():
@@ -237,3 +238,13 @@ def create_gig(request):
       raise e
         
         
+
+@api_view(['GET'])
+def gig_details(request,id):
+    try:
+        gig=GigData.objects.filter(id=id)
+        gig_data=Get_GigSerializer(gig,many=True).data
+        return Response({'success':True,'data':gig_data})
+    except (GigData.DoesNotExist) as e:
+      print(e)
+      raise e
