@@ -240,7 +240,15 @@ def create_gig(request):
       raise e
         
         
-
+@api_view(['GET'])
+def gigs(request):
+    try:
+        gig=GigData.objects.all()
+        gig_data=Get_GigSerializer(gig,many=True).data
+        return Response({'success':True,'data':gig_data})
+    except (GigData.DoesNotExist) as e:
+      print(e)
+      raise e
 @api_view(['GET'])
 def gig_details(request,id):
     try:
@@ -266,6 +274,26 @@ def create_prices(request,id):
         else:
             print(price_serializer.error_messages)
             raise price_serializer.error_messages
+            
+        
+    except (GigData.DoesNotExist) as e:
+      print(e)
+      raise e
+@api_view(['POST'])
+def create_description(request,id):
+    try:
+            des=request.data['desc']
+            if des is None:
+                return Response({'success':False,'message':"Description are Required"},status=status.HTTP_404_NOT_FOUND)
+            print(des)
+            
+            gig=GigData.objects.get(pk=id)
+            gig.description=des
+            gig.save()
+            return Response({'success':True,'message':"Description are updated"})
+        # else:
+        #     print(price_serializer.error_messages)
+        #     raise price_serializer.error_messages
             
         
     except (GigData.DoesNotExist) as e:

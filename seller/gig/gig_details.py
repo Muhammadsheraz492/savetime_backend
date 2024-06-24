@@ -34,7 +34,7 @@ class Gig_category_Serializer(serializers.ModelSerializer):
 class Get_GigSerializer(serializers.ModelSerializer):
        class Meta:
               model = GigData
-              fields = ['title',]
+              fields = ['title','description','status']
        def to_representation(self, instance):
               representation = super().to_representation(instance)
               category_representation=[]

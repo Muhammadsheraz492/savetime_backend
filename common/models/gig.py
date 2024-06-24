@@ -57,6 +57,7 @@ class GigData(models.Model):
     title = models.CharField(max_length=255)
     category = models.ManyToManyField(Gig_Category)
     description = models.TextField()
+    status=models.BooleanField(default=False)
     
     # tags = models.ManyToManyField(Tag)
     # price = models.DecimalField(max_digits=10, decimal_places=2)
