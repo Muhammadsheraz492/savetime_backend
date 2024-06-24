@@ -49,7 +49,7 @@ class Packages_serializer(serializers.ModelSerializer):
         if instance.is_duration_limit:
             durationlimit=DurationLimit.objects.filter(package_id=instance.id)
             durationlimit_data=DurationLimit_Serializer(durationlimit,many=True).data
-            data['duration_limit']=durationlimit_data
+            data['duration_limit']=[int(item['number']) for item in durationlimit_data]
         if instance.is_content:
             content=Content.objects.filter(package=instance.id)
             content_data=Content_Serializer(content,many=True).data

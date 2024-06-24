@@ -53,7 +53,7 @@ class GigSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = GigData
-        fields = ['title','gig']
+        fields = ['id','title','gig']
     def create(self, validated_data):
         # print()
         data=validated_data
@@ -61,6 +61,7 @@ class GigSerializer(serializers.ModelSerializer):
         try:    
             instance = GigData.objects.create(**validated_data)
             self.create_gig_cayegory(instance,gig=gig)
-            return data
+            
+            return {'id':instance.id,**data}
         except IntegrityError as e:
             raise serializers.ValidationError(e)

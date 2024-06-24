@@ -20,6 +20,7 @@ from common.models.category import Category,Subcategory,Packages,ServiceType
 from common.models.gig import GigData
 from common.serializer.category_serialzer import CategorySerializer,SubCategorySerializer,Packages_serializer,ServiceTypeSerializer
 from .gig.gig_details import Get_GigSerializer
+from .gig.gig_prices import Price_serializer
 def serialize_errors(errors):
     serialized_errors = []
     for field, messages in errors.items():
@@ -248,3 +249,22 @@ def gig_details(request,id):
     except (GigData.DoesNotExist) as e:
       print(e)
       raise e
+@api_view(['POST'])
+def create_prices(request,id):
+    try:
+        # print(request.data['packages'])
+        # data=
+        price_serializer = Price_serializer(data={'category_id':id,**request.data})
+        
+        # Validate the serializer data
+        if price_serializer.is_valid():
+            price_serializer.save()
+            return Response({'success':True,'message':"working on creating prices"})
+        else:
+            raise price_serializer.error_messages
+            
+        
+    except (GigData.DoesNotExist) as e:
+      print(e)
+      raise e
+    

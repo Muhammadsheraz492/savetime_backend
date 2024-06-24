@@ -1,5 +1,22 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+class Select_User_Packages(models.Model):
+   
+    gig = models.ForeignKey('GigData', on_delete=models.CASCADE, null=True, related_name='packages')
+    duration_unit=models.CharField(max_length=100)
+    title=models.CharField(max_length=100)
+    description=models.CharField(max_length=100)
+    duration=models.CharField(max_length=100)
+    price=models.CharField(max_length=100)
+    is_duration_limit=models.BooleanField()
+    is_content=models.BooleanField()
+    created_at = models.DateTimeField('created_at', auto_now_add=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.duration_unit
+
+    class Meta:
+        db_table = 'UserPackages' 
 
 class Gig_Category(models.Model):
     gig = models.ForeignKey('GigData', on_delete=models.CASCADE, null=True, related_name='categories')
@@ -37,3 +54,4 @@ class GigData(models.Model):
 
     def __str__(self):
         return self.title
+
