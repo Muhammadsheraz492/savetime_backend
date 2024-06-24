@@ -23,7 +23,7 @@ class Content_Serializer(serializers.ModelSerializer):
 
     class Meta:
         model = Content
-        fields = ['title', 'translated_label', 'edit_type', 'data_options']
+        fields = ['id','title', 'translated_label', 'edit_type', 'data_options']
     def to_representation(self, instance):
         data = super().to_representation(instance)
         if instance.data_options:
@@ -262,11 +262,10 @@ class CategorySerializer(serializers.ModelSerializer):
         subcategories_data = validated_data.pop('sub_categories', [])
         try:
             # Check if category with the same name already exists
-            # instance = Category.objects.get(name=validated_data['name'])
-            # print(instance)
-            # raise serializers.ValidationError('success':False,'message':"Category with this name already exists.")
-            # raise serializers.ValidationError({'success': False, 'message': 'Category with this name already exists.'})
-        # except Category.DoesNotExist:
+            instance = Category.objects.get(name=validated_data['name'])
+            print(instance)
+            raise serializers.ValidationError({'success': False, 'message': 'Category with this name already exists.'})
+        except Category.DoesNotExist:
             instance = Category.objects.create(**validated_data)
             self._create_subcategories(instance, subcategories_data)
             return instance

@@ -1,7 +1,10 @@
 from rest_framework import serializers
-from common.models.gig import GigData,Gig_Category
+from common.models.gig import GigData,Gig_Category,Select_User_Packages
 from common.models.category import Category,Subcategory,ServiceType
 from common.serializer.category_serialzer import SubCategorySerializer
+from .gig_prices import UserPackages 
+
+
 class Service_TypeCategorySerializer(serializers.ModelSerializer):
     name = serializers.CharField(max_length=100)
     class Meta:
@@ -50,5 +53,8 @@ class Get_GigSerializer(serializers.ModelSerializer):
                                    servicetype_data=Service_TypeCategorySerializer(servicetype).data
                                    category_representation.append(servicetype_data['name'])
               representation['category']=category_representation
+              packages=Select_User_Packages.objects.filter(gig=instance)
+              packages_data=UserPackages(packages,many=True).data
+              representation['packages']=packages_data
               return representation
         

@@ -1,5 +1,21 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+class Select_content_Package(models.Model):
+    selected_user_package = models.ForeignKey('Select_User_Packages', on_delete=models.CASCADE, null=True, related_name='content')
+    title=models.CharField(max_length=100)
+    translated_label=models.CharField(max_length=100)
+    edit_type=models.CharField(max_length=100)
+    included_modifications=models.IntegerField()
+    active=models.BooleanField()
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        db_table = 'UserPackages_Content' 
+    
+    
+    
+    
 class Select_User_Packages(models.Model):
    
     gig = models.ForeignKey('GigData', on_delete=models.CASCADE, null=True, related_name='packages')

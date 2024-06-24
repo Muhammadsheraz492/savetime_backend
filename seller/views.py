@@ -261,6 +261,7 @@ def create_prices(request,id):
             price_serializer.save()
             return Response({'success':True,'message':"working on creating prices"})
         else:
+            print(price_serializer.error_messages)
             raise price_serializer.error_messages
             
         
