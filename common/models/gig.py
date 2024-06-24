@@ -2,10 +2,11 @@ from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 class Select_content_Package(models.Model):
     selected_user_package = models.ForeignKey('Select_User_Packages', on_delete=models.CASCADE, null=True, related_name='content')
+    content_id=models.IntegerField()
     title=models.CharField(max_length=100)
     translated_label=models.CharField(max_length=100)
     edit_type=models.CharField(max_length=100)
-    included_modifications=models.IntegerField()
+    included_modifications=models.CharField(max_length=100)
     active=models.BooleanField()
     def __str__(self):
         return self.title
@@ -55,8 +56,9 @@ class Tag(models.Model):
 class GigData(models.Model):
     title = models.CharField(max_length=255)
     category = models.ManyToManyField(Gig_Category)
+    description = models.TextField()
+    
     # tags = models.ManyToManyField(Tag)
-    # description = models.TextField()
     # price = models.DecimalField(max_digits=10, decimal_places=2)
     # delivery_time = models.IntegerField(help_text="Delivery time in days", validators=[MinValueValidator(1)])
     # seller_name = models.CharField(max_length=100)

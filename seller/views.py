@@ -21,6 +21,7 @@ from common.models.gig import GigData
 from common.serializer.category_serialzer import CategorySerializer,SubCategorySerializer,Packages_serializer,ServiceTypeSerializer
 from .gig.gig_details import Get_GigSerializer
 from .gig.gig_prices import Price_serializer
+
 def serialize_errors(errors):
     serialized_errors = []
     for field, messages in errors.items():
@@ -253,7 +254,9 @@ def gig_details(request,id):
 def create_prices(request,id):
     try:
         # print(request.data['packages'])
-        # data=
+        # data=DataOptions.objects.get(content=116,text="1d")
+        # print(data)
+        # input("Hellowx")
         price_serializer = Price_serializer(data={'category_id':id,**request.data})
         
         # Validate the serializer data
