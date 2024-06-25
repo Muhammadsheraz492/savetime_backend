@@ -1,5 +1,16 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+from seller.models import User
+class Gig_Images(models.Model):
+    gig = models.ForeignKey('GigData', on_delete=models.CASCADE, null=True, related_name='Images')
+    Image_url = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.Image_url
+    class Meta:
+        db_table = 'Gig_images' 
 class Select_content_Package(models.Model):
     selected_user_package = models.ForeignKey('Select_User_Packages', on_delete=models.CASCADE, null=True, related_name='content')
     content_id=models.IntegerField()
@@ -54,6 +65,7 @@ class Tag(models.Model):
         return self.name
 
 class GigData(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     category = models.ManyToManyField(Gig_Category)
     description = models.TextField()

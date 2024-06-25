@@ -17,10 +17,10 @@ from seller import serializers
 from django.contrib.auth.hashers import check_password
 from django.http import JsonResponse
 from common.models.category import Category,Subcategory,Packages,ServiceType
-from common.models.gig import GigData
+from common.models.gig import GigData,Gig_Images
 from common.serializer.category_serialzer import CategorySerializer,SubCategorySerializer,Packages_serializer,ServiceTypeSerializer
 from .gig.gig_details import Get_GigSerializer
-from .gig.gig_prices import Price_serializer
+from .gig.gig_prices import Price_serializer,ImageSerializer
 
 def serialize_errors(errors):
     serialized_errors = []
@@ -209,7 +209,8 @@ def packages(request):
 @api_view(['POST'])
 def create_gig(request):
     try:
-        serializer = GigSerializer(data=request.data)  # Extract 'gig' from request data
+        # new_func()
+        serializer = GigSerializer(data={'username':request.decoded_user['username'],**request.data})  # Extract 'gig' from request data
         if serializer.is_valid():
             data=serializer.save()
             # Perform any additional actions like saving to the database
@@ -238,6 +239,7 @@ def create_gig(request):
     except Exception as e:
       print(e)
       raise e
+
         
         
 @api_view(['GET'])
@@ -299,4 +301,20 @@ def create_description(request,id):
     except (GigData.DoesNotExist) as e:
       print(e)
       raise e
+@api_view(['POST'])
+def create_images(request, id):
+    try:
+        if id is None:
+              return Response({'success':False,'message':"Id are Null or Invalid"},status=status.HTTP_404_NOT_FOUND)
+        if 'files' not in request.data or request.data['files'] is None:
+            return Response({'success': False, 'message': 'Files are not available or invalid'}, status=status.HTTP_404_NOT_FOUND)
+        user_name = request.decoded_user['username']
+        serializer = ImageSerializer(data={'user_name':user_name,'gig_id':id,**request.data})
+        if serializer.is_valid():
+            data=serializer.save()
+            return Response({'success': True, 'message': 'Images created successfully'}, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    except Exception as e:
+        raise e
     

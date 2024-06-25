@@ -1,0 +1,6 @@
+Watching for file changes with StatReloader
+/Users/apple/Desktop/Fyp/Final_Backend/save_time_backend/seller/gig/gig_prices.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /seller/gig_images/1/
+"POST /seller/gig_images/1/ HTTP/1.1" 500 116
+/Users/apple/Desktop/Fyp/Final_Backend/save_time_backend/save_time_backend/settings.py changed, reloading.

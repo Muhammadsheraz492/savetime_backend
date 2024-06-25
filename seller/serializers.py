@@ -47,16 +47,17 @@ class SellerSerializer(serializers.ModelSerializer):
             
             profile_image = validated_data.pop('profile_image')
             try:
+                print(settings.AWS_STORAGE_BUCKET_NAME)
                 s3 = boto3.client(
                     's3',
-                    aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
-                    aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY,
-                    region_name=settings.AWS_S3_REGION_NAME
+                    aws_access_key_id='AKIA2UC27FQCXBZKOAUO',
+                    aws_secret_access_key='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',
+                    region_name='eu-north-1'
                 )
                 timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
                 image_key = f"profile_images/{timestamp}_{profile_image.name}".replace(" ","")
-                s3.upload_fileobj(profile_image, settings.AWS_STORAGE_BUCKET_NAME, image_key)
-                s3_url = f"https://{settings.AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{image_key}"
+                s3.upload_fileobj(profile_image, 'wishtun', image_key)
+                s3_url = f"https://wishtun.s3.amazonaws.com/{image_key}"
                 validated_data['profile_image'] = s3_url
 
             except ClientError as e:

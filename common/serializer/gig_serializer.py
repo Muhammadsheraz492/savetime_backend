@@ -6,6 +6,7 @@ from ..models.gig import GigData,Gig_Category
 from rest_framework.response import Response
 from .category_serialzer import CategorySerializer
 from rest_framework import status
+from seller.models import User
 class Gig_category_Serializer(serializers.ModelSerializer):
     category_id = serializers.IntegerField()
     category_name = serializers.CharField(write_only=True)
@@ -18,6 +19,7 @@ class Gig_category_Serializer(serializers.ModelSerializer):
         fields = ['category_id', 'category_name', 'sub_category_id', 'sub_category_name', 'nested_sub_category_id', 'nested_sub_category_name']
 class GigSerializer(serializers.ModelSerializer):
     gig = Gig_category_Serializer()
+    username=serializers.CharField()
     def create_gig_cayegory(self,gig_instance,gig):
         try:
             print(gig)
@@ -53,13 +55,15 @@ class GigSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = GigData
-        fields = ['id','title','gig']
+        fields = ['id','title','username','gig']
     def create(self, validated_data):
         # print()
         data=validated_data
-        gig=validated_data.pop('gig',None)     
+        gig=validated_data.pop('gig',None)  
+        username=validated_data.pop('username',None)   
         try:    
-            instance = GigData.objects.create(**validated_data)
+            user_instance=User.objects.get(username=username)
+            instance = GigData.objects.create(user=user_instance,**validated_data)
             self.create_gig_cayegory(instance,gig=gig)
             
             return {'id':instance.id,**data}

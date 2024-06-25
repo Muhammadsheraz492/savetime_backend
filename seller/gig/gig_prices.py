@@ -1,9 +1,20 @@
+from datetime import datetime
 from django.db import IntegrityError
 from rest_framework import serializers
 from common.models.gig import Select_User_Packages,GigData,Select_content_Package
 from common.models.category import Subcategory,Content
 from django.core.exceptions import ObjectDoesNotExist
 from common.models.category import DataOptions
+from common.models.gig import Gig_Images
+from seller.models import User
+from botocore.exceptions import ClientError
+
+import logging
+import boto3
+from django.conf import settings
+logger = logging.getLogger(__name__)  # Replace with your module name if different
+
+from rest_framework.exceptions import ValidationError
 # class DataoptionsSerializer(serializers.ModelSerializer):
 #     included_modifications=serializers.CharField(required=False)
 #     class Meta:
@@ -106,5 +117,59 @@ class Price_serializer(serializers.ModelSerializer):
             
         except IntegrityError as e:
             raise serializers.ValidationError(e)
+        
+class ImageSerializer(serializers.Serializer):
+    files = serializers.ListField(child=serializers.ImageField())
+    user_name=serializers.CharField()
+    gig_id=serializers.IntegerField()
+    class Meta:
+        model=Gig_Images
+        fields=['files','user_name','gig_id']
+
+    def create(self, validated_data):
+        try:
+            files=validated_data.pop('files',[])
+            user_name=validated_data.pop('user_name',None)
+            gig_id=validated_data.pop('gig_id',None)
+            user_instance=User.objects.get(username=user_name)
+            gig_instance=GigData(user=user_instance,id=gig_id)
+            images_instac=Gig_Images.objects.filter(gig=gig_instance)
+            images_instac.delete()
+            
+            files_data=[]
+            for file in files:
+                try:
+                    s3 = boto3.client(
+                        's3',
+                        aws_access_key_id='AKIA2UC27FQCXBZKOAUO',
+                        aws_secret_access_key='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',
+                        region_name='eu-north-1'
+                    )
+                    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+                    image_key = f"profile_images/{timestamp}_{file.name}".replace(" ","")
+                    s3.upload_fileobj(file, 'wishtun', image_key)
+                    s3_url = f"https://wishtun.s3.amazonaws.com/{image_key}"
+                    # validated_data['profile_image'] = s3_url
+                    print(s3_url)
+                    images_instacne=Gig_Images.objects.create(gig=gig_instance,Image_url=s3_url)
+                    files_data.append(s3_url)
+                    
+
+                except ClientError as e:
+                    print(f"Error uploading profile image to S3: {e}")
+                
+            
+            
+            # print(validated_data)
+            
+            # print(validated_data)
+            return files_data
+        except User.DoesNotExist as e:
+            raise serializers.ValidationError(e)
+        except GigData.DoesNotExist as e:
+            raise serializers.ValidationError(e)
+        except Exception as e:
+            raise serializers.ValidationError(e)
+        
         
         
