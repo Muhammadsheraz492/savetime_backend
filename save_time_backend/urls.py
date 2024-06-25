@@ -20,4 +20,5 @@ urlpatterns = [
     # path(),
     path('v1/api/admin/', include('admin.urls')),
     path('seller/', include("seller.urls")),
+    path('buyer/', include("buyer.urls")),
 ]

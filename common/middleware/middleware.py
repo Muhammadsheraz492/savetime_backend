@@ -39,6 +39,8 @@ class BearerTokenMiddleware:
                 return JsonResponse({'status': False, 'message': 'Unauthorized. Invalid token.'}, status=401)
             except Exception as e:
                 return JsonResponse({'status': False, 'message': 'Unauthorized '}, status=500)
+        elif '/buyer/' in request.path:
+            return self.get_response(request)  
         else:
         
             excluded_urls = ['/v1/api/admin/login/','/v1/api/admin/user','/v1/api/admin/user/','/seller/register/','/seller/login/']
