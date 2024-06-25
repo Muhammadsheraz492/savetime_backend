@@ -308,6 +308,10 @@ def create_images(request, id):
               return Response({'success':False,'message':"Id are Null or Invalid"},status=status.HTTP_404_NOT_FOUND)
         if 'files' not in request.data or request.data['files'] is None:
             return Response({'success': False, 'message': 'Files are not available or invalid'}, status=status.HTTP_404_NOT_FOUND)
+        if len(request.data['files'])>3:
+            return Response({'success': False, 'message': 'You can Post only 3 images'}, status=status.HTTP_404_NOT_FOUND)
+            
+            
         user_name = request.decoded_user['username']
         serializer = ImageSerializer(data={'user_name':user_name,'gig_id':id,**request.data})
         if serializer.is_valid():
