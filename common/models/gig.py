@@ -70,6 +70,8 @@ class GigData(models.Model):
     category = models.ManyToManyField(Gig_Category)
     description = models.TextField()
     status=models.BooleanField(default=False)
+    click = models.IntegerField(default=0)
+    impression = models.IntegerField(default=0)
     
     # tags = models.ManyToManyField(Tag)
     # price = models.DecimalField(max_digits=10, decimal_places=2)

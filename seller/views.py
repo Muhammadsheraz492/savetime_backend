@@ -254,8 +254,8 @@ def gigs(request):
 @api_view(['GET'])
 def gig_details(request,id):
     try:
-        gig=GigData.objects.filter(id=id)
-        gig_data=Get_GigSerializer(gig,many=True).data
+        gig=GigData.objects.get(id=id)
+        gig_data=Get_GigSerializer(gig).data
         return Response({'success':True,'data':gig_data})
     except (GigData.DoesNotExist) as e:
       print(e)
