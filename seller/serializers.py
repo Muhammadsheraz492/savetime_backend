@@ -1,5 +1,7 @@
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 from rest_framework import serializers
-from .models import Device, User
+from .models import Device, User,Otp
 from django.db import transaction
 from django.contrib.auth.hashers import make_password
 from django.db import IntegrityError
@@ -10,7 +12,106 @@ from botocore.exceptions import ClientError
 from user_agents import parse
 from rest_framework.exceptions import ValidationError
 from .custom_exceptions import CustomValidationError  # Import the custom exception
+import random
 
+
+def send_verification_email(recipient_email, otp):
+    # Create the HTML content with dynamic values
+    html_content = '''
+    <tr>
+        <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td align="center" style="padding:40px 40px 0px 40px">
+                            <a href="https://github.com/Muhammadsheraz492" target="_blank" style="text-decoration:none;">
+                                <span style="
+                                    color: #333; 
+                                    padding: 10px 20px; 
+                                    border-radius: 5px; 
+                                    font-weight: bold; 
+                                    font-family: Arial, sans-serif;
+                                    text-align: center; 
+                                    display: inline-block; 
+                                ">Save Time</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font-size:24px;color:#0e0e0f;font-weight:700;font-family:Helvetica Neue, Arial, sans-serif;line-height:28px;vertical-align:top;text-align:center;padding:35px 40px 0px 40px">
+                            <strong>Welcome to SaveTime</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size:16px;line-height:22px;font-family:Helvetica Neue, Arial, sans-serif;text-align:left;color:#555555;padding:40px 40px 0 40px">
+                            <img src="https://www.google-analytics.com/collect?v=1&tid=UA-12078752-14&cid=8212e561-1ec6-4296-800d-ea35cc4f4627&uid=0&t=event&ec=email_open&ea=earnings_csv_created" alt="Tracking Image" style="display:none;">
+                            <div>
+                                Dear SaveTime User,
+                            </div>
+                            <br>
+                            <div>
+                               We received a request to access your Google Account <a href="mailto:{0}" target="_blank">{0}</a> through your email address. Your Save Time verification code is:
+                                <br><br>
+                                <strong style="text-align:center;font-size:24px;font-weight:bold">{1}</strong>
+                            </div>
+                            <br>
+                            Thanks,<br>The Save Time Team
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    '''.format(recipient_email, otp)
+
+    # Create the email message
+    # message = MIMEMultipart("alternative")
+    # message["Subject"] = "Save Time Verification Code"
+    # message["From"] = sender_email
+    # message["To"] = recipient_email
+
+    # Attach the HTML content to the email
+    # part = MIMEText(html_content, "html")
+    # message.attach(part)
+
+    # Send the email
+    # message = MIMEMultipart("alternative")
+    # message["Subject"] = "Save Time Verification Code"
+    # message["From"] = sender_email
+    # message["To"] = recipient_email
+
+    # # Attach the HTML content to the email
+    # part = MIMEText(html_content, "html")
+    # message.attach(part)
+
+    try:
+        import smtplib
+
+        # sender_email = "qasim5ali99@gmail.com"
+        # rec_email = "tocybernatesolution@gmail.com"
+        # password = "zhzu irtp oqja zfkx"
+        # message = "Hey, this was sent using python"
+        sender_email = "tocybernatesolution@gmail.com"
+        password = "rukb ikjx zqbp fvjh"
+        # smtp_server = 'smtp.gmail.com'
+        # smtp_port = 587
+        # Set up the SMTP server
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()  # Start TLS encryption
+        server.login(sender_email, password)  # Login to the email server
+        print("Login Success")
+
+        server.sendmail(sender_email, recipient_email, otp)
+        print("Email has been sent to", recipient_email)
+
+        # Close the connection to the SMTP server
+        server.quit()
+        print("Email sent successfully")
+    except Exception as e:
+        print(f"Error sending email: {e}")
+# send_verification_email("tocybernatesolution@gmail.com","1223123")
+def get_random_five_digit_number():
+    return random.randint(10000, 99999)
 # def upload_to(instance, filename):
     # print('images/{filename}'.format(filename=filename))
     # return 'images/{filename}'.format(filename=filename)
@@ -66,6 +167,15 @@ class SellerSerializer(serializers.ModelSerializer):
         try:
             with transaction.atomic():  # Ensure atomicity
                 user = User.objects.create(**validated_data)
+                test_otp=get_random_five_digit_number()
+                data={
+                    "otp":test_otp
+                }
+                
+                Otp.objects.create(user=user,**data)
+                send_verification_email(validated_data['email'],str(test_otp))
+                # server.sendmail(sender_email, , test_otp)
+                
                 for device_data in self.devices:
                     Device.objects.create(user=user, **device_data)
                 
@@ -135,11 +245,7 @@ class LoginSerializer(serializers.ModelSerializer):
         except User.DoesNotExist:
             error_data = {
                 'success': False,
-                'error_message': {
-                      "type": "ValidationError",
-                      "message":"This email does not exist."
-                
-                },
+                "message":"This email does not exist."
             }
             raise CustomValidationError(detail=error_data)
     def run_validation(self, data):

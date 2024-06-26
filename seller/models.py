@@ -3,6 +3,11 @@ from django.db import models
 from djongo import models as djongo_models
 from bson import ObjectId
 from django.utils import timezone
+class Otp(models.Model):
+    # _id = djongo_models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)
+    user = models.ForeignKey('User', on_delete=models.CASCADE, null=True, related_name='otp')
+    otp = models.IntegerField()
+  
 
 class Device(models.Model):
     # _id = djongo_models.ObjectIdField(primary_key=True, default=ObjectId, editable=False)

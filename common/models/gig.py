@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from seller.models import User
+from buyer.models import Buyer_User
 class Gig_Images(models.Model):
     gig = models.ForeignKey('GigData', on_delete=models.CASCADE, null=True, related_name='Images')
     Image_url = models.CharField(max_length=100)
@@ -87,4 +88,14 @@ class GigData(models.Model):
 
     def __str__(self):
         return self.title
+class Order(models.Model):
+    buyer=models.ForeignKey(Buyer_User, on_delete=models.CASCADE)
+    gig=models.ForeignKey(GigData, on_delete=models.CASCADE)
+    price=models.CharField(max_length=100)
+    deliver_time=models.DateField()
+    order_status=models.CharField(max_length=100)
+    def __str__(self):
+        return self.title
+    
+
 

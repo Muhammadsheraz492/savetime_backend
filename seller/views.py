@@ -40,35 +40,54 @@ def register(request):
         print(data)
         # input("Hello Testing")
         serializer = SellerSerializer(data=data,context={'request': request})
-        serializer.is_valid(raise_exception=True)
-        user = serializer.save()
-        # token = jwt.encode({
-        #         'username': user.username,
-        #         'iat': datetime.datetime.utcnow(),
-        #         'nbf': datetime.datetime.utcnow() + datetime.timedelta(minutes=-5),
-        #         'exp': datetime.datetime.utcnow() + datetime.timedelta(days=7)
-        # }, 'muhammad')
-        # token=jwt.encode(payload,'secret',algorithm='HS256').decode('utf-8')
-        # print(token)
-        user_data={}
-        user_data['success']=True
-        # user_data['token']=token
-        user_details = SellerSerializer(user).data
-        user_details.pop('password', None)
-        user_details.pop('devices', None)
-        user_details.pop('email', None)
-        user_data['user']=user_details
-        return Response(user_data, status=status.HTTP_201_CREATED)
+        if serializer.is_valid(raise_exception=True):
+            user = serializer.save()
+            # token = jwt.encode({
+            #         'username': user.username,
+            #         'iat': datetime.datetime.utcnow(),
+            #         'nbf': datetime.datetime.utcnow() + datetime.timedelta(minutes=-5),
+            #         'exp': datetime.datetime.utcnow() + datetime.timedelta(days=7)
+            # }, 'muhammad')
+            # token=jwt.encode(payload,'secret',algorithm='HS256').decode('utf-8')
+            # print(token)
+            user_data={}
+            user_data['success']=True
+            # user_data['token']=token
+            user_details = SellerSerializer(user).data
+            user_details.pop('password', None)
+            user_details.pop('devices', None)
+            user_details.pop('email', None)
+            user_data['user']=user_details
+            return Response(user_data, status=status.HTTP_201_CREATED)
+        else:
+            errors = serializer.errors
+            # error_message = " ".join([f"{key}: {value[0]}" for key, value in errors.items()])
+            # return Response({'success': False, 'message': error_message}, status=status.HTTP_400_BAD_REQUEST) 
     
-    except ValidationError as e:
-        
-        return Response({'success':False,'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
-    except Exception as e:
-        error_data = {
-            'success': False,
-            'error_message':serialize_exception(e),
-        }
-        return Response(error_data, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    except Exception as exc:
+        error_messages = []
+
+        if hasattr(exc, 'detail') and isinstance(exc.detail, dict):
+            for field, errors in exc.detail.items():
+                for error in errors:
+                    error_messages.append(f"{error}")
+
+            response_data = {
+                'success': False,
+                'message': ' '.join(error_messages),
+                'errors': exc.detail,
+                'status_code': status.HTTP_400_BAD_REQUEST
+            }
+        else:
+            response_data = {
+                'success': False,
+                'message': 'Unknown error occurred.',
+                'status_code': status.HTTP_400_BAD_REQUEST
+            }
+
+        return Response(response_data, status=status.HTTP_400_BAD_REQUEST)
+
+ 
 @api_view(['POST'])
 def login(request):    
     # request = self.context.get('request')

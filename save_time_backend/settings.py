@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-521s2=^ai)*!$tps$#t^*d_4gqnu(0&^l!483%v^0rh@_&yy5+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['192.168.100.4','127.0.0.1']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
     'admin',
@@ -74,6 +75,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'common.middleware.middleware.BearerTokenMiddleware',
     # "common.middleware.CustomExceptionHandlerMiddleware.CustomExceptionHandlerMiddleware"
 ]
@@ -197,3 +199,6 @@ DEFAULT_FILE_STORAGE = 'seller.storages_backends.MediaStorage'
 # Optional settings
 AWS_QUERYSTRING_AUTH = False  # Optional: remove query parameter authentication from generated URLs
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',  # Adjust as needed
+]
