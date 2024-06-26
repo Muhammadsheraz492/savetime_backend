@@ -340,4 +340,27 @@ def create_images(request, id):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     except Exception as e:
         raise e
+
+@api_view(['GET'])
+def Verify_otp(request):
+    try:
+        email = request.GET.get('email')
+        otp = request.GET.get('otp')
+        if not email or not otp:
+            return Response({'success':False,"message": "Email and OTP are required"}, status=status.HTTP_400_BAD_REQUEST)
+        user_instance=User.objects.get(email=email)
+        otp_instance=Otp.objects.get(user=user_instance)
+        print(otp_instance.otp)
+        print(otp)
+        if str(otp_instance.otp)==str(otp):
+            user_instance.is_verified=True
+            user_instance.save()
+            otp_instance.delete()
+            return Response({'success': True, 'message': 'Account are Varified SuccessFully'}, status=status.HTTP_200_OK)
+        else:
+            return Response({'success': False, 'message': 'One Time password are Failed'}, status=status.HTTP_201_CREATED)
+    except User.DoesNotExist as e:
+        raise e
+    except Exception as e:
+        raise e
     

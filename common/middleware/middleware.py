@@ -19,7 +19,7 @@ class BearerTokenMiddleware:
         bearer_token = request.headers.get('Authorization')
         cookies_token = request.headers.get('Cookie')
         if '/seller/' in request.path:
-            excluded_urls = ['/seller/register/','/seller/login/']
+            excluded_urls = ['/seller/register/','/seller/login/','/seller/varify_user/']
             if request.path in excluded_urls:
                 return self.get_response(request)
             try:
