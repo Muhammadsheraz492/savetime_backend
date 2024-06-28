@@ -174,7 +174,6 @@ class SellerSerializer(serializers.ModelSerializer):
                 
                 Otp.objects.create(user=user,**data)
                 send_verification_email(validated_data['email'],str(test_otp))
-                # server.sendmail(sender_email, , test_otp)
                 
                 for device_data in self.devices:
                     Device.objects.create(user=user, **device_data)
